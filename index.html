@@ -9,7 +9,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon.svg">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <header class="topbar">
@@ -21,12 +21,9 @@
     </span>
   </a>
   <div class="top-actions">
-    <button class="icon-btn top-search-toggle" id="top-search-toggle" type="button" aria-label="搜索">
-      <span class="ico" data-icon="search"></span>
-    </button>
     <div class="top-search" id="top-search">
       <span class="ico" data-icon="search"></span>
-      <input id="search" type="search" placeholder="搜单词、中文、音标…" autocomplete="off" spellcheck="false">
+      <input id="search" type="text" enterkeyhint="search" placeholder="搜单词、中文、音标…" autocomplete="off" spellcheck="false">
       <button class="icon-btn" id="clear-search" type="button" aria-label="清空搜索">
         <span class="ico" data-icon="close"></span>
       </button>
@@ -72,6 +69,6 @@
 </div>
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
-<script src="app.js?v=5" defer></script>
+<script src="app.js?v=6" defer></script>
 </body>
 </html>

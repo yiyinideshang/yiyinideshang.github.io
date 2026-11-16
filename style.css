@@ -95,17 +95,19 @@ svg { display: block; }
   color: var(--muted); font-size: 11.5px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.top-actions { display: flex; align-items: center; gap: 8px; flex: none; min-width: 0; }
+.top-actions { display: flex; align-items: center; gap: 8px; flex: 1; justify-content: flex-end; min-width: 0; }
 .top-search {
   display: flex; align-items: center; gap: 8px;
-  width: 280px; max-width: 32vw;
+  flex: 0 1 280px; min-width: 0;
   background: var(--surface); border: 1px solid var(--line);
   border-radius: 12px; padding: 0 10px;
 }
 .top-search .ico svg { width: 17px; height: 17px; color: var(--muted); }
 .top-search input { flex: 1; min-width: 0; border: none; background: transparent; padding: 9px 0; outline: none; font-size: 14px; }
+.top-search input::-webkit-search-cancel-button,
+.top-search input::-webkit-search-decoration { -webkit-appearance: none; appearance: none; }
+.top-search input::-ms-clear { display: none; }
 .top-search .icon-btn { width: 28px; height: 28px; margin: 0; }
-.top-search-toggle { display: none; }
 .due-pill {
   display: flex; align-items: center; gap: 6px;
   border: 1px solid var(--line); background: var(--surface);
@@ -300,8 +302,9 @@ svg { display: block; }
 .review-hero p { margin: 4px 0 0; color: var(--muted); font-size: 13.5px; }
 .review-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0 18px; }
 .stat { background: var(--surface-2); border-radius: 12px; padding: 10px; text-align: center; border: 1px solid transparent; }
-.stat[data-stat] { cursor: pointer; font: inherit; color: inherit; appearance: none; }
-.stat[data-stat]:hover { border-color: var(--accent); background: var(--accent-soft); }
+.stat[data-stat], .stat[data-rel] { cursor: pointer; font: inherit; color: inherit; appearance: none; }
+.stat[data-stat]:hover, .stat[data-rel]:hover { border-color: var(--accent); background: var(--accent-soft); }
+.stat.active { border-color: var(--accent); background: var(--accent-soft); }
 .stat b { display: block; font-size: 24px; font-family: var(--serif); line-height: 1.2; }
 .stat span { font-size: 11.5px; color: var(--muted); }
 .daily-new-row { display: inline-flex; align-items: center; gap: 6px; }
@@ -434,13 +437,10 @@ body.modal-open { overflow: hidden; }
   .toolbar { top: 64px; }
   .detail-word { font-size: 48px; }
   .review-stats { grid-template-columns: repeat(3, 1fr); }
-  .top-search {
-    display: none; position: absolute; top: 100%; left: 12px; right: 12px;
-    width: auto; max-width: none; margin: 0 0 10px; box-shadow: var(--shadow);
-  }
-  .top-search.open { display: flex; }
-  .top-search-toggle { display: grid; }
-  .brand-text small { max-width: 110px; }
+  .topbar { gap: 8px; }
+  .top-search { flex: 1; max-width: none; padding: 0 8px; }
+  .due-pill { padding: 7px 9px; }
+  .brand-text small { display: none; }
 }
 @media (min-width: 721px) {
   #app { padding: 20px 24px 48px; }

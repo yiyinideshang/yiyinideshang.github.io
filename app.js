@@ -188,6 +188,7 @@ const state = {
   wordStack: [],
   wordCurrent: null,
   wordBack: false,
+  relTab: "mix",
   list: { q: "", filter: "all", sort: "alpha", limit: 80, letter: "" },
 };
 
@@ -767,28 +768,32 @@ function renderDetail(app, word) {
 // 关系
 // ---------------------------------------------------------------------------
 function renderRelations(app) {
+  const tab = state.relTab || "mix";
+  const tabs = [
+    { key: "mix", label: "易混组", count: state.confusable.length },
+    { key: "family", label: "词族", count: state.families.length },
+    { key: "syn", label: "近义组", count: state.synonyms.length },
+  ];
   app.innerHTML = `
     <div class="review-hero">
       <h1>关系</h1>
       <p>一个词只存一条，关系自动归组。易混组来自 <span class="mono">[混:]</span>，词族来自 <span class="mono">[族:]</span>，近义组来自 <span class="mono">[近:]</span>。</p>
       <div class="review-stats">
-        <div class="stat"><b>${state.confusable.length}</b><span>易混组</span></div>
-        <div class="stat"><b>${state.families.length}</b><span>词族</span></div>
-        <div class="stat"><b>${state.synonyms.length}</b><span>近义组</span></div>
+        ${tabs.map((t) => `<button class="stat ${tab === t.key ? "active" : ""}" data-rel="${t.key}"><b>${t.count}</b><span>${t.label}</span></button>`).join("")}
       </div>
     </div>
-    <div class="section-title">易混擂台</div>
-    <div class="grid">
-      ${state.confusable.slice(0, 50).map((g) => groupCard(g, "混")).join("") || `<div class="panel">还没有易混组。在词条行尾加 <span class="mono">[混:xxx]</span> 就会自动成组。</div>`}
-    </div>
-    <div class="section-title">词族</div>
-    <div class="grid">
-      ${state.families.slice(0, 80).map(familyCard).join("") || `<div class="panel">还没有词族。</div>`}
-    </div>
-    <div class="section-title">近义组</div>
-    <div class="grid">
-      ${state.synonyms.slice(0, 40).map((g) => groupCard(g, "近")).join("") || `<div class="panel">还没有近义组。</div>`}
-    </div>
+    ${tab === "mix" ? `
+      <div class="section-title">易混擂台</div>
+      <div class="grid">${state.confusable.slice(0, 50).map((g) => groupCard(g, "混")).join("") || `<div class="panel">还没有易混组。在词条行尾加 <span class="mono">[混:xxx]</span> 就会自动成组。</div>`}</div>
+    ` : ""}
+    ${tab === "family" ? `
+      <div class="section-title">词族</div>
+      <div class="grid">${state.families.slice(0, 80).map(familyCard).join("") || `<div class="panel">还没有词族。</div>`}</div>
+    ` : ""}
+    ${tab === "syn" ? `
+      <div class="section-title">近义组</div>
+      <div class="grid">${state.synonyms.slice(0, 40).map((g) => groupCard(g, "近")).join("") || `<div class="panel">还没有近义组。</div>`}</div>
+    ` : ""}
   `;
 }
 
@@ -1265,15 +1270,9 @@ function showStat(key) {
     return;
   }
   if (key === "streak") {
-    const days = [];
-    for (let i = 13; i >= 0; i--) {
-      const dt = new Date();
-      dt.setDate(dt.getDate() - i);
-      const s = dateStr(dt);
-      const x = state.progress.days[s] || { reviewed: 0, right: 0 };
-      days.push(`<div class="kv"><span>${s}${i === 0 ? "（今天）" : ""}</span><span>复习 ${x.reviewed || 0} · 正确 ${x.right || 0}</span></div>`);
-    }
-    openModal("连续天数", summary(`当前连续 ${state.progress.streak?.count || 0} 天。`) + days.join(""));
+    const x = state.progress.days[today] || { reviewed: 0, right: 0 };
+    openModal("连续天数", summary(`当前连续 ${state.progress.streak?.count || 0} 天。`)
+      + `<div class="kv"><span>${today}（今天）</span><span>复习 ${x.reviewed || 0} · 正确 ${x.right || 0}</span></div>`);
     return;
   }
   if (key === "total") {
@@ -1448,8 +1447,6 @@ function renderPicker(message = "") {
 // ---------------------------------------------------------------------------
 function setupTopSearch() {
   const input = $("#search");
-  const box = $("#top-search");
-  const toggle = $("#top-search-toggle");
   const clear = $("#clear-search");
   if (!input) return;
 
@@ -1468,7 +1465,7 @@ function setupTopSearch() {
   input.addEventListener("input", debounce(apply, 120));
   input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") { e.preventDefault(); apply(); }
-    if (e.key === "Escape") { input.blur(); box?.classList.remove("open"); }
+    if (e.key === "Escape") { input.blur(); }
   });
   clear?.addEventListener("click", () => {
     input.value = "";
@@ -1481,10 +1478,6 @@ function setupTopSearch() {
     }
     input.focus();
   });
-  toggle?.addEventListener("click", () => {
-    box.classList.toggle("open");
-    if (box.classList.contains("open")) setTimeout(() => input.focus(), 30);
-  });
 }
 
 function installGlobalHandlers() {
@@ -1492,6 +1485,13 @@ function installGlobalHandlers() {
     if (e.target.closest("[data-close-modal]") || e.target.closest("#modal-close")) {
       e.preventDefault();
       closeModal();
+      return;
+    }
+    const relBtn = e.target.closest("[data-rel]");
+    if (relBtn) {
+      e.preventDefault();
+      state.relTab = relBtn.dataset.rel;
+      renderRelations($("#app"));
       return;
     }
     const statBtn = e.target.closest("[data-stat]");
@@ -1520,7 +1520,6 @@ function installGlobalHandlers() {
     if (wordEl) {
       e.preventDefault();
       closeModal();
-      $("#top-search")?.classList.remove("open");
       go("#/w/" + encodeURIComponent(wordEl.dataset.word));
       return;
     }
