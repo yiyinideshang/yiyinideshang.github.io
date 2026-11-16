@@ -248,9 +248,9 @@ calm adj. 平静的，风平浪静的｜v. 使平静，使镇静｜n. 平静，�
 cancel n. 取消，废除，注销 /ˈkænsl̩/
 
 cancer n. 癌症；社会恶习 /ˈkæːnsə/ [混:career]
-- 记: cancer 里有 can
+- 记: cancer 里有 can（can + cer），可以想成“癌细胞会扩散”。
 - 记: can + cer，中间是 n。
-- 错: 与 career 混；cancer 结尾 -ncer，重音在前。
+- 错: 与 career 混；重音在前，像“坎瑟”，开头是“坎”。职业 career 找 r，癌症 cancer 找 n。
 
 candidate n. 候选人,申请人,考生 /ˈkæn.dɪdət/
 
@@ -260,7 +260,7 @@ capture vt. 抓起,俘虏,攻占,夺取｜vt. 引起,吸引,捕捉｜n. 捕获,�
 
 career n. 职业；事业；生涯｜adj. 就业的；职业的 /kəˈrɪə/ [混:cancer] [近:occupation]
 - 记: career 开头像 care（care + er），职业要用心经营。
-- 错: 与 cancer 混；career 结尾 -reer，重音在后。
+- 错: 与 cancer 混；重音在后，像“克瑞尔”，有卷舌 r 音。职业 career 找 r，癌症 cancer 找 n。
 
 cease to phr. 停止做某事：指不再继续进行某项活动或行为
 

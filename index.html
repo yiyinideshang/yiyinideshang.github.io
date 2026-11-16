@@ -9,7 +9,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon.svg">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <header class="topbar">
@@ -20,9 +20,21 @@
       <small id="subtitle">正在加载…</small>
     </span>
   </a>
-  <button class="due-pill" id="due-pill" type="button" title="今日到期">
-    <span>今日</span><b id="due-count">0</b>
-  </button>
+  <div class="top-actions">
+    <button class="icon-btn top-search-toggle" id="top-search-toggle" type="button" aria-label="搜索">
+      <span class="ico" data-icon="search"></span>
+    </button>
+    <div class="top-search" id="top-search">
+      <span class="ico" data-icon="search"></span>
+      <input id="search" type="search" placeholder="搜单词、中文、音标…" autocomplete="off" spellcheck="false">
+      <button class="icon-btn" id="clear-search" type="button" aria-label="清空搜索">
+        <span class="ico" data-icon="close"></span>
+      </button>
+    </div>
+    <button class="due-pill" id="due-pill" type="button" title="今日到期">
+      <span>今日</span><b id="due-count">0</b>
+    </button>
+  </div>
 </header>
 
 <nav class="tabs" aria-label="主导航">
@@ -46,7 +58,20 @@
   <a href="#/data" data-tab="data"><span class="ico" data-icon="chart"></span><span>数据</span></a>
 </nav>
 
+<div class="modal" id="modal" hidden>
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-head">
+      <h2 id="modal-title"></h2>
+      <button class="icon-btn" id="modal-close" type="button" aria-label="关闭">
+        <span class="ico" data-icon="close"></span>
+      </button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
-<script src="app.js?v=4" defer></script>
+<script src="app.js?v=5" defer></script>
 </body>
 </html>
