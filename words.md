@@ -28,7 +28,7 @@ academic adj. 学术的 /ˌækəˈdɛmɪk/ [族:academic]
 
 academically adv. 学术上地 /ˌæk.əˈdɛm.ɪk.li/ [族:academic]
 
-academy n. 学院,学会,研究院 /əˈkæd.ə.mi/ [族:academ]
+academy n. 学院,学会,研究院 /əˈkæd.ə.mi/ [族:academic]
 
 accent n. 腔调，口音，重音｜vt. 突出,强调 /ˈak.sənt/
 
@@ -110,7 +110,7 @@ amuse vt. 逗笑,逗乐,给…提供娱乐 /əˈmjuːz/ [族:amuse] [混:amaze,a
 
 amusement n. 乐趣；娱乐活动 /əˈmjuzmənt/ [族:amuse]
 
-amusing adj. 逗人发笑的,有乐趣的 /əˈmjuːzɪŋ/ [族:amus]
+amusing adj. 逗人发笑的,有乐趣的 /əˈmjuːzɪŋ/ [族:amuse]
 
 anchor n. 锚，主持人｜v. 使固定；使扎根，抛锚 /ˈæŋ.kə/
 
@@ -302,9 +302,9 @@ commit to phr. 承诺，致力于，投入
 
 commit v. 承诺，犯（罪，错）忠于，致力于 /kəˈmɪt/
 
-communicate v. 通信,交流,交际,连接,相通,传达,传播 /kəˈmjuːnɪkeɪt/ [族:communicat]
+communicate v. 通信,交流,交际,连接,相通,传达,传播 /kəˈmjuːnɪkeɪt/ [族:commun]
 
-communicative adj. 健谈的,善于言谈的,沟通的 [族:communicat]
+communicative adj. 健谈的,善于言谈的,沟通的 [族:commun]
 
 community n. 社区,群体 /k(ə)ˈmjunəti/ [族:commun]
 
@@ -525,9 +525,9 @@ economy n. 经济体,节约 /iːˈkɒn.ə.mi/ [族:econom]
 effect n. 作用，影响，效果，印象，所有物，财产，生效，执行｜v. 实现，引起 /ɪˈfɛkt/ [族:effect]
 - 辨析: effect 名词“效果”；affect 动词“影响”。
 
-effective adj. 产生预期结果的，有效的，实际的，事实上的 /əˈfɛktɪv/ [族:effective] [近:efficient]
+effective adj. 产生预期结果的，有效的，实际的，事实上的 /əˈfɛktɪv/ [族:effect] [近:efficient]
 
-effectively adv. 有效地，实际上 [族:effective]
+effectively adv. 有效地，实际上 [族:effect]
 
 efficiency n. 效能，效率，功率 /ɪˈfɪʃn̩si/
 
@@ -591,11 +591,11 @@ examine v. 检查，调查，考核 /ɪɡˈzæmɪn/ [族:examin]
 
 excellent n. 优秀,卓越,杰出 /ˈɛksələnt/
 
-excitation n. 激发，刺激，激励 [族:excit]
+excitation n. 激发，刺激，激励 [族:excite]
 
 excite v. 使兴奋，使激动，引起，激起 /ɪkˈsaɪt/ [族:excite]
 
-excitedly adv. 兴奋地，激动地 [族:excit]
+excitedly adv. 兴奋地，激动地 [族:excite]
 
 excitement n. 令人兴奋或激动的事，刺激因素 /ɪkˈsaɪtmənt/ [族:excite]
 
@@ -641,7 +641,7 @@ extreme adj. 极大的，极度的，极端的，严重的｜n. （观点或行�
 
 extremely adv. 极度，非常 /ɪksˈtriːmli/ [族:extreme]
 
-extremist n. 极端主义者 /ɛkˈstriːmɪst/ [族:extrem]
+extremist n. 极端主义者 /ɛkˈstriːmɪst/ [族:extreme]
 
 # F
 
@@ -727,11 +727,11 @@ forge vt. 缔造,建立｜v. 缔造，建立 /fɔːd͡ʒ/ [混:fierce,force,pier
 
 formal adj. 正式的，正规的 /ˈfɔːməl/ [族:form]
 
-format n./v. 格式，版式，形式 /ˈfɔː(r).mæt/
+format n./v. 格式，版式，形式 /ˈfɔː(r).mæt/ [族:form]
 
 former adj. 以前的，前者的 /ˈfɔːmə/
 
-formula n. 公式，配方 /ˈfɔː.mjʊ.lə/
+formula n. 公式，配方 /ˈfɔː.mjʊ.lə/ [族:form]
 
 formulate v. 制定，规划；确切表达，认真阐述；用公式表示
 
@@ -815,13 +815,13 @@ honey n. 蜂蜜,亲爱的 /ˈhʌni/
 
 honor n. 荣誉(称号),荣幸｜vt. 尊敬,表彰,信守 /ˈɒn.ə/ [近:privilege]
 
-horrible adj. 可怕的；极讨厌的 /ˈhɑrɪbəl/ [族:horribl]
+horrible adj. 可怕的；极讨厌的 /ˈhɑrɪbəl/ [族:horr]
 
-horribly adv. 可怕地；非常地 [族:horribl]
+horribly adv. 可怕地；非常地 [族:horr]
 
-horrify v. 使感到震惊，使产生反感 /ˈhɒrɪfaɪ/ [族:horrify]
+horrify v. 使感到震惊，使产生反感 /ˈhɒrɪfaɪ/ [族:horr]
 
-horrifying adj. 令人极其震惊的（或厌恶的、恐惧的）｜v. 惊吓，惊骇 [族:horrify]
+horrifying adj. 令人极其震惊的（或厌恶的、恐惧的）｜v. 惊吓，惊骇 [族:horr]
 
 horror n. 震惊,恐惧；惧怕，憎恶；恐怖性；极其不愉快的（或可怕的）经历；恐怖故事（或电影等） /ˈhɔrɚ/ [族:horr]
 
@@ -877,9 +877,9 @@ instance n. 例子，实例｜v. 举…为例 /ˈɪnstəns/
 
 instinct n. 本能，天性，直觉 /ˈɪn.stɪŋkt/ [族:instinct]
 
-instinctive adj. 本能的，直觉的，天生的 /ɪnˈstɪŋktɪv/ [族:instinctive]
+instinctive adj. 本能的，直觉的，天生的 /ɪnˈstɪŋktɪv/ [族:instinct]
 
-instinctively adv. 本能地，凭直觉地 /ɪnˈstɪŋktɪvli/ [族:instinctive]
+instinctively adv. 本能地，凭直觉地 /ɪnˈstɪŋktɪvli/ [族:instinct]
 
 instinctual adj. [生物] 本能的
 
@@ -1175,9 +1175,9 @@ perspective n. 观点；远景；透视图｜adj. 透视的 /pɚˈspɛktɪv/
 
 pessimism n. 悲观,悲观主义 [族:pessim]
 
-pessimist n. 悲观主义者 /ˈpɛsɪmɪst/ [族:pessimist]
+pessimist n. 悲观主义者 /ˈpɛsɪmɪst/ [族:pessim]
 
-pessimistic adj. 悲观的 /ˌpɛ.səˈmɪs.tɪk/ [族:pessimist]
+pessimistic adj. 悲观的 /ˌpɛ.səˈmɪs.tɪk/ [族:pessim]
 
 phase n. 阶段，时期
 
@@ -1223,7 +1223,7 @@ pot n. 锅，罐，壶，大麻｜v. 把…栽入盆中 /pɒt/
 
 practical adj. 实践的；真实的，实际的 /ˈpræktɪkəl/ [族:practic]
 
-practicality n. 实用性，可行性，实事求是 [族:practical]
+practicality n. 实用性，可行性，实事求是 [族:practic]
 
 practice n./v. 实践，练习 /ˈpræktɪs/ [族:practic]
 
@@ -1255,9 +1255,9 @@ product n. 产品，产物，生成物，积 /ˈprɒd.əkt/ [族:product]
 
 production n. 生产，制造，加工，采集，生产，产量；制作（电影、戏剧、电视节目），上映 /prəˈdʌkʃən/ [族:product]
 
-productive adj. 多产的，丰饶的，有效益的，富有成效的，生产的，产生…的，引起…的 /prəˈdʌktɪv/ [族:productiv]
+productive adj. 多产的，丰饶的，有效益的，富有成效的，生产的，产生…的，引起…的 /prəˈdʌktɪv/ [族:product]
 
-productivity n. 生产力，生产率 /ˌprɒdʌkˈtɪvəti/ [族:productiv]
+productivity n. 生产力，生产率 /ˌprɒdʌkˈtɪvəti/ [族:product]
 
 professional adj. 职业的,专业的｜n. 专业人士,职业运动员 /prəˈfɛʃənəl/
 

@@ -312,7 +312,7 @@ function buildIndexes() {
   state.families = Array.from(fam.entries())
     .map(([name, set]) => ({ name, words: Array.from(set).filter((x) => state.byKey.has(x)).sort() }))
     .filter((g) => g.words.length >= 2)
-    .sort((a, b) => b.words.length - a.words.length || a.name.localeCompare(b.name));
+    .sort((a, b) => a.name.localeCompare(b.name));
   state.familyByWord = new Map();
   for (const g of state.families) for (const w of g.words) state.familyByWord.set(w, g);
 
@@ -777,7 +777,7 @@ function renderRelations(app) {
   app.innerHTML = `
     <div class="review-hero">
       <h1>关系</h1>
-      <p>一个词只存一条，关系自动归组。易混组来自 <span class="mono">[混:]</span>，词族来自 <span class="mono">[族:]</span>，近义组来自 <span class="mono">[近:]</span>。</p>
+      <p>易混组来自 <span class="mono">[混:]</span>，词族来自 <span class="mono">[族:]</span>，近义组来自 <span class="mono">[近:]</span>。</p>
       <div class="review-stats">
         ${tabs.map((t) => `<button class="stat ${tab === t.key ? "active" : ""}" data-rel="${t.key}"><b>${t.count}</b><span>${t.label}</span></button>`).join("")}
       </div>
@@ -1266,7 +1266,7 @@ function showStat(key) {
     return;
   }
   if (key === "todayLearned") {
-    openModal("今日已学", summary(`今天新学 ${d.new || 0} 个，复习 ${d.reviewed || 0} 个，正确 ${d.right || 0} 个。每天新词上限 ${state.progress.settings.dailyNew || 30}。`) + statWordList(todayList, meta));
+    openModal("今日已学", summary(`(今天新学 ${d.new || 0} 个，复习 ${d.reviewed || 0} 个，正确 ${d.right || 0} 个。每天新词上限 ${state.progress.settings.dailyNew || 30}。)`) + statWordList(todayList, meta));
     return;
   }
   if (key === "streak") {
