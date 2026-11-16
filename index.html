@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f766e">
+<meta name="description" content="四级词库：按词族和易混组组织的单词复习工具">
+<title>四级词库</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#/words" aria-label="回到词库">
+    <span class="logo" aria-hidden="true">四</span>
+    <span class="brand-text">
+      <strong>四级词库</strong>
+      <small id="subtitle">正在加载…</small>
+    </span>
+  </a>
+  <button class="due-pill" id="due-pill" type="button" title="今日到期">
+    <span>今日</span><b id="due-count">0</b>
+  </button>
+</header>
+
+<nav class="tabs" aria-label="主导航">
+  <a href="#/words" data-tab="words">词库</a>
+  <a href="#/relations" data-tab="relations">关系</a>
+  <a href="#/review" data-tab="review">复习</a>
+  <a href="#/data" data-tab="data">数据</a>
+</nav>
+
+<main id="app" tabindex="-1">
+  <div class="loading">
+    <div class="spinner" aria-hidden="true"></div>
+    <p>正在读取词库…</p>
+  </div>
+</main>
+
+<nav class="tabbar" aria-label="底部导航">
+  <a href="#/words" data-tab="words"><span class="ico" data-icon="book"></span><span>词库</span></a>
+  <a href="#/relations" data-tab="relations"><span class="ico" data-icon="link"></span><span>关系</span></a>
+  <a href="#/review" data-tab="review"><span class="ico" data-icon="cards"></span><span>复习</span></a>
+  <a href="#/data" data-tab="data"><span class="ico" data-icon="chart"></span><span>数据</span></a>
+</nav>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js?v=3" defer></script>
+</body>
+</html>

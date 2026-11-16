@@ -1,0 +1,10 @@
+build/
+sources/
+迁移报告.md
+tools/ipa-cache.json
+*.log
+.DS_Store
+Thumbs.db
+
+__pycache__/
+*.pyc

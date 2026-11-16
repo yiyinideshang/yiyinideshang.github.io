@@ -1,0 +1,14 @@
+{
+  "name": "四级词库",
+  "short_name": "四级词库",
+  "description": "按词族和易混组组织的四级单词复习工具",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f6f2",
+  "theme_color": "#0f766e",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
