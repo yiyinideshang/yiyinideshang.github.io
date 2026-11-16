@@ -186,7 +186,7 @@ const state = {
   session: null,
   summary: null,
   triage: null,
-  list: { q: "", filter: "all", sort: "alpha", limit: 80 },
+  list: { q: "", filter: "all", sort: "alpha", limit: 80, letter: "" },
 };
 
 // ---------------------------------------------------------------------------
@@ -488,7 +488,7 @@ if (hasTTS()) {
 function currentRoute() {
   const raw = location.hash.replace(/^#\/?/, "");
   const parts = raw.split("/");
-  return { tab: parts[0] || "words", rest: parts.slice(1) };
+  return { tab: parts[0] || "review", rest: parts.slice(1) };
 }
 function go(hash) {
   if (location.hash === hash) renderRoute();
@@ -522,6 +522,27 @@ function filterChip(key, label) {
   return `<button class="filter ${state.list.filter === key ? "active" : ""}" data-filter="${key}">${label}</button>`;
 }
 
+function letterBar() {
+  const present = new Set(state.words.map((w) => w.word[0].toUpperCase()));
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+  return `<button class="letter ${state.list.letter === "" ? "active" : ""}" data-letter="">全部</button>`
+    + letters.map((L) => `<button class="letter ${state.list.letter === L ? "active" : ""} ${present.has(L) ? "" : "empty"}" data-letter="${L}" ${present.has(L) ? "" : "disabled"}>${L}</button>`).join("");
+}
+
+function groupedWordCards(list) {
+  let out = "";
+  let letter = "";
+  for (const w of list) {
+    const L = w.word[0].toUpperCase();
+    if (L !== letter) {
+      letter = L;
+      out += `<div class="letter-head">${L}</div>`;
+    }
+    out += wordCard(w);
+  }
+  return out;
+}
+
 function renderWords(app) {
   app.innerHTML = `
     <div class="toolbar">
@@ -538,6 +559,7 @@ function renderWords(app) {
         ${filterChip("confusable", "有易混")}
         ${filterChip("family", "有词族")}
       </div>
+      <div class="letter-bar" id="letter-bar">${letterBar()}</div>
       <div class="result-line">
         <span id="result-count"></span>
         <select id="sort" aria-label="排序">
@@ -556,7 +578,9 @@ function renderWords(app) {
   $("#sort").value = state.list.sort;
   $("#search").addEventListener("input", debounce((e) => {
     state.list.q = e.target.value.trim();
+    state.list.letter = "";
     state.list.limit = 80;
+    $$("#letter-bar .letter").forEach((x) => x.classList.toggle("active", x.dataset.letter === ""));
     renderWordList();
   }, 120));
   $("#clear-search").addEventListener("click", () => {
@@ -570,6 +594,15 @@ function renderWords(app) {
     state.list.filter = b.dataset.filter;
     state.list.limit = 80;
     $$("#filters .filter").forEach((x) => x.classList.toggle("active", x.dataset.filter === state.list.filter));
+    renderWordList();
+  });
+  $("#letter-bar").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-letter]");
+    if (!b || b.disabled) return;
+    state.list.letter = b.dataset.letter;
+    state.list.limit = 80;
+    $$("#letter-bar .letter").forEach((x) => x.classList.toggle("active", x.dataset.letter === state.list.letter));
+    window.scrollTo(0, 0);
     renderWordList();
   });
   $("#sort").addEventListener("change", (e) => {
@@ -591,6 +624,7 @@ function renderWordList() {
       const hay = [w.word, w.ipa, ...w.senses.map((s) => s.gloss), ...w.notes.map((n) => n.text), ...Object.values(w.tags).flat()].join(" ").toLowerCase();
       if (!hay.includes(q)) return false;
     }
+    if (state.list.letter && w.word[0].toUpperCase() !== state.list.letter) return false;
     const p = getP(w.word);
     switch (state.list.filter) {
       case "due": return p && p.box > 0 && p.due <= today;
@@ -626,13 +660,17 @@ function renderWordList() {
   }
 
   const count = $("#result-count");
-  if (count) count.textContent = `${list.length} 词`;
+  if (count) count.textContent = `${state.list.letter ? state.list.letter + " · " : ""}${list.length} 词`;
   const shown = list.slice(0, state.list.limit);
   const box = $("#word-list");
   if (box) {
-    box.innerHTML = shown.length
-      ? shown.map(wordCard).join("")
-      : `<div class="panel" style="grid-column:1/-1">没有匹配的词。换个关键词或筛选。</div>`;
+    if (!shown.length) {
+      box.innerHTML = `<div class="panel" style="grid-column:1/-1">没有匹配的词。换个关键词或筛选。</div>`;
+    } else {
+      box.innerHTML = state.list.sort === "alpha"
+        ? groupedWordCards(shown)
+        : shown.map(wordCard).join("");
+    }
   }
   const more = $("#load-more");
   if (more) more.style.display = list.length > state.list.limit ? "" : "none";
@@ -750,20 +788,35 @@ function groupCard(g, kind) {
         <span style="text-align:right;max-width:58%">${esc(shortGloss(w?.senses.map((s) => s.gloss).join("；") || "", 30))}</span>
       </div>`;
     }).join("")}
-    <div style="margin-top:10px"><button class="btn" data-quiz-group="${esc(g.join(","))}">练这组</button></div>
   </div>`;
 }
 
 function familyCard(g) {
   return `<div class="panel">
     <h2><span class="mono">${esc(g.name)}</span> <span class="chip">${g.words.length} 词</span></h2>
-    <div class="chip-row">${g.words.map((x) => `<button class="chip-btn" data-word="${esc(x)}">${esc(x)}</button>`).join("")}</div>
+    ${g.words.map((x) => {
+      const w = state.byKey.get(x);
+      return `<div class="kv" data-word="${esc(x)}" style="cursor:pointer">
+        <span><strong>${esc(x)}</strong> ${w?.ipa ? `<span class="ipa">${esc(w.ipa)}</span>` : ""}</span>
+        <span style="text-align:right;max-width:58%">${esc(shortGloss(w?.senses.map((s) => s.gloss).join("；") || "", 34))}</span>
+      </div>`;
+    }).join("")}
   </div>`;
 }
 
 // ---------------------------------------------------------------------------
 // 复习
 // ---------------------------------------------------------------------------
+const MODE_LABELS = {
+  mix: "混合复习",
+  zh2en: "看中文选单词",
+  en2zh: "看单词选中文",
+  listen: "听音选词",
+  spell: "拼写",
+  cloze: "语境填空",
+};
+function modeLabel(m) { return MODE_LABELS[m] || "练习"; }
+
 function renderReview(app) {
   if (state.session) return renderQuiz(app);
   if (state.triage) return renderTriage(app);
@@ -785,9 +838,14 @@ function renderReview(app) {
       <div class="stat"><b>${d.new || 0}/${dailyNew}</b><span>今日新词</span></div>
       <div class="stat"><b>${streak}</b><span>连续天数</span></div>
     </div>
-    <div class="actions">
-      <button class="btn primary block" id="start-review" ${due + fresh === 0 ? "disabled" : ""}>${due + fresh === 0 ? "今天清完了" : "开始复习"}</button>
+    <button class="btn primary block" id="start-review" data-mode="mix" ${due + fresh === 0 ? "disabled" : ""}>${due + fresh === 0 ? "今天清完了" : "混合复习"}</button>
+    <div class="mode-grid">
+      <button class="mode-btn" data-mode="listen" ${due + fresh === 0 ? "disabled" : ""}>听音选词</button>
+      <button class="mode-btn" data-mode="spell" ${due + fresh === 0 ? "disabled" : ""}>拼写</button>
+      <button class="mode-btn" data-mode="zh2en" ${due + fresh === 0 ? "disabled" : ""}>看中文选单词</button>
+      <button class="mode-btn" data-mode="en2zh" ${due + fresh === 0 ? "disabled" : ""}>看单词选中文</button>
     </div>
+    <p class="mode-hint">听音和拼写单独出题；拼写会跳过短语。</p>
     <div class="actions">
       <button class="btn block" id="start-triage" ${fresh === 0 ? "disabled" : ""}>分诊 ${Math.min(fresh, 100)} 词</button>
     </div>
@@ -797,7 +855,7 @@ function renderReview(app) {
     <label class="kv"><span>每天新词</span><select id="daily-new">${[20, 30, 40, 50].map((n) => `<option value="${n}" ${n === dailyNew ? "selected" : ""}>${n}</option>`).join("")}</select></label>
   </div>`;
 
-  $("#start-review").addEventListener("click", () => startSession());
+  $$("[data-mode]").forEach((b) => b.addEventListener("click", () => startSession(null, b.dataset.mode)));
   $("#start-triage").addEventListener("click", () => startTriage());
   $("#daily-new").addEventListener("change", (e) => {
     state.progress.settings.dailyNew = +e.target.value;
@@ -818,18 +876,33 @@ function last7() {
   return out;
 }
 
-function startSession(customQueue) {
-  const q = (customQueue && customQueue.length ? customQueue : getQueue())
+function startSession(customQueue, mode = "mix") {
+  let q = (customQueue && customQueue.length ? customQueue : getQueue())
     .map((x) => (typeof x === "string" ? state.byKey.get(x) : x))
     .filter(Boolean);
-  if (!q.length) { toast("今天没有到期词，去词库加几个新词吧"); return; }
+  if (mode === "listen" && !hasTTS()) {
+    toast("这个浏览器不支持朗读，改用看单词选中文");
+    mode = "en2zh";
+  }
+  let skipped = 0;
+  if (mode === "spell") {
+    const before = q.length;
+    q = q.filter((w) => !w.word.includes(" "));
+    skipped = before - q.length;
+  }
+  if (!q.length) {
+    toast(mode === "spell" ? "没有可拼写的单词" : "今天没有到期词，去词库加几个新词吧");
+    return;
+  }
+  if (skipped) toast(`拼写模式跳过 ${skipped} 个短语`);
   state.summary = null;
   state.session = {
     queue: q.map((w) => w.word),
     index: 0, correct: 0, wrong: 0,
     answered: false, q: null, ok: null, choice: undefined, spoken: false,
+    mode,
   };
-  state.session.q = makeQuestion(state.byKey.get(state.session.queue[0]));
+  state.session.q = makeQuestion(state.byKey.get(state.session.queue[0]), mode);
   go("#/review");
   renderRoute();
 }
@@ -887,7 +960,7 @@ function finishTriage() {
 function renderSummary(app) {
   const s = state.summary;
   app.innerHTML = `<div class="review-hero">
-    <h1>这一组完成</h1>
+    <h1>${esc(modeLabel(s.mode))}完成</h1>
     <p>共 ${s.total} 个，对 ${s.correct}，错 ${s.wrong}。</p>
     <div class="review-stats">
       <div class="stat"><b>${s.correct}</b><span>答对</span></div>
@@ -899,7 +972,7 @@ function renderSummary(app) {
       <button class="btn block" id="to-words">回词库</button>
     </div>
   </div>`;
-  $("#again").addEventListener("click", () => { state.summary = null; startSession(); });
+  $("#again").addEventListener("click", () => { state.summary = null; startSession(null, s.mode); });
   $("#to-words").addEventListener("click", () => { state.summary = null; go("#/words"); });
 }
 
@@ -929,15 +1002,28 @@ function distractors(w, n = 3) {
   return out.slice(0, n);
 }
 
-function makeQuestion(w) {
+function makeQuestion(w, mode = "mix") {
   if (!w) return null;
   const gloss = w.senses.map((s) => s.gloss).join("；");
-  const types = ["zh2en", "en2zh"];
-  if (hasTTS()) types.push("listen");
-  if (!w.word.includes(" ")) types.push("spell");
   const example = w.notes.find((n) => n.type === "例" && new RegExp(escapeReg(w.word), "i").test(n.text));
-  if (example) types.push("cloze");
-  const type = types[Math.floor(Math.random() * types.length)];
+  let type;
+  if (mode === "mix") {
+    const types = ["zh2en", "en2zh"];
+    if (hasTTS()) types.push("listen");
+    if (!w.word.includes(" ")) types.push("spell");
+    if (example) types.push("cloze");
+    type = types[Math.floor(Math.random() * types.length)];
+  } else if (mode === "spell" && !w.word.includes(" ")) {
+    type = "spell";
+  } else if (mode === "listen" && hasTTS()) {
+    type = "listen";
+  } else if (mode === "cloze" && example) {
+    type = "cloze";
+  } else if (mode === "en2zh") {
+    type = "en2zh";
+  } else {
+    type = "zh2en";
+  }
   const ds = distractors(w, 3);
 
   if (type === "en2zh") {
@@ -1001,12 +1087,12 @@ function renderQuiz(app) {
   const s = state.session;
   const w = state.byKey.get(s.queue[s.index]);
   if (!w) { finishSession(); return; }
-  if (!s.q) s.q = makeQuestion(w);
+  if (!s.q) s.q = makeQuestion(w, s.mode);
   const q = s.q;
   if (!q) { finishSession(); return; }
 
   const pct = Math.round((s.index / s.queue.length) * 100);
-  const label = { zh2en: "看中文选单词", en2zh: "看单词选中文", listen: "听音选词", spell: "拼写", cloze: "语境填空" }[q.type] || "练习";
+  const label = modeLabel(q.type);
 
   let prompt = "";
   if (q.type === "en2zh") {
@@ -1124,7 +1210,7 @@ function nextQuestion() {
   s.choice = undefined;
   s.spoken = false;
   if (s.index >= s.queue.length) { finishSession(); return; }
-  s.q = makeQuestion(state.byKey.get(s.queue[s.index]));
+  s.q = makeQuestion(state.byKey.get(s.queue[s.index]), s.mode);
   window.scrollTo(0, 0);
   renderRoute();
 }
@@ -1132,7 +1218,7 @@ function nextQuestion() {
 function finishSession() {
   const s = state.session;
   state.session = null;
-  state.summary = { correct: s.correct, wrong: s.wrong, total: s.queue.length };
+  state.summary = { correct: s.correct, wrong: s.wrong, total: s.queue.length, mode: s.mode };
   updateBadges();
   renderRoute();
 }
@@ -1239,7 +1325,7 @@ function loadData(md) {
   state.loaded = true;
   window.__cet = state;
   try { sessionStorage.setItem("cet4.md", md); } catch (e) { /* 忽略 */ }
-  if (!location.hash) history.replaceState(null, "", "#/words");
+  if (!location.hash) history.replaceState(null, "", "#/review");
   renderRoute();
   updateBadges();
 }
@@ -1291,12 +1377,6 @@ function installGlobalHandlers() {
       toast(markBtn.dataset.mark === "known" ? "标为认识" : markBtn.dataset.mark === "fuzzy" ? "标为模糊" : "标为不认识");
       updateBadges();
       renderRoute();
-      return;
-    }
-    const groupBtn = e.target.closest("[data-quiz-group]");
-    if (groupBtn) {
-      e.preventDefault();
-      startSession(groupBtn.dataset.quizGroup.split(",").filter((x) => state.byKey.has(x)));
       return;
     }
     const wordEl = e.target.closest("[data-word]");

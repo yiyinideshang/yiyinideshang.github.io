@@ -4,6 +4,8 @@
 > 补充行：`- 辨析: ...` `- 例: ...` `- 记: ...` `- 错: ...`
 > 详细说明见 README.md
 
+# A
+
 a variety of phr. 各种各样的：指多种不同的事物或选择
 
 abandon vt. 放弃；抛弃｜n. 放任,放纵 /əˈbæn.dən/ [族:abandon]
@@ -177,6 +179,8 @@ awake adj. 醒着的,v(使)醒来 awaken v(使)醒来,唤起,(使)意识到 /ə�
 
 awareness n. 认识，意识 /əˈwɛənəs/
 
+# B
+
 bachelor n. 单身汉，学士 /ˈbætʃ.ə.lə(r)/
 
 badge n. 勋章，徽章，象征 /bædʒ/
@@ -195,9 +199,9 @@ bathe n. 洗澡 /beɪð/
 
 be worthy of phr. 值得…的,应该获得…的
 
-beg v. 恳求,哀求,乞讨,行乞 /bɛɡ/
-
 beg of phr. 推辞,反悔
+
+beg v. 恳求,哀求,乞讨,行乞 /bɛɡ/
 
 behave v. 表现，运转 /bəˈheɪv/
 
@@ -236,6 +240,8 @@ brand n. 品牌，一种，一类｜v. 加污名于 /brand/
 budget n. 预算 /ˈbʌdʒ.ɪt/
 
 burden n. 负担，重担 /ˈbɜːdn/
+
+# C
 
 calm adj. 平静的，风平浪静的｜v. 使平静，使镇静｜n. 平静，冷静 /kam/
 
@@ -292,9 +298,9 @@ combat n. 战斗,搏斗；斗争，与…作斗争｜vt. 与…作斗争,打击,
 
 comment n./v. 评论,意见 /ˈkɒmɛnt/
 
-commit v. 承诺，犯（罪，错）忠于，致力于 /kəˈmɪt/
-
 commit to phr. 承诺，致力于，投入
+
+commit v. 承诺，犯（罪，错）忠于，致力于 /kəˈmɪt/
 
 communicate v. 通信,交流,交际,连接,相通,传达,传播 /kəˈmjuːnɪkeɪt/ [族:communicat]
 
@@ -402,6 +408,8 @@ current adj. 现代的，现行的，通用的，流行的，最近的｜n. 水�
 
 curve n. 曲线，弧线｜v. 使弯曲，使成曲线 /kɜːv/
 
+# D
+
 darkness n. 黑暗，邪恶，深色 /ˈdɑːknəs/
 
 dash n./v. 飞奔 /dæʃ/
@@ -501,6 +509,8 @@ drift v. 漂流，使漂浮｜n. 雪堆，水流，气流，主旨 /drɪft/
 dullness n. 乏味,昏暗 /ˈdʌl.nəs/
 
 dust n. 尘埃， 沙土，尘土｜v. 擦去…的灰尘 /dʌst/
+
+# E
 
 eager adj. 热切的.渴望的；热切的，渴望的，渴求的 /ˈiːɡə/ [族:eager]
 
@@ -615,9 +625,9 @@ explore v. 探索，探究，考察 /ɪkˈsplɔː/
 
 export n. 出口，输出 /ˈɛks.pɔːt/
 
-expose v. 暴露，使显露，使面临，使遭受，揭露，揭发｜n. 揭露，曝光 /ɪkˈspəʊz/
-
 expose to phr. 暴露于；使处于…的影响之下
+
+expose v. 暴露，使显露，使面临，使遭受，揭露，揭发｜n. 揭露，曝光 /ɪkˈspəʊz/
 
 extend vt. 延长,扩大,提供 /ɛkˈstɛnd/
 
@@ -632,6 +642,8 @@ extreme adj. 极大的，极度的，极端的，严重的｜n. （观点或行�
 extremely adv. 极度，非常 /ɪksˈtriːmli/ [族:extreme]
 
 extremist n. 极端主义者 /ɛkˈstriːmɪst/ [族:extrem]
+
+# F
 
 facility n. 设备,设施,特色功能 /fəˈsɪlɪti/
 
@@ -692,9 +704,9 @@ fluent adj. 流利的,流畅的 /ˈfluːənt/ [近:fluid]
 
 fluid n. 流体，液体｜adj. 液体的，流体的，易变的，不稳定的 /ˈfluːɪd/ [近:fluent]
 
-focus v. 集中于｜n. 焦点,中心,焦距 /ˈfəʊ.kəs/ [近:concentrate]
-
 focus on phr. 专注于，集中
+
+focus v. 集中于｜n. 焦点,中心,焦距 /ˈfəʊ.kəs/ [近:concentrate]
 
 fold v. 折叠，对折，包，裹，倒闭，停摆｜vi. 倒闭,停演｜n. 褶(层)；褶皱 /fəʊld/
 
@@ -739,6 +751,8 @@ furthermore adv. 而且,此外,再者 /ˈfɜː(r).ðə(r).mɔː(r)/
 
 future n. 将来,将来的事,前途｜adj. 将来的,未来的 /ˈfjuːt͡ʃə/
 
+# G
+
 gain vt. 获得,赢得,增加｜v. 赢得，获得，受益｜n. 增值,好处,利润；增加，好处，利润 /ɡeɪn/
 
 gap n. 缝隙，缺口；（时间上的）间隔；空白，缺漏；隔阂，差距 /ɡæp/
@@ -770,6 +784,8 @@ grasp vt. 抓紧,理解｜n. 理解力｜n./v. 抓紧，理解 /ɡrɑːsp/ [混:
 grown adj. 成年的，成熟的 /ɡrəʊn/
 
 guide v. 带领，引导，指导，影响｜n. 指南，手册，导游，向导 /ɡaɪd/
+
+# H
 
 habitat n. 栖息地 /ˈhæbɪtæt/
 
@@ -814,6 +830,8 @@ huge adj. 庞大的，极大的 /[hʊudʒ]/
 humble adj. 谦逊的，卑微的 /ˈhʌmbəl/
 
 hunger n. 饥饿，渴望 /ˈhʌŋɡə/ [近:appetite,desire]
+
+# I
 
 immediate adj. 立刻的，即时的，目前的，紧迫的 /ɪˈmiːdɪət/
 
@@ -899,9 +917,15 @@ issue n. 问题；流出；期号；发行物｜vt. 发行，发布；发给；�
 
 item n. 一件物品，项目，一篇报道 /[ˈaɪ̯ɾm̩]/
 
+# J
+
 journal n. 期刊,杂志,报纸,日志,日记 /ˈd͡ʒɜːnəl/
 
+# K
+
 keen adj. 渴望的,热情的,对…着迷的,灵敏的 /kiːn/ [近:acute,sharp]
+
+# L
 
 labor cost phr. 劳动力成本，人工成本
 
@@ -919,9 +943,9 @@ latter adj. 后者的，后期的 /ˈlæt̬.ər/ [混:later]
 
 laziness n. 懒惰
 
-lead v. 引导，领导，指挥，导致，促使｜n. 领先地位，导语，导线 /lɛd/
-
 lead to phr. 导致
+
+lead v. 引导，领导，指挥，导致，促使｜n. 领先地位，导语，导线 /lɛd/
 
 league n. 联盟，同盟 /liːɡ/
 
@@ -977,6 +1001,8 @@ lump n. 块，方糖 /lʌmp/
 
 lunar adj. 月球的，月亮的，阴历的 /ˈl(j)uːnə/
 
+# M
+
 maintain v. 保持，维持，维修，保养，主张，赡养，抚养 /meɪnˈteɪn/
 
 mall n. 购物中心,商场 /mɔːl/
@@ -1031,6 +1057,8 @@ multiple adj. 多个的，多种的｜n. 倍数 /ˈmʌltɪpl̩/
 
 mutual adj. 相互的，彼此的 /ˈmjuːt͡ʃuəl/
 
+# N
+
 nap n. 小睡，小盹 /nap/
 
 nasty adj. 不友善的,糟糕的,严重的,下流的 /ˈnaː.sti/
@@ -1048,6 +1076,8 @@ noticeable adj. 容易注意到的,明显的 /ˈnəʊtɪsəbl̩/
 nourish v. 给…提供营养 /ˈnʌr.ɪʃ/
 
 nuisance n. 讨厌的人,麻烦的事 /ˈnjuːsəns/
+
+# O
 
 observe v. 观察,注视｜vt. 注意到,遵守 /əbˈzɝv/
 
@@ -1106,6 +1136,8 @@ output n. 产量，输出量 /ˈaʊtpʊt/
 overenthusiasm adj. 过分热情的
 
 overwhelm n. 是不知所措，击败 /ˌovɚˈʍɛlm/
+
+# P
 
 pan n. 平底锅 /pæn/
 
@@ -1250,6 +1282,8 @@ provoke v. 激起，引起，激励，刺激，挑衅，激怒 /prəˈvəʊk/
 
 publish v. 出版，刊登，发表 /ˈpʌblɪʃ/
 
+# R
+
 racial adj. 种族间的,种族的,人种的 /ˈreɪʃəl/
 
 raid n. 突然袭击，抢劫 /reɪd/
@@ -1359,6 +1393,8 @@ rude adj. 粗鲁的 /rʉːd/
 
 rust n./v. 锈，铁锈，生锈 /rʌst/
 
+# S
+
 same adj. 同一的，一模一样的，独一无二的人或物；上述的 /seɪm/
 
 scar n. 伤疤,(精神)创伤 /skɑː(r)/
@@ -1458,10 +1494,10 @@ stem n. 秆，茎 /stɛm/
 
 stereotype n. 成见,刻板印象｜vt. 对…有成见 /ˈstɛ.ri.əˌtaɪp/
 
+stick to phr. 坚持：继续做或使用（某事物）；不改变（决定、信念等）
+
 stick v. 刺入，插入，粘住，随手放置，卡住，被接受｜n. 枝条 /stɪk/ [混:strike]
 - 变形: stuck
-
-stick to phr. 坚持：继续做或使用（某事物）；不改变（决定、信念等）
 
 still adv. 仍然，还，依旧，尽管如此｜adj. 静止的，不动的，宁静的 /stɪl/
 
@@ -1505,9 +1541,9 @@ superior adj. 更好的，级别更高的 /suːˈpɪəri.ə(r)/
 
 support vt. 支持,资助,养活,证实｜n. 支持,资助,支撑物 /səˈpɔːt/
 
-suppose v. 假定，假设，认为，猜想｜vt. 假定,假设 /səˈpəʊz/ [近:assume]
-
 suppose to phr. 认为是…
+
+suppose v. 假定，假设，认为，猜想｜vt. 假定,假设 /səˈpəʊz/ [近:assume]
 
 supreme adj. 至高无上的，最高的，程度上最大的 /ˌs(j)uːˈpriːm/
 
@@ -1528,6 +1564,8 @@ swing v. 摆动,改变｜n. 摆力,改变,秋千 /ˈswɪŋ/
 system n. 系统，体系，制度 /ˈsɪstəm/ [族:system]
 
 systemic adj. 有系统的，有条理的，仔细周到的 [族:system]
+
+# T
 
 tactic n. 策略,手段 /ˈtæktɪk/
 
@@ -1609,6 +1647,8 @@ tuition n. 讲授,教学,学费 /ˈtjuːʃən/
 
 tune n. 曲子,曲调｜vt. 调音,调频道
 
+# U
+
 unconquerable adj. 不可战胜的
 
 undergo v. 经历，经受 /ˌʌndəˈɡəʊ/
@@ -1628,6 +1668,8 @@ undertake v. 承担，从事，承诺，答应 /ʌndəˈteɪk/
 unethical adj. 不道德的
 
 upper adj. 上面的,上部的,上游的 /ˈʌpə/
+
+# V
 
 vain adj. 徒劳的，自负的，虚荣的 /veɪn/
 
@@ -1650,6 +1692,8 @@ vision n. 视力，视野，远见 /ˈvɪ.ʒ(ə)n/
 vital adj. 极其重要的,充满活力的 /ˈvaɪt̬əl/ [近:critical,crucial,essential,indispensable]
 
 volume n. 体积，容积，量，音量，卷，册 /ˈvɒl.juːm/
+
+# W
 
 wake v. 醒,唤醒 /ˈweɪk/
 

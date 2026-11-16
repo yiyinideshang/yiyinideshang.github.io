@@ -663,7 +663,13 @@ def render(words: dict[str, dict]) -> str:
         "> 详细说明见 README.md",
         "",
     ]
+    current_letter = None
     for key in sorted(words):
+        letter = key[0].upper() if key[0].isalpha() else "Other"
+        if letter != current_letter:
+            out.append(f"# {letter}")
+            out.append("")
+            current_letter = letter
         e = words[key]
         tags = []
         if e["tags"]["族"]:

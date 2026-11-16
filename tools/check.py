@@ -25,8 +25,14 @@ def main() -> None:
     lines = WORDS.read_text(encoding="utf-8").splitlines()
     entries = []
     bad = []
+    heading = None
+    wrong_heading = []
     for line in lines:
         s = line.strip()
+        m = re.fullmatch(r"#\s*([A-Z])", s)
+        if m:
+            heading = m.group(1)
+            continue
         if not s or s.startswith(("#", ">", "-", "<!--", "|")):
             continue
         r = split_line(s)
@@ -41,6 +47,8 @@ def main() -> None:
             "ipa": ipa,
             "tags": tag_map,
         })
+        if heading and word and word[0].upper() != heading:
+            wrong_heading.append((word, heading))
 
     keys = [e["word"].lower() for e in entries]
     dup = {k: n for k, n in Counter(keys).items() if n > 1}
@@ -67,6 +75,7 @@ def main() -> None:
     print(f"缺词性：{len(no_pos)}")
     print(f"缺音标：{len(no_ipa)}")
     print(f"待补释义：{len(todo)}")
+    print(f"字母分组放错：{len(wrong_heading)}")
     print(f"超长释义（>100 字）：{len(long_gloss)}")
 
     if bad:
@@ -88,12 +97,16 @@ def main() -> None:
     if todo:
         print("\n[待补释义]")
         print("  " + ", ".join(todo[:40]))
+    if wrong_heading:
+        print("\n[字母分组放错]")
+        for w, h in wrong_heading[:30]:
+            print(f"  {w} 放在 # {h} 下")
     if long_gloss:
         print("\n[超长释义]")
         for w, n in sorted(long_gloss, key=lambda x: -x[1])[:20]:
             print(f"  {w}: {n} 字")
 
-    errors = len(bad) + len(dup) + len(self_ref) + len(todo)
+    errors = len(bad) + len(dup) + len(self_ref) + len(todo) + len(wrong_heading)
     if "--strict" in sys.argv and errors:
         sys.exit(1)
 
