@@ -2,7 +2,7 @@
 
 一个按**词族**和**易混组**组织的四级单词复习网页。一个词只存一条，关系写在数据里，视图和测验自动生成。
 
-当前词库：**832 词**，25 个易混组，64 个词族，29 个近义组。
+当前词库：**1183 词**，25 个易混组，145 个词族，29 个近义组。
 
 - 词库源文件：`words.md`（你只改这一个文件）
 - 应用：`index.html` + `app.js` + `style.css`
@@ -131,7 +131,7 @@ git push origin main
 - 或在 GitHub Desktop 里点一下 Push
 - 或者用 `git push` 手动推
 
-> 只改 `words.md` 不需要动版本号。改 `app.js` / `style.css` / `index.html` 时，把 `index.html` 里的 `?v=20` 和 `sw.js` 里的 `cet4-v20` 各加 1，否则手机可能继续用旧缓存。
+> 只改 `words.md` 不需要动版本号。改 `app.js` / `style.css` / `index.html` 时，把 `index.html` 里的 `?v=22` 和 `sw.js` 里的 `cet4-v22` 各加 1，否则手机可能继续用旧缓存。
 
 ---
 

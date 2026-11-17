@@ -841,7 +841,7 @@ function renderRelations(app) {
     ` : ""}
     ${tab === "family" ? `
       <div class="section-title">词族</div>
-      <div class="grid">${state.families.slice(0, 80).map(familyCard).join("") || `<div class="panel">还没有词族。</div>`}</div>
+      <div class="grid">${state.families.map(familyCard).join("") || `<div class="panel">还没有词族。</div>`}</div>
     ` : ""}
     ${tab === "syn" ? `
       <div class="section-title">近义组</div>
