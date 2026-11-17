@@ -863,7 +863,7 @@ function renderReview(app) {
       <button class="mode-btn" data-mode="zh2en" ${due + fresh === 0 ? "disabled" : ""}>看中文选单词</button>
       <button class="mode-btn" data-mode="en2zh" ${due + fresh === 0 ? "disabled" : ""}>看单词选中文</button>
     </div>
-    <p class="mode-hint">混合复习：${MIX_WORDS} 个词，按 看单词选中文 → 看中文选单词 → 听音选词 → 拼写 各过一遍；拼写跳过短语。</p>
+    <p class="mode-hint">混合复习：${MIX_WORDS} 个词，按 看单词选中文 → 看中文选单词 → 听音选词 → 拼写 各过一遍；拼写跳过短语，拼错排到队尾重拼，首次拼对才算掌握。</p>
     <div class="section-title">最近 7 天</div>
     <div class="week-bars">${week.map((x) => `<div class="week-bar ${x.today ? "today" : ""}"><b>${x.n || ""}</b><i style="height:${Math.max(3, Math.min(100, (x.n / maxN) * 100))}%"></i><span>${x.label}</span></div>`).join("")}</div>
     <div class="section-title">设置</div>
@@ -964,6 +964,7 @@ function startSession(customQueue, mode = "mix") {
     index: 0, correct: 0, wrong: 0,
     answered: false, q: null, ok: null, choice: undefined, spoken: false,
     mode,
+    spellFailed: new Set(),
   };
   state.session.q = makeQuestion(state.byKey.get(queue[0]), modes[0]);
   go("#/review");
@@ -1152,6 +1153,7 @@ function renderQuiz(app) {
           <span class="or-gloss">${esc(ow.senses.map((x) => x.gloss).join("；"))}</span>
         </a>`;
       }).join("")}</div>` : ""}
+      ${s.mode === "mix" && s.modes && s.modes[s.index] === "spell" ? `<p class="spell-note ${s.ok ? "ok" : "retry"}">${s.ok ? (!s.spellFailed?.has(w.word) ? "首次拼写正确，已标记为掌握。" : "拼写正确，已通过（这个词之前拼错过，不算首次掌握）。") : "拼写错误，已排到队尾，稍后再拼，直到拼对为止。"}</p>` : ""}
       <div class="actions"><button class="btn primary block" id="next-q">${s.index + 1 >= s.queue.length ? "看结果" : "下一个"}</button></div>
     </div>`;
   }
@@ -1218,11 +1220,30 @@ function answerSpell() {
   const input = $("#spell-input");
   const val = (input?.value || "").trim().toLowerCase();
   const ok = val === w.word.toLowerCase();
+  const isMixSpell = s.mode === "mix" && s.modes && s.modes[s.index] === "spell";
+  const firstSpell = isMixSpell && !(s.spellFailed && s.spellFailed.has(w.word));
+
   s.answered = true;
   s.ok = ok;
   s.choice = val;
   if (ok) s.correct += 1; else s.wrong += 1;
   gradeWord(w.word, ok);
+
+  if (isMixSpell && ok && firstSpell) {
+    const p = getP(w.word);
+    if (p) {
+      p.box = 5;
+      p.due = addDays(todayStr(), 14);
+      saveProgress();
+    }
+  }
+  if (isMixSpell && !ok) {
+    if (!s.spellFailed) s.spellFailed = new Set();
+    s.spellFailed.add(w.word);
+    s.queue.push(w.word);
+    s.modes.push("spell");
+  }
+
   updateBadges();
   renderRoute();
 }
