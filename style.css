@@ -300,6 +300,15 @@ svg { display: block; }
 }
 .review-hero h1 { margin: 0; font-family: var(--serif); font-size: 28px; }
 .review-hero p { margin: 4px 0 0; color: var(--muted); font-size: 13.5px; }
+.review-hero p.review-done {
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 600;
+}
 .review-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0 18px; }
 .stat { background: var(--surface-2); border-radius: 12px; padding: 10px; text-align: center; border: 1px solid transparent; }
 .stat[data-stat], .stat[data-rel] { cursor: pointer; font: inherit; color: inherit; appearance: none; }

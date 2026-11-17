@@ -310,15 +310,19 @@ function markWord(word, level) {
 function reviewTarget() {
   return Math.max(1, Math.min(200, Math.round(Number(state.progress.settings.dailyReview) || DEFAULT_REVIEW)));
 }
+function dailyRemaining() {
+  return Math.max(0, reviewTarget() - todayWordCount());
+}
 function getQueue() {
-  const target = reviewTarget();
+  const remain = dailyRemaining();
+  if (remain <= 0) return [];
   const due = dueWords().sort((a, b) => {
     const pa = getP(a.word), pb = getP(b.word);
     return pa.due.localeCompare(pb.due) || (pa.box - pb.box) || a.word.localeCompare(b.word);
   });
-  const picked = due.slice(0, target);
-  if (picked.length < target) {
-    picked.push(...shuffle(newWords()).slice(0, target - picked.length));
+  const picked = due.slice(0, remain);
+  if (picked.length < remain) {
+    picked.push(...shuffle(newWords()).slice(0, remain - picked.length));
   }
   return picked;
 }
@@ -872,6 +876,10 @@ function renderReview(app) {
   const todayMastered = todayMasteredCount();
   const streak = state.progress.streak?.count || 0;
   const dailyReview = reviewTarget();
+  const remain = dailyRemaining();
+  const doneToday = remain === 0;
+  const noWords = due + fresh === 0;
+  const blocked = doneToday || noWords;
   const presets = [20, 30, 40, 50];
   const isPreset = presets.includes(dailyReview);
   const week = last7();
@@ -880,19 +888,20 @@ function renderReview(app) {
   app.innerHTML = `<div class="review-hero">
     <h1>${greeting()}</h1>
     <p>到期 ${due} 个，未学 ${fresh} 个。今天复习 ${todayCount} 个词，掌握 ${todayMastered} 个。</p>
+    ${doneToday ? `<p class="review-done">今天已完成 ${todayCount}/${dailyReview} 个词${due > 0 ? `，还有 ${due} 个到期词明天继续` : "，明天再来"}。</p>` : ""}
     <div class="review-stats">
       <button class="stat" data-stat="due"><b>${due}</b><span>今日到期</span></button>
       <button class="stat" data-stat="todayLearned"><b>${todayCount}/${dailyReview}</b><span>今日复习</span></button>
       <button class="stat" data-stat="streak"><b>${streak}</b><span>连续天数</span></button>
     </div>
-    <button class="btn primary block" id="start-review" data-mode="mix" ${due + fresh === 0 ? "disabled" : ""}>${due + fresh === 0 ? "今天清完了" : "混合复习"}</button>
+    <button class="btn primary block" id="start-review" data-mode="mix" ${blocked ? "disabled" : ""}>${doneToday ? "今日已完成" : noWords ? "今天清完了" : "混合复习"}</button>
     <div class="mode-grid">
-      <button class="mode-btn" data-mode="listen" ${due + fresh === 0 ? "disabled" : ""}>听音选词</button>
-      <button class="mode-btn" data-mode="spell" ${due + fresh === 0 ? "disabled" : ""}>拼写</button>
-      <button class="mode-btn" data-mode="zh2en" ${due + fresh === 0 ? "disabled" : ""}>看中文选单词</button>
-      <button class="mode-btn" data-mode="en2zh" ${due + fresh === 0 ? "disabled" : ""}>看单词选中文</button>
+      <button class="mode-btn" data-mode="listen" ${blocked ? "disabled" : ""}>听音选词</button>
+      <button class="mode-btn" data-mode="spell" ${blocked ? "disabled" : ""}>拼写</button>
+      <button class="mode-btn" data-mode="zh2en" ${blocked ? "disabled" : ""}>看中文选单词</button>
+      <button class="mode-btn" data-mode="en2zh" ${blocked ? "disabled" : ""}>看单词选中文</button>
     </div>
-    <p class="mode-hint">混合复习：每次 ${dailyReview} 个词（先取今日到期，不够再补未学新词），按 看单词选中文 → 看中文选单词 → 听音选词 → 拼写 各过一遍；拼写跳过短语，拼错排到队尾重拼，首次拼对才算掌握。</p>
+    <p class="mode-hint">${doneToday ? `今天的 ${dailyReview} 个词已完成，明天再来。` : `混合复习：本次最多 ${Math.min(dailyReview, remain)} 个词（先取今日到期，不够再补未学新词），按 看单词选中文 → 看中文选单词 → 听音选词 → 拼写 各过一遍；拼写跳过短语，拼错排到队尾重拼，首次拼对才算掌握。`}</p>
     <div class="section-title">最近 7 天</div>
     <div class="week-bars">${week.map((x) => `<div class="week-bar ${x.today ? "today" : ""}"><b>${x.n || ""}</b><i style="height:${Math.max(3, Math.min(100, (x.n / maxN) * 100))}%"></i><span>${x.label}</span></div>`).join("")}</div>
     <div class="section-title">设置</div>
@@ -946,6 +955,10 @@ function last7() {
 }
 
 function startSession(customQueue, mode = "mix") {
+  if (dailyRemaining() <= 0) {
+    toast(`今天已完成 ${todayWordCount()}/${reviewTarget()} 个词，明天再来`);
+    return;
+  }
   const base = (customQueue && customQueue.length ? customQueue : getQueue())
     .map((x) => (typeof x === "string" ? state.byKey.get(x) : x))
     .filter(Boolean);
@@ -984,7 +997,7 @@ function startSession(customQueue, mode = "mix") {
   }
 
   if (!queue.length) {
-    toast(mode === "spell" ? "没有可拼写的单词" : "今天没有到期词，去词库加几个新词吧");
+    toast(mode === "spell" ? "没有可拼写的单词" : "今天没有可复习的词了");
     return;
   }
 
@@ -1004,20 +1017,29 @@ function startSession(customQueue, mode = "mix") {
 
 function renderSummary(app) {
   const s = state.summary;
+  const remain = dailyRemaining();
+  const doneToday = remain === 0;
+  const todayCount = todayWordCount();
+  const dailyReview = reviewTarget();
   app.innerHTML = `<div class="review-hero">
     <h1>${esc(modeLabel(s.mode))}完成</h1>
     <p>共 ${s.total} 个，对 ${s.correct}，错 ${s.wrong}。</p>
+    ${doneToday ? `<p class="review-done">今天已完成 ${todayCount}/${dailyReview} 个词，明天再来。</p>` : `<p>今天还可复习 ${remain} 个词。</p>`}
     <div class="review-stats">
       <div class="stat"><b>${s.correct}</b><span>答对</span></div>
       <div class="stat"><b>${s.wrong}</b><span>答错</span></div>
       <div class="stat"><b>${Math.round((s.correct / Math.max(1, s.total)) * 100)}%</b><span>正确率</span></div>
     </div>
     <div class="actions">
-      <button class="btn primary block" id="again">再来一组</button>
+      <button class="btn primary block" id="again" ${doneToday ? "disabled" : ""}>${doneToday ? "今日已完成" : "再来一组"}</button>
       <button class="btn block" id="to-words">回词库</button>
     </div>
   </div>`;
-  $("#again").addEventListener("click", () => { state.summary = null; startSession(null, s.mode); });
+  $("#again").addEventListener("click", () => {
+    if (dailyRemaining() <= 0) { toast(`今天已完成 ${todayWordCount()}/${reviewTarget()} 个词，明天再来`); return; }
+    state.summary = null;
+    startSession(null, s.mode);
+  });
   $("#to-words").addEventListener("click", () => { state.summary = null; go("#/words"); });
 }
 
@@ -1238,6 +1260,7 @@ function answerChoice(choice) {
   s.answered = true;
   s.ok = ok;
   s.choice = choice;
+  if (hasTTS()) speak(w.word);
   if (ok) s.correct += 1; else s.wrong += 1;
   gradeWord(w.word, ok);
   updateBadges();
@@ -1257,6 +1280,7 @@ function answerSpell() {
   s.answered = true;
   s.ok = ok;
   s.choice = val;
+  if (hasTTS()) speak(w.word);
   if (ok) s.correct += 1; else s.wrong += 1;
   gradeWord(w.word, ok);
 
@@ -1299,6 +1323,7 @@ function finishSession() {
   state.summary = { correct: s.correct, wrong: s.wrong, total: s.queue.length, mode: s.mode };
   updateBadges();
   renderRoute();
+  if (dailyRemaining() === 0) toast(`今日已完成 ${todayWordCount()}/${reviewTarget()} 个词`);
 }
 
 // ---------------------------------------------------------------------------
