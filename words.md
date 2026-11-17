@@ -16,9 +16,9 @@ ability n. 能力,才能,本领 /əˈ.bɪl.ɪ.ti/ [近:capacity]
 
 abnormal adj. 反常的，异常的，变态的；不规则的 /əbˈnɔr.ml̩/
 
-absence n. 缺席，缺勤，缺乏 /ˈæb.s(ə)n̩s/
+absence n. 缺席，缺勤，缺乏 /ˈæb.s(ə)n̩s/ [族:absent]
 
-absent adj. 缺勤的，缺席的，不存在的，心不在焉的｜v. 缺席，离开 /ˈæb.sn̩t/
+absent adj. 缺勤的，缺席的，不存在的，心不在焉的｜v. 缺席，离开 /ˈæb.sn̩t/ [族:absent]
 
 abundant adj. 大量的,丰富的,充足的 /əˈbʌn.dn̩t/
 
