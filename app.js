@@ -189,7 +189,7 @@ const state = {
   wordCurrent: null,
   wordBack: false,
   relTab: "mix",
-  list: { q: "", filter: "all", sort: "alpha", limit: 80, letter: "" },
+  list: { q: "", filter: "all", sort: "alpha", letter: "" },
 };
 
 // ---------------------------------------------------------------------------
@@ -569,16 +569,12 @@ function renderWords(app) {
       </div>
     </div>
     <div id="word-list" class="grid"></div>
-    <div style="text-align:center;margin:18px 0">
-      <button class="btn" id="load-more">显示更多</button>
-    </div>
   `;
   $("#sort").value = state.list.sort;
   $("#filters").addEventListener("click", (e) => {
     const b = e.target.closest("[data-filter]");
     if (!b) return;
     state.list.filter = b.dataset.filter;
-    state.list.limit = 80;
     $$("#filters .filter").forEach((x) => x.classList.toggle("active", x.dataset.filter === state.list.filter));
     renderWordList();
   });
@@ -586,17 +582,12 @@ function renderWords(app) {
     const b = e.target.closest("[data-letter]");
     if (!b || b.disabled) return;
     state.list.letter = b.dataset.letter;
-    state.list.limit = 80;
     $$("#letter-bar .letter").forEach((x) => x.classList.toggle("active", x.dataset.letter === state.list.letter));
     window.scrollTo(0, 0);
     renderWordList();
   });
   $("#sort").addEventListener("change", (e) => {
     state.list.sort = e.target.value;
-    renderWordList();
-  });
-  $("#load-more").addEventListener("click", () => {
-    state.list.limit += 80;
     renderWordList();
   });
   renderWordList();
@@ -647,19 +638,16 @@ function renderWordList() {
 
   const count = $("#result-count");
   if (count) count.textContent = `${state.list.letter ? state.list.letter + " · " : ""}${list.length} 词`;
-  const shown = list.slice(0, state.list.limit);
   const box = $("#word-list");
   if (box) {
-    if (!shown.length) {
+    if (!list.length) {
       box.innerHTML = `<div class="panel" style="grid-column:1/-1">没有匹配的词。换个关键词或筛选。</div>`;
     } else {
       box.innerHTML = state.list.sort === "alpha"
-        ? groupedWordCards(shown)
-        : shown.map(wordCard).join("");
+        ? groupedWordCards(list)
+        : list.map(wordCard).join("");
     }
   }
-  const more = $("#load-more");
-  if (more) more.style.display = list.length > state.list.limit ? "" : "none";
 }
 
 function wordCard(w) {
@@ -1453,7 +1441,6 @@ function setupTopSearch() {
   const apply = () => {
     state.list.q = input.value.trim();
     state.list.letter = "";
-    state.list.limit = 80;
     if (currentRoute().tab !== "words") {
       location.hash = "#/words";
     } else if ($("#word-list")) {
