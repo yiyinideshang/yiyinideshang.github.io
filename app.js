@@ -1137,7 +1137,7 @@ function renderQuiz(app) {
   if (s.answered) {
     feedback = `<div class="feedback">
       <h3 class="${s.ok ? "ok" : "no"}">${s.ok ? "对了" : "再看一眼"}</h3>
-      <div class="word-line"><strong>${esc(w.word)}</strong>${w.ipa ? `<span class="ipa">${esc(w.ipa)}</span>` : ""}<button class="icon-btn" data-speak="${esc(w.word)}" aria-label="朗读">${icon("speaker")}</button><button class="chip-btn" data-word="${esc(w.word)}">查看词条</button></div>
+      <div class="word-line"><strong>${esc(w.word)}</strong>${w.ipa ? `<span class="ipa">${esc(w.ipa)}</span>` : ""}<button class="icon-btn" data-speak="${esc(w.word)}" aria-label="朗读">${icon("speaker")}</button><a class="chip-btn" href="#/w/${encodeURIComponent(w.word)}" target="_blank" rel="noopener" title="在新窗口打开词条">查看词条</a></div>
       <div class="sense-list" style="margin:8px 0">${w.senses.map((x) => `<div class="sense">${x.pos ? `<span class="pos">${esc(x.pos)}</span>` : ""}<span>${esc(x.gloss)}</span></div>`).join("")}</div>
       ${w.notes.map((n) => `<div class="note-block"><span class="note-label ${esc(n.type)}">${esc(n.type)}</span>${esc(n.text)}</div>`).join("")}
       ${q.options.length ? `<div class="section-title">选项解析</div><div class="option-review">${q.options.map((o) => {
@@ -1145,12 +1145,12 @@ function renderQuiz(app) {
         if (!ow) return "";
         const isCorrect = String(o.key) === String(q.answer);
         const isChoice = String(o.key) === String(s.choice);
-        return `<button class="option-review-row ${isCorrect ? "correct" : ""} ${isChoice && !isCorrect ? "wrong" : ""}" data-word="${esc(ow.word)}">
+        return `<a class="option-review-row ${isCorrect ? "correct" : ""} ${isChoice && !isCorrect ? "wrong" : ""}" href="#/w/${encodeURIComponent(ow.word)}" target="_blank" rel="noopener" title="在新窗口打开词条">
           <span class="or-word">${esc(ow.word)}</span>
           ${ow.ipa ? `<span class="or-ipa">${esc(ow.ipa)}</span>` : ""}
           ${isCorrect ? `<span class="or-badge">答案</span>` : ""}
           <span class="or-gloss">${esc(ow.senses.map((x) => x.gloss).join("；"))}</span>
-        </button>`;
+        </a>`;
       }).join("")}</div>` : ""}
       <div class="actions"><button class="btn primary block" id="next-q">${s.index + 1 >= s.queue.length ? "看结果" : "下一个"}</button></div>
     </div>`;
