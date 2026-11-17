@@ -1319,7 +1319,7 @@ function statWordList(words, metaFn) {
     const meta = metaFn ? metaFn(w) : "";
     return `<div class="kv stat-row" data-word="${esc(w.word)}">
       <span><strong>${esc(w.word)}</strong>${w.ipa ? ` <span class="ipa">${esc(w.ipa)}</span>` : ""}</span>
-      <span class="stat-row-right">${esc(shortGloss(w.senses.map((s) => s.gloss).join("；"), 28))}${meta ? `<br><span class="stat-meta">${esc(meta)}</span>` : ""}</span>
+      <span class="stat-row-right">${esc(shortGloss(w.senses.map((s) => s.gloss).join("；"), 28))}${meta ? `<br><span class="stat-meta">${meta}</span>` : ""}</span>
     </div>`;
   }).join("");
   return out + (words.length > 300 ? `<p class="stat-empty">只显示前 300 个，共 ${words.length} 个。</p>` : "");
@@ -1334,9 +1334,10 @@ function showStat(key) {
   const masteryRate = todayMasteryRate();
   const meta = (w) => {
     const p = getP(w.word) || {};
+    const box = p.box || 0;
     const parts = [];
-    if (p.box) parts.push("盒 " + p.box);
-    parts.push((p.box || 0) >= 4 ? "已掌握" : "未掌握");
+    if (box) parts.push("盒 " + box);
+    parts.push(box >= 4 ? `<span class="mastery-ok">已掌握</span>` : `<span class="mastery-bad">未掌握</span>`);
     if (p.due) parts.push("下次 " + p.due);
     return parts.join(" · ");
   };
