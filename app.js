@@ -1006,22 +1006,23 @@ function makeQuestion(w, mode = "mix") {
 
   if (type === "en2zh") {
     const correct = shortGloss(gloss, 42);
-    const labels = [correct];
+    const labels = [{ label: correct, word: w.word }];
     for (const d of ds) {
-      const g = shortGloss(state.byKey.get(d)?.senses.map((s) => s.gloss).join("；") || "", 42);
-      if (g && !labels.includes(g)) labels.push(g);
+      const dw = state.byKey.get(d);
+      const g = shortGloss(dw?.senses.map((s) => s.gloss).join("；") || "", 42);
+      if (g && !labels.some((x) => x.label === g)) labels.push({ label: g, word: d });
     }
     if (labels.length < 4) {
       for (const x of shuffle(state.words)) {
         const g = shortGloss(x.senses.map((s) => s.gloss).join("；") || "", 42);
-        if (g && !labels.includes(g)) labels.push(g);
+        if (g && !labels.some((y) => y.label === g)) labels.push({ label: g, word: x.word });
         if (labels.length >= 4) break;
       }
     }
     return {
       type,
       prompt: w.word,
-      options: shuffle(labels.map((g) => ({ key: g, label: g }))),
+      options: shuffle(labels.map((x) => ({ key: x.label, label: x.label, word: x.word }))),
       answer: correct,
     };
   }
@@ -1036,7 +1037,7 @@ function makeQuestion(w, mode = "mix") {
     return {
       type,
       prompt: sentence,
-      options: shuffle([w.word, ...ds]).map((x) => ({ key: x, label: x })),
+      options: shuffle([w.word, ...ds]).map((x) => ({ key: x, label: x, word: x })),
       answer: w.word,
     };
   }
@@ -1045,7 +1046,7 @@ function makeQuestion(w, mode = "mix") {
     return {
       type,
       prompt: "",
-      options: shuffle([w.word, ...ds]).map((x) => ({ key: x, label: x })),
+      options: shuffle([w.word, ...ds]).map((x) => ({ key: x, label: x, word: x })),
       answer: w.word,
     };
   }
@@ -1053,7 +1054,7 @@ function makeQuestion(w, mode = "mix") {
   return {
     type: "zh2en",
     prompt: shortGloss(gloss, 60),
-    options: shuffle([w.word, ...ds]).map((x) => ({ key: x, label: x })),
+    options: shuffle([w.word, ...ds]).map((x) => ({ key: x, label: x, word: x })),
     answer: w.word,
   };
 }
@@ -1101,9 +1102,21 @@ function renderQuiz(app) {
   if (s.answered) {
     feedback = `<div class="feedback">
       <h3 class="${s.ok ? "ok" : "no"}">${s.ok ? "对了" : "再看一眼"}</h3>
-      <div class="word-line"><strong>${esc(w.word)}</strong>${w.ipa ? `<span class="ipa">${esc(w.ipa)}</span>` : ""}<button class="icon-btn" data-speak="${esc(w.word)}" aria-label="朗读">${icon("speaker")}</button></div>
+      <div class="word-line"><strong>${esc(w.word)}</strong>${w.ipa ? `<span class="ipa">${esc(w.ipa)}</span>` : ""}<button class="icon-btn" data-speak="${esc(w.word)}" aria-label="朗读">${icon("speaker")}</button><button class="chip-btn" data-word="${esc(w.word)}">查看词条</button></div>
       <div class="sense-list" style="margin:8px 0">${w.senses.map((x) => `<div class="sense">${x.pos ? `<span class="pos">${esc(x.pos)}</span>` : ""}<span>${esc(x.gloss)}</span></div>`).join("")}</div>
       ${w.notes.map((n) => `<div class="note-block"><span class="note-label ${esc(n.type)}">${esc(n.type)}</span>${esc(n.text)}</div>`).join("")}
+      ${q.options.length ? `<div class="section-title">选项解析</div><div class="option-review">${q.options.map((o) => {
+        const ow = state.byKey.get(o.word || o.key);
+        if (!ow) return "";
+        const isCorrect = String(o.key) === String(q.answer);
+        const isChoice = String(o.key) === String(s.choice);
+        return `<button class="option-review-row ${isCorrect ? "correct" : ""} ${isChoice && !isCorrect ? "wrong" : ""}" data-word="${esc(ow.word)}">
+          <span class="or-word">${esc(ow.word)}</span>
+          ${ow.ipa ? `<span class="or-ipa">${esc(ow.ipa)}</span>` : ""}
+          ${isCorrect ? `<span class="or-badge">答案</span>` : ""}
+          <span class="or-gloss">${esc(ow.senses.map((x) => x.gloss).join("；"))}</span>
+        </button>`;
+      }).join("")}</div>` : ""}
       <div class="actions"><button class="btn primary block" id="next-q">${s.index + 1 >= s.queue.length ? "看结果" : "下一个"}</button></div>
     </div>`;
   }
