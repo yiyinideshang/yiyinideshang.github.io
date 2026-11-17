@@ -205,17 +205,20 @@ const state = {
 const STORE = "cet4.progress.v1";
 const INTERVALS = [0, 1, 2, 4, 7, 14];
 const EXAM_DATE = "2026-12-12"; // 下次四级考试日期
-const MIX_WORDS = 15;
+const DEFAULT_REVIEW = 30;
 
 function freshProgress() {
-  return { v: 1, words: {}, days: {}, settings: { dailyNew: 30 }, streak: { last: null, count: 0 } };
+  return { v: 1, words: {}, days: {}, settings: { dailyReview: DEFAULT_REVIEW }, streak: { last: null, count: 0 } };
 }
 function migrateProgress(p) {
   if (!p || typeof p !== "object") return freshProgress();
   p.v = 1;
   p.words = p.words || {};
   p.days = p.days || {};
-  p.settings = Object.assign({ dailyNew: 30 }, p.settings || {});
+  const oldSettings = p.settings || {};
+  p.settings = Object.assign({}, oldSettings);
+  p.settings.dailyReview = Number(p.settings.dailyReview) || Number(oldSettings.dailyNew) || DEFAULT_REVIEW;
+  delete p.settings.dailyNew;
   p.streak = p.streak || { last: null, count: 0 };
   return p;
 }
@@ -304,15 +307,20 @@ function markWord(word, level) {
   state.progress.words[word] = p;
   saveProgress();
 }
+function reviewTarget() {
+  return Math.max(1, Math.min(200, Math.round(Number(state.progress.settings.dailyReview) || DEFAULT_REVIEW)));
+}
 function getQueue() {
+  const target = reviewTarget();
   const due = dueWords().sort((a, b) => {
     const pa = getP(a.word), pb = getP(b.word);
     return pa.due.localeCompare(pb.due) || (pa.box - pb.box) || a.word.localeCompare(b.word);
   });
-  const d = todayStats();
-  const remainNew = Math.max(0, (state.progress.settings.dailyNew || 30) - (d.new || 0));
-  const fresh = shuffle(newWords()).slice(0, remainNew);
-  return due.concat(fresh).slice(0, 60);
+  const picked = due.slice(0, target);
+  if (picked.length < target) {
+    picked.push(...shuffle(newWords()).slice(0, target - picked.length));
+  }
+  return picked;
 }
 
 // ---------------------------------------------------------------------------
@@ -860,13 +868,12 @@ function renderReview(app) {
 
   const due = dueWords().length;
   const fresh = newWords().length;
-  const d = todayStats();
   const todayCount = todayWordCount();
   const todayMastered = todayMasteredCount();
   const streak = state.progress.streak?.count || 0;
-  const dailyNew = Number(state.progress.settings.dailyNew) || 30;
+  const dailyReview = reviewTarget();
   const presets = [20, 30, 40, 50];
-  const isPreset = presets.includes(dailyNew);
+  const isPreset = presets.includes(dailyReview);
   const week = last7();
   const maxN = Math.max(1, ...week.map((x) => x.n));
 
@@ -875,7 +882,7 @@ function renderReview(app) {
     <p>到期 ${due} 个，未学 ${fresh} 个。今天复习 ${todayCount} 个词，掌握 ${todayMastered} 个。</p>
     <div class="review-stats">
       <button class="stat" data-stat="due"><b>${due}</b><span>今日到期</span></button>
-      <button class="stat" data-stat="todayLearned"><b>${d.new || 0}/${dailyNew}</b><span>今日已学</span></button>
+      <button class="stat" data-stat="todayLearned"><b>${todayCount}/${dailyReview}</b><span>今日复习</span></button>
       <button class="stat" data-stat="streak"><b>${streak}</b><span>连续天数</span></button>
     </div>
     <button class="btn primary block" id="start-review" data-mode="mix" ${due + fresh === 0 ? "disabled" : ""}>${due + fresh === 0 ? "今天清完了" : "混合复习"}</button>
@@ -885,41 +892,41 @@ function renderReview(app) {
       <button class="mode-btn" data-mode="zh2en" ${due + fresh === 0 ? "disabled" : ""}>看中文选单词</button>
       <button class="mode-btn" data-mode="en2zh" ${due + fresh === 0 ? "disabled" : ""}>看单词选中文</button>
     </div>
-    <p class="mode-hint">混合复习：${MIX_WORDS} 个词，按 看单词选中文 → 看中文选单词 → 听音选词 → 拼写 各过一遍；拼写跳过短语，拼错排到队尾重拼，首次拼对才算掌握。</p>
+    <p class="mode-hint">混合复习：每次 ${dailyReview} 个词（先取今日到期，不够再补未学新词），按 看单词选中文 → 看中文选单词 → 听音选词 → 拼写 各过一遍；拼写跳过短语，拼错排到队尾重拼，首次拼对才算掌握。</p>
     <div class="section-title">最近 7 天</div>
     <div class="week-bars">${week.map((x) => `<div class="week-bar ${x.today ? "today" : ""}"><b>${x.n || ""}</b><i style="height:${Math.max(3, Math.min(100, (x.n / maxN) * 100))}%"></i><span>${x.label}</span></div>`).join("")}</div>
     <div class="section-title">设置</div>
-    <label class="kv"><span>每天新词</span>
-      <span class="daily-new-row">
-        <select id="daily-new">
-          ${presets.map((n) => `<option value="${n}" ${n === dailyNew ? "selected" : ""}>${n}</option>`).join("")}
+    <label class="kv"><span>每天复习</span>
+      <span class="daily-review-row">
+        <select id="daily-review">
+          ${presets.map((n) => `<option value="${n}" ${n === dailyReview ? "selected" : ""}>${n}</option>`).join("")}
           <option value="custom" ${isPreset ? "" : "selected"}>自定义</option>
         </select>
-        <input id="daily-new-custom" type="number" min="1" max="200" value="${dailyNew}" ${isPreset ? "hidden" : ""} aria-label="自定义每天新词">
+        <input id="daily-review-custom" type="number" min="1" max="200" value="${dailyReview}" ${isPreset ? "hidden" : ""} aria-label="自定义每天复习词数">
       </span>
     </label>
   </div>`;
 
   $$("[data-mode]").forEach((b) => b.addEventListener("click", () => startSession(null, b.dataset.mode)));
-  $("#daily-new").addEventListener("change", (e) => {
+  $("#daily-review").addEventListener("change", (e) => {
     if (e.target.value === "custom") {
-      const inp = $("#daily-new-custom");
+      const inp = $("#daily-review-custom");
       inp.hidden = false;
       inp.focus();
       inp.select();
       return;
     }
-    state.progress.settings.dailyNew = +e.target.value;
+    state.progress.settings.dailyReview = +e.target.value;
     saveProgress();
     renderRoute();
   });
-  $("#daily-new-custom").addEventListener("change", (e) => {
-    const n = Math.max(1, Math.min(200, parseInt(e.target.value, 10) || 30));
-    state.progress.settings.dailyNew = n;
+  $("#daily-review-custom").addEventListener("change", (e) => {
+    const n = Math.max(1, Math.min(200, parseInt(e.target.value, 10) || DEFAULT_REVIEW));
+    state.progress.settings.dailyReview = n;
     saveProgress();
     renderRoute();
   });
-  $("#daily-new-custom").addEventListener("keydown", (e) => {
+  $("#daily-review-custom").addEventListener("keydown", (e) => {
     if (e.key === "Enter") { e.preventDefault(); e.target.blur(); }
   });
 }
@@ -951,7 +958,7 @@ function startSession(customQueue, mode = "mix") {
   let modes = [];
 
   if (mode === "mix") {
-    const words = base.slice(0, MIX_WORDS);
+    const words = base;
     const phases = ["en2zh", "zh2en", "listen", "spell"];
     for (const ph of phases) {
       if (ph === "listen" && !hasTTS()) continue;
@@ -1351,7 +1358,7 @@ function showStat(key) {
     return;
   }
   if (key === "todayLearned") {
-    openModal("今日已学", summary(`今天新学 ${d.new || 0} 个，复习 ${todayCount} 个词，掌握 ${todayMastered} 个（掌握率 ${masteryRate}%）。每天新词上限 ${state.progress.settings.dailyNew || 30}。`) + statWordList(todayList, meta));
+    openModal("今日复习", summary(`今天复习 ${todayCount} 个词（新学 ${d.new || 0} 个），掌握 ${todayMastered} 个（掌握率 ${masteryRate}%）。每天复习目标 ${reviewTarget()} 个。`) + statWordList(todayList, meta));
     return;
   }
   if (key === "streak") {
