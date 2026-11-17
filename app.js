@@ -1488,6 +1488,22 @@ function renderData(app) {
       </ul>
     </div>
     <div class="panel">
+      <h2>形近词 / 同尾词 / 同韵词怎么来的</h2>
+      <p>这三类由程序自动生成，不需要写标签，只在词条详情页展示；其中形近词还会参与选择题干扰项的抽取。</p>
+      <table class="box-table">
+        <thead><tr><th>类型</th><th>生成方式</th></tr></thead>
+        <tbody>
+          <tr><td>形近词</td><td>只比较不含空格的单词；长度差 ≤ 2，编辑距离 ≤ 2；按编辑距离、字母顺序取前 8 个。</td></tr>
+          <tr><td>同尾词</td><td>优先取最后 4 个字母；同组不足 2 个词时退到最后 3 个字母；仍不足 2 个就不显示；最多 8 个。</td></tr>
+          <tr><td>同韵词</td><td>取音标最后一个重音符号之后的部分；没有重音就取最后 3 个字符；同组最多 8 个；没有音标的词不显示。</td></tr>
+        </tbody>
+      </table>
+      <ul class="box-rules">
+        <li>同尾词、同韵词只是拼写/发音上的粗略相似，不等于构词关系；构词关系仍然看 <span class="mono">[族:]</span>。</li>
+        <li>例：<span class="mono">absent</span> 和 <span class="mono">absence</span> 会互相出现在形近词里；同尾词分别落在 <span class="mono">-ent</span> 和 <span class="mono">-ence</span>，同韵词也不同，所以不会互相出现在这两类里。</li>
+      </ul>
+    </div>
+    <div class="panel">
       <h2>词库文件</h2>
       <p>本地直接打开时，词库会缓存在这个浏览器里。改了 words.md 后，点下面重新选一次；部署到 GitHub Pages 后会自动读取最新文件。</p>
       <label class="btn" style="display:inline-flex;align-items:center;gap:6px;cursor:pointer">${icon("upload")} 重新选择 words.md<input type="file" id="reload-md" accept=".md,.txt" hidden></label>
