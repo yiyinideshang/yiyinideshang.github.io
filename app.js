@@ -17,6 +17,13 @@ const escapeReg = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const dateStr = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 const todayStr = () => dateStr(new Date());
 const addDays = (s, n) => { const d = new Date(s + "T00:00:00"); d.setDate(d.getDate() + n); return dateStr(d); };
+const daysUntil = (s) => {
+  const [y, m, d] = s.split("-").map(Number);
+  const target = Date.UTC(y, m - 1, d);
+  const now = new Date();
+  const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  return Math.round((target - today) / 86400000);
+};
 const shuffle = (arr) => {
   const a = arr.slice();
   for (let i = a.length - 1; i > 0; i--) {
@@ -197,6 +204,8 @@ const state = {
 // ---------------------------------------------------------------------------
 const STORE = "cet4.progress.v1";
 const INTERVALS = [0, 1, 2, 4, 7, 14];
+const EXAM_DATE = "2026-12-12"; // 下次四级考试日期
+const MIX_WORDS = 15;
 
 function freshProgress() {
   return { v: 1, words: {}, days: {}, settings: { dailyNew: 30 }, streak: { last: null, count: 0 } };
@@ -512,8 +521,9 @@ function renderRoute() {
 function updateBadges() {
   if (!state.loaded) return;
   const due = dueWords().length;
-  const dc = $("#due-count");
-  if (dc) dc.textContent = due;
+  const examDays = Math.max(0, daysUntil(EXAM_DATE));
+  const ed = $("#exam-days");
+  if (ed) ed.textContent = examDays;
   const sub = $("#subtitle");
   if (sub) sub.textContent = `${state.words.length} 词 · 到期 ${due} · ${Object.keys(state.progress.words).length} 已学`;
 }
@@ -853,7 +863,7 @@ function renderReview(app) {
       <button class="mode-btn" data-mode="zh2en" ${due + fresh === 0 ? "disabled" : ""}>看中文选单词</button>
       <button class="mode-btn" data-mode="en2zh" ${due + fresh === 0 ? "disabled" : ""}>看单词选中文</button>
     </div>
-    <p class="mode-hint">听音和拼写单独出题；拼写会跳过短语。</p>
+    <p class="mode-hint">混合复习：${MIX_WORDS} 个词，按 看单词选中文 → 看中文选单词 → 听音选词 → 拼写 各过一遍；拼写跳过短语。</p>
     <div class="section-title">最近 7 天</div>
     <div class="week-bars">${week.map((x) => `<div class="week-bar ${x.today ? "today" : ""}"><b>${x.n || ""}</b><i style="height:${Math.max(3, Math.min(100, (x.n / maxN) * 100))}%"></i><span>${x.label}</span></div>`).join("")}</div>
     <div class="section-title">设置</div>
@@ -905,32 +915,57 @@ function last7() {
 }
 
 function startSession(customQueue, mode = "mix") {
-  let q = (customQueue && customQueue.length ? customQueue : getQueue())
+  const base = (customQueue && customQueue.length ? customQueue : getQueue())
     .map((x) => (typeof x === "string" ? state.byKey.get(x) : x))
     .filter(Boolean);
   if (mode === "listen" && !hasTTS()) {
     toast("这个浏览器不支持朗读，改用看单词选中文");
     mode = "en2zh";
   }
-  let skipped = 0;
-  if (mode === "spell") {
-    const before = q.length;
-    q = q.filter((w) => !w.word.includes(" "));
-    skipped = before - q.length;
+
+  let queue = [];
+  let modes = [];
+
+  if (mode === "mix") {
+    const words = base.slice(0, MIX_WORDS);
+    const phases = ["en2zh", "zh2en", "listen", "spell"];
+    for (const ph of phases) {
+      if (ph === "listen" && !hasTTS()) continue;
+      for (const w of words) {
+        if (ph === "spell" && w.word.includes(" ")) continue;
+        queue.push(w.word);
+        modes.push(ph);
+      }
+    }
+    const phrases = words.filter((w) => w.word.includes(" ")).length;
+    if (phrases) toast(`拼写阶段跳过 ${phrases} 个短语`);
+  } else {
+    let words = base;
+    let skipped = 0;
+    if (mode === "spell") {
+      const before = words.length;
+      words = words.filter((w) => !w.word.includes(" "));
+      skipped = before - words.length;
+    }
+    queue = words.map((w) => w.word);
+    modes = words.map(() => mode);
+    if (skipped) toast(`拼写模式跳过 ${skipped} 个短语`);
   }
-  if (!q.length) {
+
+  if (!queue.length) {
     toast(mode === "spell" ? "没有可拼写的单词" : "今天没有到期词，去词库加几个新词吧");
     return;
   }
-  if (skipped) toast(`拼写模式跳过 ${skipped} 个短语`);
+
   state.summary = null;
   state.session = {
-    queue: q.map((w) => w.word),
+    queue,
+    modes,
     index: 0, correct: 0, wrong: 0,
     answered: false, q: null, ok: null, choice: undefined, spoken: false,
     mode,
   };
-  state.session.q = makeQuestion(state.byKey.get(state.session.queue[0]), mode);
+  state.session.q = makeQuestion(state.byKey.get(queue[0]), modes[0]);
   go("#/review");
   renderRoute();
 }
@@ -1066,7 +1101,7 @@ function renderQuiz(app) {
   const s = state.session;
   const w = state.byKey.get(s.queue[s.index]);
   if (!w) { finishSession(); return; }
-  if (!s.q) s.q = makeQuestion(w, s.mode);
+  if (!s.q) s.q = makeQuestion(w, (s.modes && s.modes[s.index]) || s.mode);
   const q = s.q;
   if (!q) { finishSession(); return; }
 
@@ -1201,7 +1236,7 @@ function nextQuestion() {
   s.choice = undefined;
   s.spoken = false;
   if (s.index >= s.queue.length) { finishSession(); return; }
-  s.q = makeQuestion(state.byKey.get(s.queue[s.index]), s.mode);
+  s.q = makeQuestion(state.byKey.get(s.queue[s.index]), (s.modes && s.modes[s.index]) || s.mode);
   window.scrollTo(0, 0);
   renderRoute();
 }

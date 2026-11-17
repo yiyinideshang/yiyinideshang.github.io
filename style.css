@@ -112,7 +112,7 @@ svg { display: block; }
   display: flex; align-items: center; gap: 6px;
   border: 1px solid var(--line); background: var(--surface);
   padding: 7px 12px; border-radius: 999px;
-  font-size: 13px; color: var(--muted); flex: none;
+  font-size: 13px; color: var(--muted); flex: none; white-space: nowrap;
 }
 .due-pill b { color: var(--accent); font-size: 15px; }
 .due-pill:hover { border-color: var(--accent); }
