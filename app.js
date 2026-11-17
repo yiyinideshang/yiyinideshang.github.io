@@ -1365,6 +1365,11 @@ function renderData(app) {
       <button class="stat" data-stat="accuracyToday"><b>${acc}%</b><span>今日正确率</span></button>
     </div>
     <div class="panel">
+      <h2>词库文件</h2>
+      <p>本地直接打开时，词库会缓存在这个浏览器里。改了 words.md 后，点下面重新选一次；部署到 GitHub Pages 后会自动读取最新文件。</p>
+      <label class="btn" style="display:inline-flex;align-items:center;gap:6px;cursor:pointer">${icon("upload")} 重新选择 words.md<input type="file" id="reload-md" accept=".md,.txt" hidden></label>
+    </div>
+    <div class="panel">
       <h2>进度备份</h2>
       <p>进度存在这台设备的浏览器里。换设备或清缓存前，先导出。</p>
       <div class="actions">
@@ -1392,6 +1397,18 @@ function renderData(app) {
 
   $("#export").addEventListener("click", exportProgress);
   $("#import").addEventListener("change", importProgress);
+  $("#reload-md").addEventListener("change", async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    try {
+      loadData(await file.text());
+      toast("词库已更新");
+    } catch (err) {
+      alert("读取失败：" + err.message);
+    } finally {
+      e.target.value = "";
+    }
+  });
   $("#reset").addEventListener("click", () => {
     if (!confirm("确定清空所有复习进度？词库本身不会动。")) return;
     state.progress = freshProgress();
@@ -1444,7 +1461,7 @@ function loadData(md) {
   state.progress = loadProgress();
   state.loaded = true;
   window.__cet = state;
-  try { sessionStorage.setItem("cet4.md", md); } catch (e) { /* 忽略 */ }
+  try { localStorage.setItem("cet4.md", md); } catch (e) { /* 忽略 */ }
   if (!location.hash) history.replaceState(null, "", "#/review");
   renderRoute();
   updateBadges();
@@ -1453,7 +1470,7 @@ function loadData(md) {
 function renderPicker(message = "") {
   $("#app").innerHTML = `<div class="empty">
     <h2>先选词库文件</h2>
-    <p>${message || "浏览器在本地直接打开时，不允许自动读取 <span class=\"mono\">words.md</span>。点下面选一次；当前标签页会记住。"}</p>
+    <p>${message || "浏览器在本地直接打开时，不允许自动读取 <span class=\"mono\">words.md</span>。点下面选一次；之后这个浏览器（包括新标签页）会记住。清空网站数据后需要再选一次。"}</p>
     <div class="file-drop" id="drop">把 <b>words.md</b> 拖到这里，或点一下选择文件</div>
     <input type="file" id="file" accept=".md,.txt" hidden>
   </div>`;
@@ -1604,18 +1621,18 @@ async function init() {
   installGlobalHandlers();
   setupTopSearch();
   let md = null;
+  let fetchError = "";
   try {
     const r = await fetch("words.md", { cache: "no-store" });
     if (r.ok) md = await r.text();
     else if (r.status === 404) {
-      renderPicker("没有找到 words.md。确认它和 index.html 在同一个文件夹，或者手动选一下。");
-      return;
+      fetchError = "没有找到 words.md。确认它和 index.html 在同一个文件夹，或者手动选一下。";
     }
   } catch (e) { /* file:// 或离线 */ }
   if (!md) {
-    try { md = sessionStorage.getItem("cet4.md"); } catch (e) { /* 忽略 */ }
+    try { md = localStorage.getItem("cet4.md"); } catch (e) { /* 忽略 */ }
   }
-  if (!md) { renderPicker(); return; }
+  if (!md) { renderPicker(fetchError); return; }
   loadData(md);
 
   if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
