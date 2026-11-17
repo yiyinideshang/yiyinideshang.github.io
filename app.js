@@ -326,6 +326,29 @@ function getQueue() {
   }
   return picked;
 }
+function mixWrongCount(word) {
+  return state.session?.mixWrong?.get(word) || 0;
+}
+function mixBox(word) {
+  return Math.max(1, 5 - mixWrongCount(word));
+}
+function finalizeMixWord(word) {
+  const s = state.session;
+  if (!s || s.mode !== "mix") return;
+  const p = getP(word);
+  if (!p) return;
+  const box = mixBox(word);
+  p.box = box;
+  p.due = addDays(todayStr(), INTERVALS[box]);
+  saveProgress();
+}
+function trackMixAnswer(word, ok) {
+  const s = state.session;
+  if (!s || s.mode !== "mix") return;
+  if (!s.mixWrong) s.mixWrong = new Map();
+  if (!ok) s.mixWrong.set(word, (s.mixWrong.get(word) || 0) + 1);
+  if (s.queue.indexOf(word, s.index + 1) === -1) finalizeMixWord(word);
+}
 
 // ---------------------------------------------------------------------------
 // 索引
@@ -901,7 +924,7 @@ function renderReview(app) {
       <button class="mode-btn" data-mode="zh2en" ${blocked ? "disabled" : ""}>看中文选单词</button>
       <button class="mode-btn" data-mode="en2zh" ${blocked ? "disabled" : ""}>看单词选中文</button>
     </div>
-    <p class="mode-hint">${doneToday ? `今天的 ${dailyReview} 个词已完成，明天再来。` : `混合复习：本次最多 ${Math.min(dailyReview, remain)} 个词（先取今日到期，不够再补未学新词），按 看单词选中文 → 看中文选单词 → 听音选词 → 拼写 各过一遍；拼写跳过短语，拼错排到队尾重拼，首次拼对才算掌握。`}</p>
+    <p class="mode-hint">${doneToday ? `今天的 ${dailyReview} 个词已完成，明天再来。` : `混合复习：本次最多 ${Math.min(dailyReview, remain)} 个词（先取今日到期，不够再补未学新词），按 看单词选中文 → 看中文选单词 → 听音选词 → 拼写 各过一遍；拼写跳过短语，拼错排到队尾重拼；本轮按错次定盒：0 错盒 5、1 错盒 4、2 错盒 3、3 错盒 2、4 错及以上盒 1。`}</p>
     <div class="section-title">最近 7 天</div>
     <div class="week-bars">${week.map((x) => `<div class="week-bar ${x.today ? "today" : ""}"><b>${x.n || ""}</b><i style="height:${Math.max(3, Math.min(100, (x.n / maxN) * 100))}%"></i><span>${x.label}</span></div>`).join("")}</div>
     <div class="section-title">设置</div>
@@ -1008,7 +1031,7 @@ function startSession(customQueue, mode = "mix") {
     index: 0, correct: 0, wrong: 0,
     answered: false, q: null, ok: null, choice: undefined, spoken: false,
     mode,
-    spellFailed: new Set(),
+    mixWrong: new Map(),
   };
   state.session.q = makeQuestion(state.byKey.get(queue[0]), modes[0]);
   go("#/review");
@@ -1023,12 +1046,12 @@ function renderSummary(app) {
   const dailyReview = reviewTarget();
   app.innerHTML = `<div class="review-hero">
     <h1>${esc(modeLabel(s.mode))}完成</h1>
-    <p>共 ${s.total} 个，对 ${s.correct}，错 ${s.wrong}。</p>
+    <p>今天复习 ${todayCount} 个词，共 ${s.total} 次作答，答对 ${s.correct} 次，答错 ${s.wrong} 次。</p>
     ${doneToday ? `<p class="review-done">今天已完成 ${todayCount}/${dailyReview} 个词，明天再来。</p>` : `<p>今天还可复习 ${remain} 个词。</p>`}
     <div class="review-stats">
-      <div class="stat"><b>${s.correct}</b><span>答对</span></div>
-      <div class="stat"><b>${s.wrong}</b><span>答错</span></div>
-      <div class="stat"><b>${Math.round((s.correct / Math.max(1, s.total)) * 100)}%</b><span>正确率</span></div>
+      <div class="stat"><b>${s.correct}</b><span>答对次数</span></div>
+      <div class="stat"><b>${s.wrong}</b><span>答错次数</span></div>
+      <div class="stat"><b>${Math.round((s.correct / Math.max(1, s.total)) * 100)}%</b><span>正确率（按次数）</span></div>
     </div>
     <div class="actions">
       <button class="btn primary block" id="again" ${doneToday ? "disabled" : ""}>${doneToday ? "今日已完成" : "再来一组"}</button>
@@ -1161,6 +1184,8 @@ function renderQuiz(app) {
 
   const pct = Math.round((s.index / s.queue.length) * 100);
   const label = modeLabel(q.type);
+  const spellWrongs = mixWrongCount(w.word);
+  const spellBox = mixBox(w.word);
 
   let prompt = "";
   if (q.type === "en2zh") {
@@ -1206,7 +1231,7 @@ function renderQuiz(app) {
           <span class="or-gloss">${esc(ow.senses.map((x) => x.gloss).join("；"))}</span>
         </a>`;
       }).join("")}</div>` : ""}
-      ${s.mode === "mix" && s.modes && s.modes[s.index] === "spell" ? `<p class="spell-note ${s.ok ? "ok" : "retry"}">${s.ok ? (!s.spellFailed?.has(w.word) ? "首次拼写正确，已标记为掌握。" : "拼写正确，已通过（这个词之前拼错过，不算首次掌握）。") : "拼写错误，已排到队尾，稍后再拼，直到拼对为止。"}</p>` : ""}
+      ${s.mode === "mix" && s.modes && s.modes[s.index] === "spell" ? `<p class="spell-note ${s.ok ? "ok" : "retry"}">${s.ok ? (spellWrongs ? `拼写正确。本轮这个词错了 ${spellWrongs} 次，最终放入盒 ${spellBox}。` : "拼写正确。本轮一次没错，最终放入盒 5。") : `拼写错误，已排到队尾重拼（本轮已错 ${spellWrongs} 次）。`}</p>` : ""}
       <div class="actions"><button class="btn primary block" id="next-q">${s.index + 1 >= s.queue.length ? "看结果" : "下一个"}</button></div>
     </div>`;
   }
@@ -1263,6 +1288,7 @@ function answerChoice(choice) {
   if (hasTTS()) speak(w.word);
   if (ok) s.correct += 1; else s.wrong += 1;
   gradeWord(w.word, ok);
+  trackMixAnswer(w.word, ok);
   updateBadges();
   renderRoute();
 }
@@ -1275,7 +1301,6 @@ function answerSpell() {
   const val = (input?.value || "").trim().toLowerCase();
   const ok = val === w.word.toLowerCase();
   const isMixSpell = s.mode === "mix" && s.modes && s.modes[s.index] === "spell";
-  const firstSpell = isMixSpell && !(s.spellFailed && s.spellFailed.has(w.word));
 
   s.answered = true;
   s.ok = ok;
@@ -1284,20 +1309,11 @@ function answerSpell() {
   if (ok) s.correct += 1; else s.wrong += 1;
   gradeWord(w.word, ok);
 
-  if (isMixSpell && ok && firstSpell) {
-    const p = getP(w.word);
-    if (p) {
-      p.box = 5;
-      p.due = addDays(todayStr(), 14);
-      saveProgress();
-    }
-  }
   if (isMixSpell && !ok) {
-    if (!s.spellFailed) s.spellFailed = new Set();
-    s.spellFailed.add(w.word);
     s.queue.push(w.word);
     s.modes.push("spell");
   }
+  if (isMixSpell) trackMixAnswer(w.word, ok);
 
   updateBadges();
   renderRoute();
@@ -1441,6 +1457,35 @@ function renderData(app) {
       <button class="stat" data-stat="due"><b>${due}</b><span>今日到期</span></button>
       <button class="stat" data-stat="reviewedToday"><b>${todayCount}</b><span>今日复习（词）</span></button>
       <button class="stat" data-stat="accuracyToday"><b>${masteryRate}%</b><span>今日掌握率</span></button>
+    </div>
+    <div class="panel">
+      <h2>盒子怎么运作</h2>
+      <p>盒子是间隔复习的等级，1–5 盒。</p>
+      <table class="box-table">
+        <thead><tr><th>盒子</th><th>下次复习</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>1 天后</td></tr>
+          <tr><td>2</td><td>2 天后</td></tr>
+          <tr><td>3</td><td>4 天后</td></tr>
+          <tr><td>4</td><td>7 天后</td></tr>
+          <tr><td>5</td><td>14 天后</td></tr>
+        </tbody>
+      </table>
+      <p><strong>规则：</strong></p>
+      <ul class="box-rules">
+        <li>新词：还没有盒子；第一次答对 → 盒 2（2 天后再见）；第一次答错 → 盒 1（明天再见）</li>
+        <li>答对：盒子 +1，最高盒 5</li>
+        <li>答错：直接回到盒 1，明天再来</li>
+        <li>盒 4、5 算掌握，也就是“掌握（盒 4+）”</li>
+        <li>今日掌握率 = 今天复习的词里，盒 4/5 的比例</li>
+      </ul>
+      <p><strong>混合复习的定盒规则：</strong></p>
+      <ul class="box-rules">
+        <li>混合复习的 4 个阶段会临时改变盒子，最终按本轮错次重新定盒。</li>
+        <li>按这个单词本轮答错的次数定盒：一次不错 → 盒 5；错 1 次 → 盒 4；错 2 次 → 盒 3；错 3 次 → 盒 2；错 4 次及以上 → 盒 1。</li>
+        <li>拼写错了会排到队尾重拼；重拼正确后，仍按本轮总错次定盒。</li>
+        <li>手动“认识” = 盒 5、14 天；“模糊” = 盒 2、明天；“不认识” = 盒 1、明天。</li>
+      </ul>
     </div>
     <div class="panel">
       <h2>词库文件</h2>

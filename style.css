@@ -395,6 +395,11 @@ svg { display: block; }
 .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px; margin: 12px 0; }
 .panel h2 { font-size: 15px; margin: 0 0 10px; }
 .panel p { font-size: 13px; color: var(--muted); }
+.box-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 10px 0 14px; }
+.box-table th, .box-table td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+.box-table th { color: var(--muted); font-weight: 600; }
+.box-rules { margin: 8px 0 14px; padding-left: 18px; font-size: 13px; color: var(--muted); }
+.box-rules li { margin: 5px 0; }
 .kv { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
 .kv:last-child { border-bottom: none; }
 .kv > span:first-child { color: var(--muted); }
