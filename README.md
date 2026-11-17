@@ -131,7 +131,7 @@ git push origin main
 - 或在 GitHub Desktop 里点一下 Push
 - 或者用 `git push` 手动推
 
-> 只改 `words.md` 不需要动版本号。改 `app.js` / `style.css` / `index.html` 时，把 `index.html` 里的 `?v=13` 和 `sw.js` 里的 `cet4-v13` 各加 1，否则手机可能继续用旧缓存。
+> 只改 `words.md` 不需要动版本号。改 `app.js` / `style.css` / `index.html` 时，把 `index.html` 里的 `?v=14` 和 `sw.js` 里的 `cet4-v14` 各加 1，否则手机可能继续用旧缓存。
 
 ---
 

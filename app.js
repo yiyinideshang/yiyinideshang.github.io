@@ -231,7 +231,7 @@ function saveProgress() {
 }
 function getP(word) { return state.progress.words[word] || null; }
 function todayStats() {
-  return state.progress.days[todayStr()] || { reviewed: 0, right: 0, new: 0 };
+  return state.progress.days[todayStr()] || { reviewed: 0, right: 0, new: 0, words: {} };
 }
 function dueWords() {
   const today = todayStr();
@@ -243,6 +243,15 @@ function dueWords() {
 function newWords() {
   return state.words.filter((w) => !getP(w.word));
 }
+function todayWordList() {
+  const today = todayStr();
+  const d = state.progress.days[today];
+  if (d && d.words && Object.keys(d.words).length) {
+    return Object.keys(d.words).map((w) => state.byKey.get(w)).filter(Boolean);
+  }
+  return state.words.filter((w) => getP(w.word)?.last === today);
+}
+function todayWordCount() { return todayWordList().length; }
 function updateStreak(today) {
   const s = state.progress.streak;
   if (s.last === today) return;
@@ -265,7 +274,11 @@ function gradeWord(word, ok) {
   p.due = addDays(today, INTERVALS[p.box]);
   state.progress.words[word] = p;
 
-  const d = state.progress.days[today] || { reviewed: 0, right: 0, new: 0 };
+  const d = state.progress.days[today] || { reviewed: 0, right: 0, new: 0, words: {} };
+  d.words = d.words || {};
+  const wd = d.words[word] || { right: 0, wrong: 0 };
+  if (ok) wd.right += 1; else wd.wrong += 1;
+  d.words[word] = wd;
   d.reviewed += 1;
   if (ok) d.right += 1;
   if (wasNew) d.new += 1;
@@ -841,6 +854,7 @@ function renderReview(app) {
   const due = dueWords().length;
   const fresh = newWords().length;
   const d = todayStats();
+  const todayCount = todayWordCount();
   const streak = state.progress.streak?.count || 0;
   const dailyNew = Number(state.progress.settings.dailyNew) || 30;
   const presets = [20, 30, 40, 50];
@@ -850,7 +864,7 @@ function renderReview(app) {
 
   app.innerHTML = `<div class="review-hero">
     <h1>${greeting()}</h1>
-    <p>到期 ${due} 个，未学 ${fresh} 个。今天已复习 ${d.reviewed} 个，正确 ${d.right} 个。</p>
+    <p>到期 ${due} 个，未学 ${fresh} 个。今天复习 ${todayCount} 个词，共 ${d.reviewed} 题，正确 ${d.right} 题。</p>
     <div class="review-stats">
       <button class="stat" data-stat="due"><b>${due}</b><span>今日到期</span></button>
       <button class="stat" data-stat="todayLearned"><b>${d.new || 0}/${dailyNew}</b><span>今日已学</span></button>
@@ -1304,13 +1318,24 @@ function showStat(key) {
   const today = todayStr();
   const d = todayStats();
   const tracked = state.words.filter((w) => getP(w.word));
-  const todayList = state.words.filter((w) => getP(w.word)?.last === today);
+  const todayList = todayWordList();
+  const todayCount = todayList.length;
   const meta = (w) => {
     const p = getP(w.word) || {};
     const parts = [];
     if (p.box) parts.push("盒 " + p.box);
     if (p.due) parts.push("下次 " + p.due);
     if (p.right || p.wrong) parts.push(`对 ${p.right || 0} · 错 ${p.wrong || 0}`);
+    return parts.join(" · ");
+  };
+  const metaToday = (w) => {
+    const p = getP(w.word) || {};
+    const wd = d.words?.[w.word];
+    const parts = [];
+    if (p.box) parts.push("盒 " + p.box);
+    if (p.due) parts.push("下次 " + p.due);
+    if (wd) parts.push(`今天 对 ${wd.right} · 错 ${wd.wrong}`);
+    else if (p.right || p.wrong) parts.push(`累计 对 ${p.right || 0} · 错 ${p.wrong || 0}`);
     return parts.join(" · ");
   };
   const summary = (html) => `<p class="stat-summary">${html}</p>`;
@@ -1323,13 +1348,13 @@ function showStat(key) {
     return;
   }
   if (key === "todayLearned") {
-    openModal("今日已学", summary(`(今天新学 ${d.new || 0} 个，复习 ${d.reviewed || 0} 个，正确 ${d.right || 0} 个。每天新词上限 ${state.progress.settings.dailyNew || 30}。)`) + statWordList(todayList, meta));
+    openModal("今日已学", summary(`今天新学 ${d.new || 0} 个，复习 ${todayCount} 个词 / ${d.reviewed || 0} 题，正确 ${d.right || 0} 题。每天新词上限 ${state.progress.settings.dailyNew || 30}。`) + statWordList(todayList, metaToday));
     return;
   }
   if (key === "streak") {
     const x = state.progress.days[today] || { reviewed: 0, right: 0 };
     openModal("连续天数", summary(`当前连续 ${state.progress.streak?.count || 0} 天。`)
-      + `<div class="kv"><span>${today}（今天）</span><span>复习 ${x.reviewed || 0} · 正确 ${x.right || 0}</span></div>`);
+      + `<div class="kv"><span>${today}（今天）</span><span>复习 ${todayCount} 词 · ${x.reviewed || 0} 题 · 正确 ${x.right || 0} 题</span></div>`);
     return;
   }
   if (key === "total") {
@@ -1354,13 +1379,13 @@ function showStat(key) {
     return;
   }
   if (key === "reviewedToday") {
-    openModal("今日复习", summary(`今天复习 ${d.reviewed || 0} 个，正确 ${d.right || 0} 个。`) + statWordList(todayList, meta));
+    openModal("今日复习", summary(`今天复习 ${todayCount} 个词，共 ${d.reviewed || 0} 题，对 ${d.right || 0}，错 ${(d.reviewed || 0) - (d.right || 0)} 题。`) + statWordList(todayList, metaToday));
     return;
   }
   if (key === "accuracyToday") {
     const wrong = (d.reviewed || 0) - (d.right || 0);
     const pct = d.reviewed ? Math.round((d.right / d.reviewed) * 100) : 0;
-    openModal("今日正确率", summary(`今天复习 ${d.reviewed || 0} 个，对 ${d.right || 0}，错 ${wrong}，正确率 ${pct}%。下面是今天复习过的词（累计对错）。`) + statWordList(todayList, meta));
+    openModal("今日正确率", summary(`今天复习 ${todayCount} 个词，共 ${d.reviewed || 0} 题，对 ${d.right || 0}，错 ${wrong}，正确率 ${pct}%（按题）。下面是今天复习过的词。`) + statWordList(todayList, metaToday));
   }
 }
 
@@ -1373,6 +1398,7 @@ function renderData(app) {
   const known = state.words.filter((w) => (getP(w.word)?.box || 0) >= 4).length;
   const due = dueWords().length;
   const today = todayStats();
+  const todayCount = todayWordCount();
   const acc = today.reviewed ? Math.round((today.right / today.reviewed) * 100) : 0;
   const noPos = state.words.filter((w) => !w.senses.some((s) => s.pos)).length;
 
@@ -1382,8 +1408,8 @@ function renderData(app) {
       <button class="stat" data-stat="tracked"><b>${withP}</b><span>已进复习</span></button>
       <button class="stat" data-stat="known"><b>${known}</b><span>掌握（盒 4+）</span></button>
       <button class="stat" data-stat="due"><b>${due}</b><span>今日到期</span></button>
-      <button class="stat" data-stat="reviewedToday"><b>${today.reviewed}</b><span>今日复习</span></button>
-      <button class="stat" data-stat="accuracyToday"><b>${acc}%</b><span>今日正确率</span></button>
+      <button class="stat" data-stat="reviewedToday"><b>${todayCount}</b><span>今日复习（词）</span></button>
+      <button class="stat" data-stat="accuracyToday"><b>${acc}%</b><span>今日正确率（题）</span></button>
     </div>
     <div class="panel">
       <h2>词库文件</h2>
