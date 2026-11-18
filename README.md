@@ -11,7 +11,7 @@
 部署后地址：
 
 ```
-https://yiyinideshang.github.io/ct4/
+https://yiyinideshang.github.io/
 ```
 
 手机用浏览器打开后，“添加到主屏幕”，和 App 一样。加个 service worker，地铁里没网也能背。
@@ -108,7 +108,7 @@ python3 tools/check.py
 
 ## 首次部署（只做一次）
 
-仓库已经建好：`https://github.com/yiyinideshang/ct4`
+仓库已经建好：`https://github.com/yiyinideshang/yiyinideshang.github.io`
 
 在本机执行：
 
@@ -126,7 +126,7 @@ git push -u origin main
 2. **Source** 选 `Deploy from a branch`
 3. Branch 选 `main`，目录选 `/ (root)`
 4. 保存，等 1–2 分钟
-5. 打开 `https://yiyinideshang.github.io/ct4/`
+5. 打开 `https://yiyinideshang.github.io/`
 
 > 你的 Windows `hosts` 里有 Steam++ 写的 `127.0.0.1 github.com`。推送前先打开 Steam++，或者用它自带的加速；否则 git 连不上。
 
