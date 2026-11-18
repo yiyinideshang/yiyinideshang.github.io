@@ -2,7 +2,7 @@
 
 一个按**词族**和**易混组**组织的四级单词复习网页。一个词只存一条，关系写在数据里，视图和测验自动生成。
 
-当前词库：**1183 词**，25 个易混组，145 个词族，29 个近义组。
+当前词库：**1468 词**，25 个易混组，198 个词族，29 个近义组。
 
 - 词库源文件：`words.md`（你只改这一个文件）
 - 应用：`index.html` + `app.js` + `style.css`
@@ -87,6 +87,25 @@ python3 tools/check.py
 
 ---
 
+## 批量同步 26_1.md
+
+如果 `D:\Typora\英语\26_1.md` 有大版本更新，使用仓库里的 skill：
+
+```text
+.opencode/skills/ct4-vocab-sync/SKILL.md
+```
+
+流程：
+
+1. 原地修正 `26_1.md` 的错词、错释义
+2. 重复词按词头合并，保留最完整的一条
+3. 同步到 `sources/26_1.md`
+4. 增量合并到 `words.md`，保留已有音标和标签
+5. 补明显的词族
+6. 跑 `tools/check.py`、更新版本号、提交
+
+---
+
 ## 首次部署（只做一次）
 
 仓库已经建好：`https://github.com/yiyinideshang/ct4`
@@ -131,7 +150,7 @@ git push origin main
 - 或在 GitHub Desktop 里点一下 Push
 - 或者用 `git push` 手动推
 
-> 只改 `words.md` 不需要动版本号。改 `app.js` / `style.css` / `index.html` 时，把 `index.html` 里的 `?v=22` 和 `sw.js` 里的 `cet4-v22` 各加 1，否则手机可能继续用旧缓存。
+> 只改 `words.md` 不需要动版本号。改 `app.js` / `style.css` / `index.html` 时，把 `index.html` 里的 `?v=23` 和 `sw.js` 里的 `cet4-v23` 各加 1，否则手机可能继续用旧缓存。
 
 ---
 
