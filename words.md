@@ -112,8 +112,6 @@ agreement n. 协议,协定,一致 /əˈɡriːmənt/
 
 ahead adv. 向前面,在前面,提前,领先｜adj. 向前；在前的；领先｜adv. 向前地；领先地；在（某人或某事物的）前面；预先；在将来，为未来 /əˈhed/
 
-airfares n. 飞机票价 /ˈerferz/
-
 airplane n. 飞机 /ˈerpleɪn/
 
 aisle n. 过道，走道 /aɪl/
@@ -255,7 +253,7 @@ automatic adj. 自动的，必然的，无意识的，不假思索的 /ˌɔːtə
 avoidance n. 避免,防止,回避 /əˈvɔɪdəns/
 
 awake adj. 醒着的,v(使)醒来 awaken v(使)醒来,唤起,(使)意识到 /əˈweɪk/
-- 变形: awoke, awoken
+- 变形: 过去式 awoke；过去分词 awoken
 
 awareness n. 认识，意识 /əˈwernəs/
 
@@ -1108,7 +1106,7 @@ fiction n. 小说，虚构之事，幻想 /ˈfɪkʃ(ə)n/
 fierce adj. 凶猛的,激烈的；凶猛的，激烈的 /fɪrs/ [混:force,forge,pierce]
 
 fight v. 战斗,打架,斗争,努力争取｜vi. 争辩,奋力抵抗,还击｜n. 打架,斗争 /faɪt/ [族:fight] [混:flight,light]
-- 变形: fought, fought
+- 变形: 过去式/过去分词 fought
 
 fighting n. 战斗,打斗 /ˈfaɪtɪŋ/ [族:fight]
 
@@ -1175,7 +1173,7 @@ folk n. 人们,各位,家属,民间音乐｜adj. 民间的,民俗的,流传民�
 following adj. 接着的，下述的；prep. 在…之后，由于 /ˈfɑːloʊɪŋ/
 
 forbid vt. 禁止,不准,妨碍 /fərˈbɪd/
-- 变形: forbade, forbidden
+- 变形: 过去式 forbade；过去分词 forbidden
 
 forbidden adj. 禁止的 /fərˈbɪdn/
 
@@ -1598,7 +1596,7 @@ league n. 联盟，同盟 /liːɡ/
 leak v. 泄漏,漏出｜n. 漏洞,裂缝,泄漏 /liːk/ [混:lean,lend,load,loan]
 
 lean vi. 倾斜身体，倚靠｜adj. 精瘦的 /liːn/ [混:leak,lend,load,loan] [近:thin]
-- 变形: leaned, leant
+- 变形: 过去式/过去分词 leaned, leant
 
 leaning n. 倾向,偏爱 /ˈliːnɪŋ/
 
@@ -1651,7 +1649,7 @@ lose v. 丢失,丧失,被夺去,使不理解｜v. 输掉,使失去 /luːz/ [混:
 loss n. 丧失，损失，亏损，逝世 /lɔːs/ [混:lose,lost]
 
 lost adj. 迷路的，失去的 /lɔːst/ [混:lose,loss]
-- 变形: lose 的过去式/过去分词
+- 变形: lose 的过去式/过去分词 lost
 
 lower adj. 下面的，下方的，底部的；vt. 把…放低，把…降下；v. 减少，缩小，降低 /ˈloʊər/
 
@@ -1709,9 +1707,9 @@ measurement n. 测量，计量 /ˈmeʒərmənt/ [族:measure]
 
 medal n. 勋章，奖牌 /ˈmed(ə)l/
 
-media n. 媒体；新闻媒介；( /ˈmiːdiə/ [近:means,medium]
+media n. 媒体；新闻媒介；medium 的复数 /ˈmiːdiə/ [近:means,medium]
 
-medium n. 的复数) /ˈmiːdiəm/ [近:means,media]
+medium n. 媒介，手段，工具，培养基 /ˈmiːdiəm/ [近:means,media]
 
 memory n. 记忆力；回忆 /ˈmeməri/
 
@@ -2164,7 +2162,7 @@ protective adj. 保护的 /prəˈtektɪv/ [族:protect]
 proud adj. 自豪的，得意的 /praʊd/
 
 prove vt. 证明,证实,展现 vlink.证明是,被发现是｜v. 证明，证实，证明是，结果是 /pruːv/ [混:approve,confirm,improve,provide] [近:confirm,demonstrate,verify]
-- 变形: proved, proven
+- 变形: 过去式 proved；过去分词 proved / proven
 
 proven adj. 经证实的 /ˈpruːvn/
 
@@ -2498,7 +2496,7 @@ simplicity n. 简单，容易；质朴，朴素 /sɪmˈplɪsəti/ [族:simple]
 simply adv. 仅仅，简直，简单地，简朴地 /ˈsɪmpli/ [族:simple]
 
 sit vi. 坐,坐落在；被放在；担任 /sɪt/
-- 变形: sat, sat
+- 变形: 过去式/过去分词 sat
 
 site n. 场所，地点，工地，网站；vt. 使坐落于，为…选址 /saɪt/
 
@@ -2627,7 +2625,7 @@ stereotype n. 成见,刻板印象｜vt. 对…有成见 /ˈsteriətaɪp/
 stick to phr. 坚持：继续做或使用（某事物）；不改变（决定、信念等）
 
 stick v. 刺入，插入，粘住，随手放置，卡住，被接受｜n. 枝条 /stɪk/ [混:strike]
-- 变形: stuck
+- 变形: 过去式/过去分词 stuck
 
 stiff adj. 僵硬的；adv. 极其，非常；n. 死尸 /stɪf/
 
