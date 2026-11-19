@@ -1600,7 +1600,8 @@ lean vi. 倾斜身体，倚靠｜adj. 精瘦的 /liːn/ [混:leak,lend,load,loan
 
 leaning n. 倾向,偏爱 /ˈliːnɪŋ/
 
-leap n. 跳跃 /liːp/
+leap vi. 跳跃，突然做某事｜n. 跳跃，激增，猛涨 /liːp/
+- 变形: 过去式/过去分词 leaped, leapt
 
 least adj. 一点儿，最小的，最微不足道的（little 的最高级）｜adv. 最低程度地，最少，至少｜n. 最不重要的事物，起码｜pron. 最少量，起码 /liːst/
 
