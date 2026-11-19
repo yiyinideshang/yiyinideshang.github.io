@@ -2576,6 +2576,7 @@ sphere n. 球体,球形,范围,领域；范围，领域，球体，社会阶层 
 spill v. (使)溢出或洒出｜n. 洒出，泼出 /spɪl/
 
 spoil v. 毁坏，破坏，宠坏，溺爱；vi. (食物)变质 /spɔɪl/
+- 变形: 过去式/过去分词 spoiled, spoilt
 
 spoilage n. 变质 /ˈspɔɪlɪdʒ/
 
