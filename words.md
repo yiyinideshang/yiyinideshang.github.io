@@ -933,7 +933,7 @@ drill n. 钻机，练习，演习；v. 钻(孔)，培训 /drɪl/
 
 drip vi. (液体)滴下；v. 滴下(液体)；充满；n. 滴落，滴水声 /drɪp/
 
-drougth n. 干旱，旱灾
+drought n. 干旱，旱灾 /draʊt/
 
 drown v. 溺亡，淹死 /draʊn/
 
@@ -1964,7 +1964,7 @@ outlook n. 世界观，观点，前景 /ˈaʊtlʊk/
 
 overcome vt. 克服，击败 /ˌoʊvərˈkʌm/
 
-overenthusiasm adj. 过分热情的
+overenthusiasm adj. 过分热情的 /ˌoʊvərɪnˈθuːziæzəm/
 
 overwhelm n. 是不知所措，击败 /ˌoʊvərˈwelm/
 
@@ -2411,7 +2411,7 @@ residence n. 住处，住宅，居住 /ˈrezɪdəns/
 
 resident n. 居民，住户 /ˈrezɪdənt/
 
-residential adj. 住宅区的，寄宿制的
+residential adj. 住宅区的，寄宿制的 /ˌrezɪˈdenʃ(ə)l/
 
 resign v. 辞职；vt. 使顺从 /rɪˈzaɪn/ [族:resign]
 
@@ -2457,13 +2457,13 @@ reverse vt. 扭转，撤销；v. 倒车；n. 相反的情况；adj. 相反的，
 
 reversible adj. 可逆的 /rɪˈvɜːrsəb(ə)l/ [族:revers]
 
-review n. 评论；审查；回顾；复习；vt. 写评论；审查；回顾；复习
+review n. 评论；审查；回顾；复习；vt. 写评论；审查；回顾；复习 /rɪˈvjuː/
 
 reviewer n. 评论家,评论员 /rɪˈvjuːər/
 
 revise v. 改变，修改，修订｜v. 复习 /rɪˈvaɪz/
 
-revision n. 修订，修改，修订稿；复习
+revision n. 修订，修改，修订稿；复习 /rɪˈvɪʒ(ə)n/
 
 revolution n. 革命，变革 /ˌrevəˈluːʃ(ə)n/
 
@@ -2506,15 +2506,15 @@ sailor n. 水手，船员，海员 /ˈseɪlər/ [族:sail]
 
 saint n. 圣徒，圣人 /seɪnt/
 
-sate n. 缘故，目的，利益
+sate n. 缘故，目的，利益 /seɪt/
 
-satisfaction n. 满意，满足
+satisfaction n. 满意，满足 /ˌsætɪsˈfækʃ(ə)n/
 
-satisfactory adj. 令人满意的，够好的
+satisfactory adj. 令人满意的，够好的 /ˌsætɪsˈfæktəri/
 
-save vt. 救助，保留，避免；v. 储蓄，节省，保存
+save vt. 救助，保留，避免；v. 储蓄，节省，保存 /seɪv/
 
-saving n. 存款；节省下来的钱(或物)
+saving n. 存款；节省下来的钱(或物) /ˈseɪvɪŋ/
 
 scale n. 规模，等级，秤，鳞片 /skeɪl/
 
@@ -2524,21 +2524,21 @@ scare vt. 惊吓,使恐惧｜n. 恐惧｜vi. 害怕 /sker/
 
 scarf n. 围巾，头巾 /skɑːrf/
 
-scene n. 现场；场面；景色
+scene n. 现场；场面；景色 /siːn/
 
-scenery n. 风景，景色
+scenery n. 风景，景色 /ˈsiːnəri/
 
-scenic adj. 景色优美的
+scenic adj. 景色优美的 /ˈsiːnɪk/
 
-scent n. 香味，气味；香水；vt. 闻到；预感到；使具有香味
+scent n. 香味，气味；香水；vt. 闻到；预感到；使具有香味 /sent/
 
-science n. 科学
+science n. 科学 /ˈsaɪəns/
 
-scientific adj. 科学的，细致严谨的
+scientific adj. 科学的，细致严谨的 /ˌsaɪənˈtɪfɪk/
 
 secondary adj. 中学的,次要的 /ˈsekənderi/
 
-sector n. 部门，行业
+sector n. 部门，行业 /ˈsektər/
 
 segment n. 部分,节,段｜vt. 分割,划分 /ˈseɡmənt/
 
@@ -2546,21 +2546,21 @@ segmental adj. 分段的，部分的 /seɡˈmentl/ [族:segment]
 
 selfish adj. 自私的 /ˈselfɪʃ/
 
-senate n. 参议院
+senate n. 参议院 /ˈsenət/
 
-senator n. 参议员
+senator n. 参议员 /ˈsenətər/
 
 senior adj. 级别高的，老年的，成人的，中学的；n. 毕业班学生 /ˈsiːniər/
 
-seniority n. 工龄，资历；年长
+seniority n. 工龄，资历；年长 /ˌsiːnˈjɔːrəti/
 
-sensible adj. 明智的
+sensible adj. 明智的 /ˈsensəb(ə)l/
 
-sensitive adj. 敏感的；灵敏的
+sensitive adj. 敏感的；灵敏的 /ˈsensətɪv/
 
-sensitivity n. 体贴，敏感性，过敏性，敏感
+sensitivity n. 体贴，敏感性，过敏性，敏感 /ˌsensəˈtɪvəti/
 
-sensor n. 传感器
+sensor n. 传感器 /ˈsensər/
 
 sequence n. 一系列，一连串，顺序，次序；vt. 按顺序排列 /ˈsiːkwəns/
 
@@ -2631,25 +2631,25 @@ slip vi. 滑倒，溜走，变差，陷入；vt. 悄悄塞；v. (迅速且容易
 
 smell vi. 有..气味｜vt. 闻到,嗅｜n. 气味；嗅觉；臭味 /smel/
 
-snack n. 零食，点心，小吃；里有 c，a 发短音 æ是零食，像“斯纳克”短促，可以想成 cookies
+snack n. 零食，点心，小吃；里有 c，a 发短音 æ是零食，像“斯纳克”短促，可以想成 cookies /snæk/
 
-snake n. 蛇，阴险狡诈的人
+snake n. 蛇，阴险狡诈的人 /sneɪk/
 
-sofa n. 长沙发
+sofa n. 长沙发 /ˈsoʊfə/
 
 solution n. 解决方法，溶液，谜底，答案 /səˈluːʃ(ə)n/
 
 sort n. 种类，类别，分类，排序；vt. 分类，整理 /sɔːrt/
 
-south n. 南方；adj. 南方的；adv. 向南方
+south n. 南方；adj. 南方的；adv. 向南方 /saʊθ/
 
-southeast n. 东南方，东南地区；adj. 东南部的；adv. 向东南地
+southeast n. 东南方，东南地区；adj. 东南部的；adv. 向东南地 /ˌsaʊθˈiːst/
 
-southeastern adj. 东南部的
+southeastern adj. 东南部的 /ˌsaʊθˈiːstərn/
 
 southwest n. 西南方，西南部｜adv. 向西南｜adj. 西南部的 /ˌsaʊθˈwest/
 
-southwestern adj. 西南部的
+southwestern adj. 西南部的 /ˌsaʊθˈwestərn/
 
 space n. 空间，太空，空白处，空行 /speɪs/ [族:space]
 
@@ -2712,7 +2712,7 @@ stake n. 股份；重大利益；赌注｜vt. 以…打赌,拿…冒险 /steɪk/
 
 stale adj. 不新鲜的，厌倦的；v. (使)变得不新鲜 /steɪl/
 
-standpoint n. 立场，观点，角度，立足点
+standpoint n. 立场，观点，角度，立足点 /ˈstændpɔɪnt/
 
 staple adj. 主要的，基本的，重要的；n. 基本食物 /ˈsteɪp(ə)l/
 
@@ -2722,11 +2722,11 @@ steady adj. 稳步的，稳定的，可靠的；v. 稳住，使平静；adv. 稳
 
 steak n. 牛排,肉排,鱼排 /steɪk/
 
-steam n. 蒸汽，水汽；v. 蒸
+steam n. 蒸汽，水汽；v. 蒸 /stiːm/
 
-steamer n. 汽船，大轮船，蒸笼
+steamer n. 汽船，大轮船，蒸笼 /ˈstiːmər/
 
-steamy adj. (地方)闷热潮湿的
+steamy adj. (地方)闷热潮湿的 /ˈstiːmi/
 
 stem n. 秆，茎 /stem/
 
@@ -2735,7 +2735,7 @@ stereotype n. 成见,刻板印象｜vt. 对…有成见 /ˈsteriətaɪp/
 stick v. 刺入，插入，粘住，随手放置，卡住，被接受｜n. 枝条 /stɪk/ [混:strike]
 - 变形: 过去式/过去分词 stuck
 
-sticky adj. 黏的；闷热的；棘手的
+sticky adj. 黏的；闷热的；棘手的 /ˈstɪki/
 
 stiff adj. 僵硬的；adv. 极其，非常；n. 死尸 /stɪf/
 
@@ -2755,9 +2755,9 @@ strategist n. 战略家 /ˈstrætədʒɪst/ [族:strateg]
 
 strategy n. 战略,策略；战术策略 复数 strategies /ˈstrætədʒi/ [族:strateg]
 
-strength n. 力量，优势，强度
+strength n. 力量，优势，强度 /streŋθ/
 
-strengthen v. 加强，加固
+strengthen v. 加强，加固 /ˈstreŋ(k)θ(ə)n/
 
 strict adj. 严格的，严厉的 /strɪkt/ [族:strict]
 
@@ -2779,7 +2779,7 @@ stuffing n. (食物内的)填料；填充物 /ˈstʌfɪŋ/ [族:stuff]
 
 stuffy adj. 闷热的，(鼻子)不通的 /ˈstʌfi/ [族:stuff]
 
-subcommittee n. 小组委员会
+subcommittee n. 小组委员会 /ˈsʌbkəmɪti/
 
 subsequent adj. 随后的，后来的 /ˈsʌbsɪkwənt/
 
@@ -2787,21 +2787,21 @@ substantial adj. 大量的，重大的，实质性的 /səbˈstænʃ(ə)l/
 
 suggest vt. 提议,建议,表明 /səˈdʒest/
 
-super adj. 极好的，很棒的；adv. 非常，格外pref.超级
+super adj. 极好的，很棒的；adv. 非常，格外pref.超级 /ˈsuːpər/
 
-superb adj. 极好的，卓越的
+superb adj. 极好的，卓越的 /suːˈpɜːrb/
 
-superficial adj. 肤浅的；表面的
+superficial adj. 肤浅的；表面的 /ˌsuːpərˈfɪʃ(ə)l/
 
 superior adj. 更好的，级别更高的 /suːˈpɪriər/
 
-superiority n. 优越，优势
+superiority n. 优越，优势 /suːˌpɪriˈɔːrəti/
 
-supervise v. 监管，管理，指导，主管
+supervise v. 监管，管理，指导，主管 /ˈsuːpərvaɪz/
 
-supervision n. 监督，管理
+supervision n. 监督，管理 /ˌsuːpərˈvɪʒ(ə)n/
 
-supervisor n. 监督者，指导者，主管人
+supervisor n. 监督者，指导者，主管人 /ˈsuːpərvaɪzər/
 
 support vt. 支持,资助,养活,证实｜n. 支持,资助,支撑物 /səˈpɔːrt/
 
@@ -2821,15 +2821,15 @@ surprise n. 意想不到的事情,惊奇｜vt. 使惊奇,使感到意外 /sərˈ
 
 surrender v. 投降；vt. (被迫)放弃，交出；n. 投降；屈服；放弃，交出 /səˈrendər/
 
-surround vt. 环绕；包围；与…密切相关
+surround vt. 环绕；包围；与…密切相关 /səˈraʊnd/
 
-surroundings n. 环境，周围事物
+surroundings n. 环境，周围事物 /səˈraʊndɪŋz/
 
 sway v. 使摆动,使摇摆；影响，左右｜v. 影响,左右｜n. 掌控,影响力 /sweɪ/
 
-swear vi. 咒骂，诅咒，说脏话；vt. 肯定地说；v. 发誓
+swear vi. 咒骂，诅咒，说脏话；vt. 肯定地说；v. 发誓 /swer/
 
-sweat n. 汗，出汗；v. 出汗；vi. 担心，不安
+sweat n. 汗，出汗；v. 出汗；vi. 担心，不安 /swet/
 
 swift adj. 快的，迅速的 /swɪft/
 
@@ -2837,9 +2837,9 @@ swing v. 摆动,改变｜n. 摆力,改变,秋千 /swɪŋ/
 
 system n. 系统，体系，制度 /ˈsɪstəm/ [族:system]
 
-systematic adj. 系统的，有条理的，有计划的
+systematic adj. 系统的，有条理的，有计划的 /ˌsɪstəˈmætɪk/
 
-systematically adv. 系统化地，有条理地
+systematically adv. 系统化地，有条理地 /ˌsɪstəˈmætɪkli/
 
 # T
 
@@ -2857,7 +2857,7 @@ temperature n. 温度，气温，体温 /ˈtemprətʃər； ˈtemprətʃʊr/ [�
 
 tender adj. 温柔的 /ˈtendər/
 
-tent n. 帐篷
+tent n. 帐篷 /tent/
 
 terminal n. 终点站,航站楼,终端 /ˈtɜːrmɪn(ə)l/
 
@@ -2867,7 +2867,7 @@ theory n. 理论，学说，理论基础，观点 /ˈθiːəri/
 
 therefore adv. 所以,因此,因而；因此,所以,因而 /ˈðerfɔːr/
 
-thermometer n. 温度计
+thermometer n. 温度计 /θərˈmɑːmɪtər/
 
 thesis n. 论文,学位论文 /ˈθiːsɪs/
 
@@ -2881,7 +2881,7 @@ thumb n. 拇指 /θʌm/
 
 thus adv. 因此,以此种方式 /ðʌs/
 
-tick vi. 发出嘀嗒声
+tick vi. 发出嘀嗒声 /tɪk/
 
 tight adj. 紧的，紧身的，严格的，拮据的 /taɪt/
 
@@ -2896,7 +2896,7 @@ tobacco n. 烟草，烟叶 /təˈbækoʊ/
 tooth n. 牙齿 /tuːθ/
 - 变形: 复数 teeth
 
-torch n. 火把，手电筒
+torch n. 火把，手电筒 /tɔːrtʃ/
 
 touch vt. 触摸,使感动,影响｜v. 接触,触及｜n. 触觉,触摸,少许 /tʌtʃ/
 
@@ -2904,7 +2904,7 @@ tough adj. 艰难的,严厉的,强硬的,坚强的；艰难的，严厉的，强
 
 trace v. 查出，发现，追踪，追究，记述，勾勒，描摹｜n. 痕迹，遗迹，踪迹，微量，少许 /treɪs/
 
-track n. 小径，踪迹，路线；n. 站台；vt. 跟踪，追踪
+track n. 小径，踪迹，路线；n. 站台；vt. 跟踪，追踪 /træk/
 
 tragedy n. 不幸,惨剧,悲剧 /ˈtrædʒədi/
 
@@ -2926,9 +2926,9 @@ trend n. 趋势，倾向 /trend/
 
 trial n. 审判,试验,试用 /ˈtraɪəl/ [近:experiment]
 
-trick n. 诡计，花招，戏法，诀窍；vt. 欺骗，欺诈
+trick n. 诡计，花招，戏法，诀窍；vt. 欺骗，欺诈 /trɪk/
 
-tricky adj. 棘手的，诡计多端的
+tricky adj. 棘手的，诡计多端的 /ˈtrɪki/
 
 triumph n./vi. 成功，胜利 /ˈtraɪʌmf/
 
@@ -2938,13 +2938,13 @@ tuition n. 讲授,教学,学费 /tuˈɪʃ(ə)n/
 
 tune n. 曲子,曲调｜vt. 调音,调频道 /tuːn/
 
-turkey n. 火鸡，火鸡肉
+turkey n. 火鸡，火鸡肉 /ˈtɜːrki/
 
 type n. 类型，种类；v. 打(字) /taɪp/
 
 # U
 
-unalterable adj. 无法改变的
+unalterable adj. 无法改变的 /ʌnˈɔːltərəb(ə)l/
 
 unconquerable adj. 不可战胜的 /ʌnˈkɑːŋkərəb(ə)l/
 
@@ -2956,7 +2956,7 @@ underline vt. 在…下画线,强调,突出｜v. 在…下划（画）线，强�
 
 undermine vt. 逐渐削弱,损害｜v. 逐渐削弱，损害 /ˌʌndərˈmaɪn/
 
-underwear n. 内衣，内裤
+underwear n. 内衣，内裤 /ˈʌndərwer/
 
 upper adj. 上面的,上部的,上游的 /ˈʌpər/
 
@@ -2966,9 +2966,9 @@ utmost adj. 极度的，最大的；n. 极限，最大限度 /ˈʌtmoʊst/
 
 # V
 
-vacancy n. (职位的)空缺
+vacancy n. (职位的)空缺 /ˈveɪkənsi/
 
-vacant adj. 空的，空缺的
+vacant adj. 空的，空缺的 /ˈveɪkənt/
 
 vacation n. 假期，度假；vi. 度假 /veɪˈkeɪʃ(ə)n/
 
@@ -2978,7 +2978,7 @@ vain adj. 徒劳的，自负的，虚荣的 /veɪn/
 
 validate vt. 证实，使生效，认可 /ˈvælɪdeɪt/
 
-van n. 货车，面包车
+van n. 货车，面包车 /væn/
 
 variable adj. 多变的，可变的；n. 变量，可变因素 /ˈveriəb(ə)l/ [族:vary]
 
@@ -3004,11 +3004,11 @@ victorious adj. 获胜的，战胜的，胜利的 /vɪkˈtɔːriəs/ [族:victor
 
 victory n. 胜利，成功 /ˈvɪktəri/ [族:victory]
 
-view n. 看法；(思维)方式；视野；景色；vt. 视为，看待；观看
+view n. 看法；(思维)方式；视野；景色；vt. 视为，看待；观看 /vjuː/
 
 viewer n. 观众 /ˈvjuːər/ [近:audience]
 
-viewpoint n. 观点，看法；视角，角度
+viewpoint n. 观点，看法；视角，角度 /ˈvjuːpɔɪnt/
 
 violate vt. 违反，违背 /ˈvaɪəleɪt/ [族:violat]
 
@@ -3028,11 +3028,11 @@ visibility n. 可见度,能见度,引人注目性 /ˌvɪzəˈbɪləti/
 
 vital adj. 极其重要的，维持生命所必需的，充满活力的 /ˈvaɪt(ə)l/ [近:critical,crucial]
 
-vitamin n. 维生素，维他命
+vitamin n. 维生素，维他命 /ˈvaɪtəmɪn/
 
-vote v./n. 投票，表决，选举
+vote v./n. 投票，表决，选举 /voʊt/
 
-voter n. 选民，投票人，选举人
+voter n. 选民，投票人，选举人 /ˈvoʊtər/
 
 # W
 
@@ -3048,25 +3048,25 @@ wary adj. 小心的，提防的 /ˈweri/
 
 wave n. 海浪，浪潮，波；v. 挥手 /weɪv/
 
-wavy adj. 波纹状的，波浪形的
+wavy adj. 波纹状的，波浪形的 /ˈweɪvi/
 
-weaken v. (使)变弱，削弱；v. (使)变得不结实
+weaken v. (使)变弱，削弱；v. (使)变得不结实 /ˈwiːkən/
 
-weakness n. 虚弱，软弱；弱点，缺点；迷恋
+weakness n. 虚弱，软弱；弱点，缺点；迷恋 /ˈwiːknəs/
 
 wealthy adj. 富有的,富裕的 /ˈwelθi/
 
-weapon n. 武器，兵器；工具，手段
+weapon n. 武器，兵器；工具，手段 /ˈwepən/
 
-wear vt. 穿，戴；v. 磨损，消耗；n. 衣着，磨损，用坏
+wear vt. 穿，戴；v. 磨损，消耗；n. 衣着，磨损，用坏 /wer/
 
 weary adj. 疲劳的，厌倦的 /ˈwɪri/
 
-weather n. 天气，气象预报；vt. 平安地渡过(难关)
+weather n. 天气，气象预报；vt. 平安地渡过(难关) /ˈweðər/
 
-weave v. 编，织，迂回进行，穿行；vt. 编造
+weave v. 编，织，迂回进行，穿行；vt. 编造 /wiːv/
 
-west n. 西方；adj. 西方的；adv. 向西方
+west n. 西方；adj. 西方的；adv. 向西方 /west/
 
 wheelchair n. 轮椅 /ˈwiːltʃer/ [族:chair]
 
@@ -3078,11 +3078,11 @@ widespread adj. 普遍的，广泛的 /ˌwaɪdˈspred/
 
 willing adj. 愿意的，乐意的，乐于相助的｜v. 希望，想要 /ˈwɪlɪŋ/ [族:willing]
 
-willpower n. 意志力，毅力
+willpower n. 意志力，毅力 /ˈwɪlpaʊər/
 
 wing n. 翅膀,机翼 /wɪŋ/
 
-winner n. 获胜者
+winner n. 获胜者 /ˈwɪnər/
 
 wipe vt./n. 擦拭，抹除，消除 /waɪp/
 
@@ -3120,4 +3120,4 @@ yoghurt n. 酸奶 /ˈjoʊɡərt/
 
 # Z
 
-zone n. 地带，区域
+zone n. 地带，区域 /zoʊn/
