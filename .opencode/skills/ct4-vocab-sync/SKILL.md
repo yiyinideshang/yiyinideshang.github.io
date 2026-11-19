@@ -147,7 +147,12 @@ If many new words lack IPA, use the Uapi dictionary endpoint:
 ```bash
 UAPI_API_KEY='uapi-...' python3 tools/fetch_ipa_uapi.py --dry-run
 UAPI_API_KEY='uapi-...' python3 tools/fetch_ipa_uapi.py --write
+UAPI_API_KEY='uapi-...' python3 tools/fetch_ipa_uapi.py --write --replace-old
 ```
+
+`--replace-old` replaces IPA only for words present in
+`tools/ipa-cache.json` (the old dictionary API cache). It preserves words that
+were hand-written or came from other sources.
 
 Rules:
 

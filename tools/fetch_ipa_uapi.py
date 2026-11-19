@@ -29,6 +29,7 @@ from enrich import split_line  # noqa: E402
 
 WORDS = ROOT / "words.md"
 CACHE = ROOT / "tools" / "uapi-ipa-cache.json"
+OLD_CACHE = ROOT / "tools" / "ipa-cache.json"
 TAG_RE = re.compile(r"\s*\[(?:族|混|近):[^\]]*\]")
 
 API = "https://uapis.cn/api/v1/dictionary/lookup"
@@ -112,6 +113,8 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--retry-failed", action="store_true")
+    ap.add_argument("--replace-old", action="store_true",
+                    help="Replace IPA only for words present in tools/ipa-cache.json")
     args = ap.parse_args()
     if not args.write and not args.dry_run:
         print("Use --dry-run or --write")
@@ -122,6 +125,12 @@ def main():
         sys.exit(1)
 
     lines = WORDS.read_text(encoding="utf-8").splitlines()
+    old_cache = {}
+    if args.replace_old and OLD_CACHE.exists():
+        try:
+            old_cache = json.loads(OLD_CACHE.read_text(encoding="utf-8"))
+        except Exception:
+            old_cache = {}
     todo = []
     skipped_phrase = 0
     for i, line in enumerate(lines):
@@ -132,8 +141,12 @@ def main():
         if not r:
             continue
         word, senses, ipa, tags = r
-        if ipa:
-            continue
+        if args.replace_old:
+            if not ipa or word not in old_cache:
+                continue
+        else:
+            if ipa:
+                continue
         if " " in word:
             skipped_phrase += 1
             continue
@@ -147,7 +160,8 @@ def main():
         if c and (c.get("ipa") or (c.get("_fail") and not args.retry_failed)):
             continue
         pending.append((i, w))
-    print(f"missing single words: {len(todo)}, skipped phrases: {skipped_phrase}, to fetch: {len(pending)}", flush=True)
+    print(f"mode: {'replace-old' if args.replace_old else 'fill-missing'}")
+    print(f"candidates: {len(todo)}, skipped phrases: {skipped_phrase}, to fetch: {len(pending)}", flush=True)
 
     limiter = RateLimiter(0.17)  # ~5.8 requests/sec, below the 7 QPS limit
     results = {}
@@ -203,15 +217,20 @@ def main():
             continue
         line = lines[i]
         ipa = "/" + text.strip("/") + "/"
-        m = TAG_RE.search(line)
-        if m:
-            line = line[: m.start()] + f" {ipa}" + line[m.start():]
+        r = split_line(line)
+        old_ipa = r[2] if r else ""
+        if args.replace_old and old_ipa and old_ipa in line:
+            line = line.replace(old_ipa, ipa, 1)
         else:
-            line = line.rstrip() + f" {ipa}"
+            m = TAG_RE.search(line)
+            if m:
+                line = line[: m.start()] + f" {ipa}" + line[m.start():]
+            else:
+                line = line.rstrip() + f" {ipa}"
         lines[i] = line
         added += 1
     WORDS.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"added IPA: {added}", flush=True)
+    print(f"{'updated' if args.replace_old else 'added'} IPA: {added}", flush=True)
     if failures:
         print("failed words:", ", ".join(f"{w}({s})" for w, s in failures[:80]), flush=True)
 
