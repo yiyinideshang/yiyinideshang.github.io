@@ -693,7 +693,7 @@ def render(words: dict[str, dict]) -> str:
 
 
 def main() -> None:
-    files = [SRC / "26_1.md", SRC / "英语四级.md"]
+    files = [SRC / "26_1.md"]
     all_entries: list[dict] = []
     all_trans: list[str] = []
     for f in files:

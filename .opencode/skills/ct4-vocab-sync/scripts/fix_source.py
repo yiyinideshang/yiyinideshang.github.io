@@ -166,6 +166,7 @@ ENTRY_RE = re.compile(
 
 
 def is_entry_line(line: str):
+    line = line.replace("\u200b", "")
     s = line.strip()
     if not s or s.startswith(("#", "<!--", "|")):
         return None
