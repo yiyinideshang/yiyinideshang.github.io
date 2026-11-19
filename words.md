@@ -531,7 +531,7 @@ comprise vt. 包括，由…组成 /kəmˈpraɪz/
 
 compromise n. 妥协，让步，折中；vi. 妥协，让步，折中；vt. 危及，有损 /ˈkɑːmprəmaɪz/
 
-conceal vt. 掩盖，隐藏
+conceal vt. 掩盖，隐藏 /kənˈsiːl/
 
 concentrate v. 全神贯注；(使)集中｜n. 浓缩物 /ˈkɑːns(ə)ntreɪt/ [族:concentrat] [混:compensate,concrete,cooperate] [近:focus]
 
@@ -633,7 +633,7 @@ controversial adj. 有争议的，引发争论的 /ˌkɑːntrəˈvɜːrʃ(ə)l/
 
 controversy n. 争论，争议 /ˈkɑːntrəvɜːrsi/
 
-convenience n. 方便，便利
+convenience n. 方便，便利 /kənˈviːniəns/
 
 convenient adj. 方便的 /kənˈviːniənt/
 
@@ -1565,7 +1565,7 @@ interviewer n. 面试官,采访者 /ˈɪntərvjuːər/ [族:interview]
 
 introduce vt. 介绍，使初次了解，推行，引入 /ˌɪntrəˈduːs/
 
-introductory adj. 序言的，入门的
+introductory adj. 序言的，入门的 /ˌɪntrəˈdʌktəri/
 
 invariably adv. 总是，不变地，始终如一地 /ɪnˈveriəbli/
 
@@ -2337,9 +2337,9 @@ regional adj. 地区的，区域的 /ˈriːdʒən(ə)l/
 
 register v. 注册，登记；注意到；n. 登记表；现金收纳机 /ˈredʒɪstər/
 
-registrar n. 登记员；(大学的)教务主任
+registrar n. 登记员；(大学的)教务主任 /ˈredʒɪstrɑːr/
 
-registration n. 登记，注册
+registration n. 登记，注册 /ˌredʒɪˈstreɪʃ(ə)n/
 
 regret vt. 为…感到后悔，对…感到抱歉；n. 懊悔，遗憾 /rɪˈɡret/
 
@@ -2349,7 +2349,7 @@ regulate v.(以规章)管理，约束；vt.调整，调节 /ˈreɡjuleɪt/
 
 relate v. 联系,使有关联｜vt. 叙述,讲述｜vi. 涉及,关于,理解 /rɪˈleɪt/ [族:relat] [近:associate]
 
-relaxation n. 放松，消遣
+relaxation n. 放松，消遣 /ˌriːlækˈseɪʃ(ə)n/
 
 relay vt. 传递,转发,传播｜n. 接力赛,接班人,中继设备 /ˈriːleɪ/
 
@@ -2361,15 +2361,15 @@ relief n. 缓和；救济(金) ，宽慰，减轻 /rɪˈliːf/ [族:relief]
 
 relieve vt. 减轻，缓和 /rɪˈliːv/ [族:relief]
 
-reluctance n. 勉强，不情愿
+reluctance n. 勉强，不情愿 /rɪˈlʌktəns/
 
-reluctant adj. 勉强的，不情愿的
+reluctant adj. 勉强的，不情愿的 /rɪˈlʌktənt/
 
 rely vi. 依靠，信任 /rɪˈlaɪ/ [族:rely]
 
-remainder n. 剩余部分，剩余物
+remainder n. 剩余部分，剩余物 /rɪˈmeɪndər/
 
-remembrance n. 怀念，悼念，纪念物
+remembrance n. 怀念，悼念，纪念物 /rɪˈmembrəns/
 
 removal n. 移走，拿走，消除，免职 /rɪˈmuːv(ə)l/ [族:remove]
 
@@ -2389,11 +2389,11 @@ renovate vt. 修复,改造,翻新；修复，改造 /ˈrenəveɪt/ [族:renovat]
 
 renovation n. 修复,改造,翻新 /ˌrenəˈveɪʃ(ə)n/ [族:renovat]
 
-rent v. 租用，租借；vt. 出租；n. 租金
+rent v. 租用，租借；vt. 出租；n. 租金 /rent/
 
 replace vt. 替换,更换 /rɪˈpleɪs/
 
-replacement n. 替换，取代；替换物，接替者
+replacement n. 替换，取代；替换物，接替者 /rɪˈpleɪsmənt/
 
 report v. 报告,汇报,报道,宣布｜vt. 举报,告发｜n. 报告 /rɪˈpɔːrt/
 
@@ -2407,7 +2407,7 @@ reserve vt. 预订，预约，预留；n. 储备，自然保护区，内向 /rɪ
 
 reserved adj. 内敛的，预订的，保留的 /rɪˈzɜːrvd/ [族:reserv]
 
-residence n. 住处，住宅，居住
+residence n. 住处，住宅，居住 /ˈrezɪdəns/
 
 resident n. 居民，住户 /ˈrezɪdənt/
 
