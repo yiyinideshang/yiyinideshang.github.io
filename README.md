@@ -150,7 +150,7 @@ git push origin main
 - 或在 GitHub Desktop 里点一下 Push
 - 或者用 `git push` 手动推
 
-> 只改 `words.md` 不需要动版本号。改 `app.js` / `style.css` / `index.html` 时，把 `index.html` 里的 `?v=23` 和 `sw.js` 里的 `cet4-v23` 各加 1，否则手机可能继续用旧缓存。
+> 只改 `words.md` 不需要动版本号。改 `app.js` / `style.css` / `index.html` 时，把 `index.html` 里的 `?v=24` 和 `sw.js` 里的 `cet4-v24` 各加 1，否则手机可能继续用旧缓存。
 
 ---
 
@@ -241,6 +241,7 @@ ct4/
     ├── letter_headings.py  给 words.md 加 A–Z 标题
     ├── merge_families.py   合并被拆开的词族
     ├── enrich.py           补音标/词性（词典 API）
+    ├── fetch_ipa_uapi.py   用 Uapi 补缺失音标
     └── check.py            推送前格式检查
 ```
 

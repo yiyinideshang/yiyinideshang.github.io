@@ -140,7 +140,25 @@ python3 scripts/merge_words.py --write
 python3 tools/letter_headings.py
 ```
 
-### 6. Validate
+### 6. Fill missing IPA (optional)
+
+If many new words lack IPA, use the Uapi dictionary endpoint:
+
+```bash
+UAPI_API_KEY='uapi-...' python3 tools/fetch_ipa_uapi.py --dry-run
+UAPI_API_KEY='uapi-...' python3 tools/fetch_ipa_uapi.py --write
+```
+
+Rules:
+
+- Only fill blank IPA; never overwrite a hand-written IPA.
+- Skip phrases containing spaces.
+- Prefer US phonetics, fall back to UK.
+- Cache in `tools/uapi-ipa-cache.json` (gitignored).
+- Never commit the API key. Read it from `UAPI_API_KEY`.
+- If quota or rate limit runs out, leave the rest blank and report it.
+
+### 7. Validate
 
 ```bash
 python3 tools/check.py
@@ -169,7 +187,7 @@ Preview-check in the app:
 - one new word detail page
 - one new family card
 
-### 7. Finish
+### 8. Finish
 
 - Update `README.md` word/family counts (compute from the app, not by hand).
 - Bump the cache version in `index.html`, `sw.js`, and the README note.
