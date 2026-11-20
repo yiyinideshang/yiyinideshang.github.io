@@ -92,6 +92,7 @@ revolution: revolutionary
 
 announce: announce, announcement
 mission: mission, emission, omission, admission, commission, submission, permission, transmission
+dominat: dominate, dominant, dominance, domination
 annoy: annoy, annoyance
 assign: assign, assignment
 assure: assure, assurance

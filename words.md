@@ -453,12 +453,16 @@ calf n. 牛犊；幼兽 /kæf/
 
 calm adj. 平静的，风平浪静的｜v. 使平静，使镇静｜n. 平静，冷静 /kɑːm/
 
+camp n. 营地，阵营；vi. 扎营，露营 /kæmp/
+
 cancer n. 癌症；社会恶习 /ˈkænsər/ [混:career]
 - 记: cancer 里有 can（can + cer），可以想成“癌细胞会扩散”。
 - 记: can + cer，中间是 n。
 - 错: 与 career 混；重音在前，像“坎瑟”，开头是“坎”。职业 career 找 r，癌症 cancer 找 n。
 
 candidate n. 候选人,申请人,考生 /ˈkændɪdət/
+
+cap n. 帽子，盖子，最高限额；vt. 设置最高限额 /kæp/
 
 capacity n. 容量；能力,职责 /kəˈpæsəti/ [近:ability]
 
@@ -863,6 +867,8 @@ coordination n. 协作，配合；(身体的)协调能力 /koʊˌɔːrdɪˈneɪ�
 
 coordinator n. 协调者，统筹人 /koʊˈɔːrdɪneɪtər/
 
+cope vi. 应对，处理 /koʊp/
+
 copper n. 铜币；警察 /ˈkɑːpər/
 
 cord n. 电源线，粗线，细绳 /kɔːrd/
@@ -1186,6 +1192,14 @@ doctor n. 医生，博士 /ˈdɑːktər/
 document n. 文件,文档,文献｜vt. 记录,记载,用文献证明 /ˈdɑːkjumənt/
 
 doll n. 玩偶,玩具娃娃 /dɑːl/
+
+dominance n. 优势，支配地位 /ˈdɑːmɪnəns/ [族:dominat]
+
+dominant adj. 占支配(统治)地位的 /ˈdɑːmɪnənt/ [族:dominat]
+
+dominate v. 主宰，统治，支配；vt. 高耸 /ˈdɑːmɪneɪt/ [族:dominat]
+
+domination n. 统治，支配 /ˌdɑːmɪˈneɪʃ(ə)n/ [族:dominat]
 
 donate vt. 捐赠；献(血、器官等) /ˈdoʊneɪt/
 
@@ -3883,8 +3897,6 @@ tender adj. 温柔的 /ˈtendər/
 
 tent n. 帐篷 /tent/
 
-tremendous adj. 巨大的，大量的，极好的 /trəˈmendəs/
-
 terminal n. 终点站,航站楼,终端 /ˈtɜːrmɪn(ə)l/
 
 theme n. 主题，主旋律 /θiːm/
@@ -3975,6 +3987,8 @@ trash n. 垃圾,废物｜vt. 损坏,毁坏｜v. 损坏，毁坏 /træʃ/
 tray n. 托盘，浅盘 /treɪ/
 
 treat vt. 对待，治疗，款待；n. 款待 /triːt/
+
+tremendous adj. 巨大的，大量的，极好的 /trəˈmendəs/
 
 trend n. 趋势，倾向 /trend/
 

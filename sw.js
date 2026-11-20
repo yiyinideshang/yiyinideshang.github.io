@@ -1,10 +1,10 @@
 /* 四级词库 service worker：离线可背 */
-const CACHE = "cet4-v27";
+const CACHE = "cet4-v28";
 const ASSETS = [
   "./",
   "./index.html",
-  "./style.css?v=27",
-  "./app.js?v=27",
+  "./style.css?v=28",
+  "./app.js?v=28",
   "./words.md",
   "./manifest.webmanifest",
   "./icon.svg",
