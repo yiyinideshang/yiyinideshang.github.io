@@ -941,6 +941,8 @@ cowboy n. (尤其指旧时北美的)牛仔 /ˈkaʊbɔɪ/
 
 crack n. 裂缝；v. 破裂 /kræk/
 
+cracker n. 薄脆饼干；爆竹 /ˈkrækər/
+
 craft n. 手艺，飞行器｜v. 精心制作 /kræft/
 
 crash n./v. 碰撞，坠毁；崩溃 /kræʃ/
@@ -1573,6 +1575,8 @@ extent n. 程度,地步 /ɪkˈstent/
 
 extinct adj. 灭绝的 /ɪkˈstɪŋkt/
 
+extinguish vt. 熄灭，扑灭；消除 /ɪkˈstɪŋɡwɪʃ/
+
 extra adj. 额外的，附加的；adv. 额外，另外；n. 另外收费的事物 /ˈekstrə/
 
 extract n. 摘录,引文｜vt. 提取 /ˈekstrækt； ɪkˈstrækt/
@@ -2103,6 +2107,8 @@ instant adj. 立即的，即食的，速溶的；n. 刹那，顷刻 /ˈɪnstənt
 
 instinct n. 本能，直觉 /ˈɪnstɪŋkt/
 
+instinctive adj. 本能的，直觉的 /ɪnˈstɪŋktɪv/ [族:instinct]
+
 instruct vt. 指示，吩咐；教授，传授 /ɪnˈstrʌkt/ [族:instruct]
 
 instructive adj. 增进知识的 /ɪnˈstrʌktɪv/ [族:instruct]
@@ -2427,6 +2433,8 @@ mastery n. 精通，掌握，通统治，驾驭 /ˈmæstəri/
 match n. 相匹配的人或物，比赛，火柴；v. 般配，和…相配；vt. 配对 /mætʃ/
 
 mature adj. 成熟的；v. 成熟 /məˈtʃʊr/
+
+maturity n. 成熟 /məˈtʃʊrəti/ [族:mature]
 
 maybe adv. 也许，可能，大概 /ˈmeɪbi/
 
@@ -3074,7 +3082,17 @@ proclaim vt. 宣布，声称；表明，显示 /prəˈkleɪm/ [族:claim]
 
 product n. 产品，产物 /ˈprɑːdʌkt/
 
+production n. 生产，产量 /prəˈdʌkʃn/ [族:product]
+
+productive adj. 多产的，富有成效的 /prəˈdʌktɪv/ [族:product]
+
+productivity n. 生产力，生产率 /ˌproʊdʌkˈtɪvətiˌˌprɑːdʌkˈtɪvəti/ [族:product]
+
+profession n. 职业，专业 /prəˈfeʃ(ə)n/ [族:profess]
+
 professional adj. 职业的,专业的｜n. 专业人士,职业运动员 /prəˈfeʃən(ə)l/
+
+professor n. 教授 /prəˈfesər/ [族:profess]
 
 proficiency n. 熟练,精通 /prəˈfɪʃ(ə)nsi/
 
@@ -3332,6 +3350,12 @@ replacement n. 替换，取代；替换物，接替者 /rɪˈpleɪsmənt/
 report v. 报告,汇报,报道,宣布｜vt. 举报,告发｜n. 报告 /rɪˈpɔːrt/
 
 reporter n. 记者 /rɪˈpɔːrtər/ [族:report]
+
+reproduce v. 繁殖，复制，再现 /ˌriːprəˈduːs/ [族:reproduce]
+
+reproduction n. 繁殖，复制，再现 /ˌriːprəˈdʌkʃ(ə)n/ [族:reproduce]
+
+reproductive adj. 生殖的，繁殖的 /ˌriːprəˈdʌktɪv/ [族:reproduce]
 
 require vt. 需要；要求；规定 /rɪˈkwaɪər/ [族:require] [混:acquire,inquire,inquiry]
 

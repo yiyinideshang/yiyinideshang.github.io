@@ -107,6 +107,11 @@ tour: tourism, tourist
 architect: architect, architecture
 direct: direct, redirect
 secure: secure, security
+product: production, productive, productivity
+reproduce: reproduce, reproductive, reproduction
+mature: maturity
+profess: professor, profession
+instinct: instinctive
 annoy: annoy, annoyance
 assign: assign, assignment
 assure: assure, assurance
