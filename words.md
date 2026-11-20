@@ -361,6 +361,8 @@ be worthy of phr. 值得…的,应该获得…的
 
 bean n. 豆，豆科植物 /biːn/
 
+because of phr. 因为
+
 beg of phr. 推辞,反悔
 
 beg v. 恳求,哀求,乞讨,行乞 /beɡ/
@@ -811,7 +813,19 @@ consumption n. 消耗,消费 /kənˈsʌmpʃ(ə)n/
 
 contact n. 联系，接触 /ˈkɑːntækt/
 
+container n. 容器，集装箱，货柜 /kənˈteɪnər/
+
 contestant n. 参赛者 /kənˈtestənt/
+
+continent n. 洲，大陆；欧洲大陆 /ˈkɑːntɪnənt/ [族:continent]
+
+continental adj. 大陆的；n. 欧洲大陆人 /ˌkɑːntɪˈnent(ə)l/ [族:continent]
+
+continual adj. 不停的，无间断的 /kənˈtɪnjuəl/ [族:continu]
+
+continuation n. 持续，继续，延续 /kənˌtɪnjuˈeɪʃ(ə)n/ [族:continu]
+
+continuity n. 连续性 /ˌkɑːntɪˈnuːəti/ [族:continu]
 
 contract n. 合约，合同；v. 缩小，收缩，签合同；vt. 患上 /ˈkɑːntrækt/
 
@@ -1244,6 +1258,8 @@ dragon n. 龙 /ˈdræɡən/
 dreamy adj. 恍惚的，不切实际的 /ˈdriːmi/
 
 dress n. 连衣裙，服装；v. 给…穿衣服；vi. 穿正式衣服 /dres/
+
+drift away phr. 散开，逐渐离开
 
 drift v. 漂流，使漂浮｜n. 雪堆，水流，气流，主旨 /drɪft/
 
@@ -2147,6 +2163,8 @@ item n. 一件物品，项目，一篇报道 /ˈaɪtəm/
 
 journal n. 期刊,杂志,报纸,日志,日记 /ˈdʒɜːrn(ə)l/
 
+judgement n. 看法，评价，判断力，判决 /ˈdʒʌdʒmənt/
+
 jump vi. 跳跃，突然快速移动，激增；vt. 跳过，越过；n. 跳，跃，突升，激增 /dʒʌmp/
 
 junior adj. 级别低的，青少年的；n. 大三学生 /ˈdʒuːniər/
@@ -2646,6 +2664,8 @@ outbreak n. (暴力活动、疾病等的)爆发 /ˈaʊtbreɪk/
 
 outcome n. 结果，后果 /ˈaʊtkʌm/
 
+outing n. 远足，短途旅行 /ˈaʊtɪŋ/
+
 outlet n. 出口，经销商 /ˈaʊtlet/
 
 outline n./vt. 概述，概要 /ˈaʊtlaɪn/
@@ -2661,6 +2681,8 @@ overenthusiasm adj. 过分热情的 /ˌoʊvərɪnˈθuːziæzəm/
 overwhelm n. 是不知所措，击败 /ˌoʊvərˈwelm/
 
 overwhelming adj. 压倒性的，无法抗拒的 /ˌoʊvərˈwelmɪŋ/
+
+owing to phr. 由于，因为
 
 owner n. 物主，所有者 /ˈoʊnər/
 
@@ -2739,6 +2761,10 @@ peculiar adj. 古怪的，特有的 /pɪˈkjuːliər/
 peculiarity n. 古怪之处，特性 /pɪˌkjuːliˈærəti/
 
 peculiarly adv. 奇怪地，特有地 /pɪˈkjuːliərli/
+
+penalize vt. 处罚，惩罚 /ˈpiːnəlaɪz/ [族:penal]
+
+penalty n. 处罚，罚金 /ˈpenəlti/ [族:penal]
 
 pension n. 养老金 /ˈpenʃən/
 
@@ -2847,6 +2873,10 @@ pleasure n. 愉快，满足，令人快乐的事 /ˈpleʒər/ [族:please]
 plentiful adj. 丰富的，充足的 /ˈplentɪf(ə)l/
 
 pointless adj. 无意义的，无目的的，无益的 /ˈpɔɪntləs/
+
+poison n. 毒药，毒物；vt. 毒害，下毒 /ˈpɔɪzn/ [族:poison]
+
+poisonous adj. 有毒的；恶毒的 /ˈpɔɪzənəs/ [族:poison]
 
 polar adj. 极地的，完全相反的 /ˈpoʊlər/
 
@@ -2979,6 +3009,10 @@ principle n. 原则，原理，定律 /ˈprɪnsəp(ə)l/
 prior adj. 先前的，在…前面的 /ˈpraɪər/
 
 priority n. 当务之急；优先权 /praɪˈɔːrəti/
+
+prison n. 监狱 /ˈprɪzn/ [族:prison]
+
+prisoner n. 囚犯，犯人；俘虏，战俘 /ˈprɪz(ə)nər/ [族:prison]
 
 privilege n. 特权,荣幸,权势 /ˈprɪvəlɪdʒ/ [近:honor]
 
@@ -3984,6 +4018,8 @@ trap n. 陷阱，圈套，困境，牢笼；vt. 使陷入困境，卡住 /træp/
 
 trash n. 垃圾,废物｜vt. 损坏,毁坏｜v. 损坏，毁坏 /træʃ/
 
+travel v./n. 旅行，旅游 /ˈtræv(ə)l/
+
 tray n. 托盘，浅盘 /treɪ/
 
 treat vt. 对待，治疗，款待；n. 款待 /triːt/
@@ -4079,6 +4115,8 @@ verb n. 动词 /vɜːrb/
 verify v. 证实，证明，核实 /ˈverɪfaɪ/ [近:confirm,prove]
 
 versus prep. 以…为对手，与…相比 /ˈvɜːrsəs/
+
+vessel n. 舰，轮船，容器，器皿，血管 /ˈves(ə)l/
 
 via n. 介词，经由，经过，通过，凭借 /ˈvaɪə/
 

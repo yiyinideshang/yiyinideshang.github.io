@@ -93,6 +93,11 @@ revolution: revolutionary
 announce: announce, announcement
 mission: mission, emission, omission, admission, commission, submission, permission, transmission
 dominat: dominate, dominant, dominance, domination
+penal: penalty, penalize
+prison: prison, prisoner
+poison: poison, poisonous
+continu: continual, continuity, continuation
+continent: continent, continental
 annoy: annoy, annoyance
 assign: assign, assignment
 assure: assure, assurance
