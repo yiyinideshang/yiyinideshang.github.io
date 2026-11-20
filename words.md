@@ -28,6 +28,8 @@ accent n. 腔调，口音，重音｜vt. 突出,强调 /ˈæksent/
 
 accentuate v. 使突出,强调 /əkˈsentʃueɪt/
 
+accident n. 事故，意外 /ˈæksɪdənt/
+
 accidental adj. 意外的，偶然发生的 /ˌæksəˈdent(ə)l/
 
 accomplish v. 完成，实现 /əˈkɑːmplɪʃ/ [族:accomplish]
@@ -55,6 +57,8 @@ accuracy n. 准确性,精确性 /ˈækjərəsi； ˈækjʊrəsi/
 accurate adj. 准确的，精确的 /ˈækjərət/
 
 accuse vt. 指责,指控,控告 /əˈkjuːz/ [混:abuse,acute]
+
+ache n./vi. 疼痛 /eɪk/
 
 acquire vt. 获得；购得；得到 /əˈkwaɪər/ [混:inquire,inquiry,require]
 
@@ -148,6 +152,8 @@ alteration n. 变动，改动 /ˌɔːltəˈreɪʃ(ə)n/
 
 alternative adj. 可替代的，其他的；n. 可供选择的事物 /ɔːlˈtɜːrnətɪv/
 
+amateur n. 业余爱好者；adj. 业余的 /ˈæmətər/
+
 amaze vt. 使吃惊 /əˈmeɪz/ [混:amuse,assume,consume,resume]
 
 amount n. 数量,金额｜vi. 共计,等同于,发展成 /əˈmaʊnt/
@@ -203,6 +209,10 @@ appropriate adj. 适当的，恰当的 /əˈproʊpriət/
 approval n. 赞成，同意，批准，许可 /əˈpruːv(ə)l/ [族:approve]
 
 approve vi. 同意,赞成,赞许｜vt. 批准,通过 /əˈpruːv/ [混:confirm,improve,prove,provide]
+
+architect n. 建筑师 /ˈɑːrkɪtekt/ [族:architect]
+
+architecture n. 建筑学，建筑风格 /ˈɑːrkɪtektʃər/ [族:architect]
 
 argument n. 争论,论据,理由 /ˈɑːrɡjumənt/ [族:argu]
 
@@ -929,7 +939,11 @@ cowardly adj. 胆小的，懦弱的 /ˈkaʊərdli/
 
 cowboy n. (尤其指旧时北美的)牛仔 /ˈkaʊbɔɪ/
 
+crack n. 裂缝；v. 破裂 /kræk/
+
 craft n. 手艺，飞行器｜v. 精心制作 /kræft/
+
+crash n./v. 碰撞，坠毁；崩溃 /kræʃ/
 
 criminal adj. 犯罪的，刑事的；n. 罪犯，犯人 /ˈkrɪmɪn(ə)l/
 
@@ -944,6 +958,8 @@ crop n. 庄稼，农作物；产量，收成｜v. 种植，收割，修剪｜v. 
 crucial adj. 至关重要的,关键性的 /ˈkruːʃ(ə)l/ [近:critical,vital]
 
 cruel adj. 残酷的；残酷的 /ˈkruːəl/
+
+crush vt. 压碎，压垮；n. 迷恋 /krʌʃ/
 
 cube n. 立方体 /kjuːb/
 
@@ -1041,6 +1057,8 @@ dentist n. 牙医，牙医诊所 /ˈdentɪst/
 
 deny vt. 否认；拒绝接受 /dɪˈnaɪ/
 
+depict vt. 描绘，描述 /dɪˈpɪkt/
+
 depress vt. 使沮丧 /dɪˈpres/
 
 depression n. 抑郁症，抑郁，沮丧；萧条期；n. 洼地，坑，低气压 /dɪˈpreʃ(ə)n/
@@ -1134,6 +1152,10 @@ diplomacy n. 外交；手腕，策略 /dɪˈploʊməsi/
 diplomat n. 外交官 /ˈdɪpləmæt/
 
 diplomatic adj. 外交的，圆滑的 /ˌdɪpləˈmætɪk/
+
+direct adj. 直接的；v. 指导，导演；adv. 直接地 /dəˈrekt/ [族:direct]
+
+dirt n. 泥土，污垢 /dɜːrt/
 
 disability n. 残疾,缺陷,障碍 /ˌdɪsəˈbɪləti/
 
@@ -1308,6 +1330,8 @@ earthy adj. 泥土的，粗俗的，朴实的 /ˈɜːrθi/
 ease n. 容易，轻易，舒适，安逸；v. (使)宽慰，缓解；vt. 使容易些 /iːz/
 
 east n. 东方；adj. 东方的；adv. 向东方 /iːst/
+
+echo n. 回声，共鸣；v. 回响，重复 /ˈekoʊ/
 
 economic adj. 经济的,有利可图的 /ˌiːkəˈnɑːmɪk； ˌekəˈnɑːmɪk/ [族:econom]
 
@@ -1547,6 +1571,8 @@ extensive adj. 广阔的，大量的，广泛的 /ɪkˈstensɪv/
 
 extent n. 程度,地步 /ɪkˈstent/
 
+extinct adj. 灭绝的 /ɪkˈstɪŋkt/
+
 extra adj. 额外的，附加的；adv. 额外，另外；n. 另外收费的事物 /ˈekstrə/
 
 extract n. 摘录,引文｜vt. 提取 /ˈekstrækt； ɪkˈstrækt/
@@ -1669,6 +1695,8 @@ float v. 漂浮，漂流 /floʊt/
 fluency n. 流利，流畅 /ˈfluːənsi/
 
 fluent adj. 流利的,流畅的 /ˈfluːənt/
+
+fluently adv. 流利地，流畅地 /ˈfluːəntli/
 
 focus v. 集中于｜n. 焦点,中心,焦距 /ˈfoʊkəs/ [近:concentrate]
 
@@ -2015,6 +2043,8 @@ informative adj. 提供信息的，增进知识的 /ɪnˈfɔːrmətɪv/ [族:inf
 
 ingredient n. 配料，成分，因素 /ɪnˈɡriːdiənt/
 
+inherent adj. 固有的，内在的 /ɪnˈherənt/
+
 inherit v. 继承；vt. 经遗传获得 /ɪnˈherɪt/
 
 inheritance n. 遗产，遗传特征 /ɪnˈherɪtəns/
@@ -2070,6 +2100,8 @@ insistent adj. 坚决要求的；持续不断的 /ɪnˈsɪstənt/
 installment n. 一期 /ɪnˈstɔːlmənt/
 
 instant adj. 立即的，即食的，速溶的；n. 刹那，顷刻 /ˈɪnstənt/
+
+instinct n. 本能，直觉 /ˈɪnstɪŋkt/
 
 instruct vt. 指示，吩咐；教授，传授 /ɪnˈstrʌkt/ [族:instruct]
 
@@ -2393,6 +2425,8 @@ masterpiece n. 代表作，杰作 /ˈmæstərpiːs/
 mastery n. 精通，掌握，通统治，驾驭 /ˈmæstəri/
 
 match n. 相匹配的人或物，比赛，火柴；v. 般配，和…相配；vt. 配对 /mætʃ/
+
+mature adj. 成熟的；v. 成熟 /məˈtʃʊr/
 
 maybe adv. 也许，可能，大概 /ˈmeɪbi/
 
@@ -3038,6 +3072,8 @@ problematic adj. 有问题的，有困难的 /ˌprɑːbləˈmætɪk/
 
 proclaim vt. 宣布，声称；表明，显示 /prəˈkleɪm/ [族:claim]
 
+product n. 产品，产物 /ˈprɑːdʌkt/
+
 professional adj. 职业的,专业的｜n. 专业人士,职业运动员 /prəˈfeʃən(ə)l/
 
 proficiency n. 熟练,精通 /prəˈfɪʃ(ə)nsi/
@@ -3193,6 +3229,8 @@ record n./v. 记录,记载 /ˈrekɔːd； rɪˈkɔːd/
 
 recycle n. 回收利用,循环利用 /ˌriːˈsaɪk(ə)l/
 
+redirect vt. 重新定向，改道 /ˌriːdəˈrekt/ [族:direct]
+
 reduce vt. 减少,缩小,降低 /rɪˈduːs/
 
 reduction n. 减少，缩小 /rɪˈdʌkʃ(ə)n/
@@ -3296,6 +3334,8 @@ report v. 报告,汇报,报道,宣布｜vt. 举报,告发｜n. 报告 /rɪˈpɔ�
 reporter n. 记者 /rɪˈpɔːrtər/ [族:report]
 
 require vt. 需要；要求；规定 /rɪˈkwaɪər/ [族:require] [混:acquire,inquire,inquiry]
+
+researcher n. 研究人员 /rɪˈsɜːrtʃər/
 
 resemble vt. 看起来像，与…相似 /rɪˈzemb(ə)l/
 
@@ -3497,6 +3537,10 @@ scrape vt. 刮掉；n. 刮，擦伤 /skreɪp/
 secondary adj. 中学的,次要的 /ˈsekənderi/
 
 sector n. 部门，行业 /ˈsektər/
+
+secure adj. 安全的，可靠的；v. 获得，保护，使安全 /sɪˈkjʊr/
+
+security n. 安全，保障；保安 /sɪˈkjʊrəti/ [族:secure]
 
 segment n. 部分,节,段｜vt. 分割,划分 /ˈseɡmənt/
 

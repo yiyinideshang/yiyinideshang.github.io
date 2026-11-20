@@ -104,6 +104,9 @@ suppose: supposedly, supposition
 report: reporter
 judge: judge, judgement
 tour: tourism, tourist
+architect: architect, architecture
+direct: direct, redirect
+secure: secure, security
 annoy: annoy, annoyance
 assign: assign, assignment
 assure: assure, assurance
