@@ -44,6 +44,8 @@ RENAME = {
     "carryout": "carry out",
 }
 
+DROP_WORDS = {"x", "chips", "geese", "teeth", "footn"}
+
 POS_OVERRIDES = {
     "tray": "n", "bride": "n", "victory": "n", "dealing": "n",
     "spokesperson": "n", "outcome": "n",
@@ -189,7 +191,7 @@ def collect_new():
     for e in entries:
         w = norm_word(e["word"])
         w = RENAME.get(w, w)
-        if not w or w in current:
+        if not w or w in DROP_WORDS or w in current:
             continue
         if w not in merged:
             merged[w] = {"word": w, "senses": [], "notes": []}
@@ -215,7 +217,7 @@ def collect_new():
             continue
         w = norm_head(m.group("word"))
         w = RENAME.get(w, w)
-        if not w or w in current or w in merged:
+        if not w or w in DROP_WORDS or w in current or w in merged:
             continue
         rest = line_rest(line)
         senses, ipa = mig.parse_senses(rest, w)

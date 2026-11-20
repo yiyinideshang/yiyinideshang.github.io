@@ -91,6 +91,7 @@ remove: removal
 revolution: revolutionary
 
 announce: announce, announcement
+mission: mission, emission, omission, admission, commission, submission, permission, transmission
 annoy: annoy, annoyance
 assign: assign, assignment
 assure: assure, assurance
