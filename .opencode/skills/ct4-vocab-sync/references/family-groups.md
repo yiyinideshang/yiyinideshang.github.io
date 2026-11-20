@@ -98,6 +98,12 @@ prison: prison, prisoner
 poison: poison, poisonous
 continu: continual, continuity, continuation
 continent: continent, continental
+journal: journalist, journalism
+support: supporter, supportive
+suppose: supposedly, supposition
+report: reporter
+judge: judge, judgement
+tour: tourism, tourist
 annoy: annoy, annoyance
 assign: assign, assignment
 assure: assure, assurance

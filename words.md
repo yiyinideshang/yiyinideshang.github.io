@@ -2163,7 +2163,13 @@ item n. 一件物品，项目，一篇报道 /ˈaɪtəm/
 
 journal n. 期刊,杂志,报纸,日志,日记 /ˈdʒɜːrn(ə)l/
 
-judgement n. 看法，评价，判断力，判决 /ˈdʒʌdʒmənt/
+journalism n. 新闻工作，新闻业 /ˈdʒɜːrnəlɪz(ə)m/ [族:journal]
+
+journalist n. 记者，新闻工作者 /ˈdʒɜːrnəlɪst/ [族:journal]
+
+judge n. 法官；裁判员；v. 判断；评价，职责；vt. 估计，猜测 /dʒʌdʒ/ [族:judge]
+
+judgement n. 看法，评价，判断力，判决 /ˈdʒʌdʒmənt/ [族:judge]
 
 jump vi. 跳跃，突然快速移动，激增；vt. 跳过，越过；n. 跳，跃，突升，激增 /dʒʌmp/
 
@@ -2944,6 +2950,8 @@ preference n. 偏好；优惠 /ˈprefrəns/
 
 preferential adj. 优先的，优待的 /ˌprefəˈrenʃ(ə)l/
 
+prejudice n. 偏见，成见；vt. 使有偏见 /ˈpredʒədɪs/
+
 preliminary adj. 初步的，预备的；n. 初步行动，准备工作 /prɪˈlɪmɪneri/
 
 preparation n. 准备工作 /ˌprepəˈreɪʃ(ə)n/
@@ -3081,6 +3089,8 @@ protect v. 保护，防护 /prəˈtekt/ [族:protect]
 protection n. 保卫，防卫，保障 /prəˈtekʃn/ [族:protect]
 
 protective adj. 保护的 /prəˈtektɪv/ [族:protect]
+
+protest n./v. 抗议，反对 /ˈproʊtest/
 
 prove vt. 证明,证实,展现 vlink.证明是,被发现是｜v. 证明，证实，证明是，结果是 /pruːv/ [混:approve,confirm,improve,provide] [近:confirm,verify]
 - 变形: 过去式 proved；过去分词 proved / proven
@@ -3282,6 +3292,8 @@ replace vt. 替换,更换 /rɪˈpleɪs/
 replacement n. 替换，取代；替换物，接替者 /rɪˈpleɪsmənt/
 
 report v. 报告,汇报,报道,宣布｜vt. 举报,告发｜n. 报告 /rɪˈpɔːrt/
+
+reporter n. 记者 /rɪˈpɔːrtər/ [族:report]
 
 require vt. 需要；要求；规定 /rɪˈkwaɪər/ [族:require] [混:acquire,inquire,inquiry]
 
@@ -3835,7 +3847,15 @@ supply n. 供应量，供给；vt. 供给，供应 /səˈplaɪ/
 
 support vt. 支持,资助,养活,证实｜n. 支持,资助,支撑物 /səˈpɔːrt/
 
+supporter n. 支持者 /səˈpɔːrtər/ [族:support]
+
+supportive adj. 给予帮助的，支持的 /səˈpɔːrtɪv/ [族:support]
+
 suppose v. 假定，假设，认为，猜想｜vt. 假定,假设 /səˈpoʊz/ [近:assume]
+
+supposedly adv. 据传，据说 /səˈpoʊzɪdli/ [族:suppose]
+
+supposition n. 假定，设想 /ˌsʌpəˈzɪʃ(ə)n/ [族:suppose]
 
 surge vi. 涌动，激增；n. 激增；奔涌向前 /sɜːrdʒ/
 
@@ -3992,7 +4012,9 @@ touch vt. 触摸,使感动,影响｜v. 接触,触及｜n. 触觉,触摸,少许 /
 
 tough adj. 艰难的,严厉的,强硬的,坚强的；艰难的，严厉的，强硬的；坚强的 /tʌf/
 
-tourism n. 旅游业 /ˈtʊrɪzəm/
+tourism n. 旅游业 /ˈtʊrɪzəm/ [族:tour]
+
+tourist n. 游客 /ˈtʊrɪst/ [族:tour]
 
 town n. 城镇，商业区 /taʊn/
 
