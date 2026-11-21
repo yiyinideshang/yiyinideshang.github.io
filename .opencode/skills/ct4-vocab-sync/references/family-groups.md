@@ -112,6 +112,7 @@ reproduce: reproduce, reproductive, reproduction
 mature: maturity
 profess: professor, profession
 instinct: instinctive
+sympath: sympathy, sympathize, sympathetic
 annoy: annoy, annoyance
 assign: assign, assignment
 assure: assure, assurance
