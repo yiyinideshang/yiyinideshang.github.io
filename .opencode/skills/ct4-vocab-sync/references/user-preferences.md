@@ -38,6 +38,19 @@ git push
 
 Only describe what changed and the validation result. The user commits manually.
 
+**Always include a ready-to-paste git description** with a subject and body after
+every change, even when no commit is made.
+
+Example:
+
+```text
+fix: 修正多词性显示和选项词性
+
+- words.md: ...
+- app.js: ...
+- 检查：...
+```
+
 ## Minimal new-word input
 
 The user may provide only:

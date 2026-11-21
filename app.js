@@ -133,7 +133,7 @@ function parseWords(md) {
     if (cut <= 0) { bad.push(line); continue; }
     const word = body.slice(0, cut).trim().replace(/\s+/g, " ");
     if (!/^[A-Za-z][A-Za-z'’\- ]*$/.test(word)) { bad.push(line); continue; }
-    const sensesRaw = body.slice(cut).trim();
+    const sensesRaw = body.slice(cut).trim().replace(/[;；]\s*(?=(?:vt|vi|adj|adv|prep|pron|conj|num|art|det|phr|idm|aux|int|n|v)\.)/gi, "｜");
     const senses = [];
     for (const part of sensesRaw.split(/[｜|]/)) {
       const s = part.trim();
@@ -1092,6 +1092,14 @@ function distractors(w, n = 3) {
   return out.slice(0, n);
 }
 
+function firstPos(word) {
+  return state.byKey.get(word)?.senses[0]?.pos || "";
+}
+function optionLabel(word, text) {
+  const pos = firstPos(word);
+  return pos ? pos + ". " + text : text;
+}
+
 function makeQuestion(w, mode = "mix") {
   if (!w) return null;
   const gloss = w.senses.map((s) => s.gloss).join("；");
@@ -1134,7 +1142,7 @@ function makeQuestion(w, mode = "mix") {
     return {
       type,
       prompt: w.word,
-      options: shuffle(labels.map((x) => ({ key: x.label, label: x.label, word: x.word }))),
+      options: shuffle(labels.map((x) => ({ key: x.label, label: optionLabel(x.word, x.label), word: x.word }))),
       answer: correct,
     };
   }
@@ -1149,7 +1157,7 @@ function makeQuestion(w, mode = "mix") {
     return {
       type,
       prompt: sentence,
-      options: shuffle([w.word, ...ds]).map((x) => ({ key: x, label: x, word: x })),
+      options: shuffle([w.word, ...ds]).map((x) => ({ key: x, label: optionLabel(x, x), word: x })),
       answer: w.word,
     };
   }
@@ -1158,7 +1166,7 @@ function makeQuestion(w, mode = "mix") {
     return {
       type,
       prompt: "",
-      options: shuffle([w.word, ...ds]).map((x) => ({ key: x, label: x, word: x })),
+      options: shuffle([w.word, ...ds]).map((x) => ({ key: x, label: optionLabel(x, x), word: x })),
       answer: w.word,
     };
   }
@@ -1166,7 +1174,7 @@ function makeQuestion(w, mode = "mix") {
   return {
     type: "zh2en",
     prompt: shortGloss(gloss, 60),
-    options: shuffle([w.word, ...ds]).map((x) => ({ key: x, label: x, word: x })),
+    options: shuffle([w.word, ...ds]).map((x) => ({ key: x, label: optionLabel(x, x), word: x })),
     answer: w.word,
   };
 }

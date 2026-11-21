@@ -31,6 +31,8 @@ Use this skill when the user asks to update `words.md` from a revised
 2. **Never write to git**
    - Do not run `git add`, `git commit`, or `git push`
    - Only describe the changed files and validation result
+   - **Always provide a ready-to-paste git description**
+     (subject + body) after every change, even when not committing
    - The user commits manually
 3. **Minimal word input**
    - The user may provide only `英文 词性 中文`
@@ -231,3 +233,4 @@ Preview-check in the app:
   - word/family counts
   - check results
   - remaining missing IPA
+  - a ready-to-paste git commit description (subject + body)
