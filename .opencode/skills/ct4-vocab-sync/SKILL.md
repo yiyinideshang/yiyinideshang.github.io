@@ -20,6 +20,26 @@ Use this skill when the user asks to update `words.md` from a revised
 
 `sources/` is gitignored. Update it on disk, but do not expect it in git.
 
+## User preferences
+
+1. **Family-group spacing**
+   - 3 blank lines before the first word of a family group
+   - 3 blank lines after the last word of a family group
+   - 1 blank line between members of the same family
+   - 1 blank line between ordinary entries
+   - notes such as `- 变形:`, `- 辨析:`, `- 记:`, `- 错:` stay directly below their word
+2. **Never write to git**
+   - Do not run `git add`, `git commit`, or `git push`
+   - Only describe the changed files and validation result
+   - The user commits manually
+3. **Minimal word input**
+   - The user may provide only `英文 词性 中文`
+   - Add IPA, `[族:]`, `[混:]`, `[近:]`, and useful
+     `- 辨析: / - 记: / - 错:` notes
+   - Do not invent uncertain relations; leave them blank instead
+
+See `references/user-preferences.md`.
+
 ## Hard rules
 
 1. **Never run `tools/migrate.py` main to regenerate `words.md`.**
@@ -126,6 +146,7 @@ Use `scripts/merge_words.py`. It must:
 - preserve `[族:]`, `[混:]`, `[近:]`
 - add obvious family tags from `references/family-groups.md`
 - run `tools/letter_headings.py` afterward
+- apply family spacing with `tools/family_spacing.py`
 
 Useful checks before writing:
 
@@ -138,6 +159,14 @@ Then write:
 ```bash
 python3 scripts/merge_words.py --write
 python3 tools/letter_headings.py
+python3 tools/family_spacing.py --write
+```
+
+`letter_headings.py` now preserves the family spacing rules. If a manual edit
+or another tool collapses the blank lines, run:
+
+```bash
+python3 .opencode/skills/ct4-vocab-sync/scripts/normalize_family_spacing.py --write
 ```
 
 ### 6. Fill missing IPA (optional)
@@ -194,7 +223,11 @@ Preview-check in the app:
 
 ### 8. Finish
 
-- Update `README.md` word/family counts (compute from the app, not by hand).
-- Bump the cache version in `index.html`, `sw.js`, and the README note.
-- Commit the code/data changes. `sources/26_1.md` stays untracked.
-- Tell the user to push manually.
+- Update `README.md` word/family counts if the user wants docs updated.
+- Bump the cache version in `index.html`, `sw.js`, and the README note only when
+  the user asks for app changes; data-only edits do not require it.
+- **Do not commit or push.** Report:
+  - files changed
+  - word/family counts
+  - check results
+  - remaining missing IPA

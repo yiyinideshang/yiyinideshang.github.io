@@ -94,14 +94,27 @@ When a family name already exists, use the existing name, e.g.:
 - `consequ`: `consequence`, `consequent`, `consequently`
 - `space`: `space`, `spaceship`, `spacecraft`, `spacious`, `spatial`
 
-## 5. Validation
+## 5. Formatting and validation
 
 After writing:
 
 ```bash
 python3 tools/letter_headings.py
+python3 tools/family_spacing.py --write
 python3 tools/check.py
 ```
+
+`letter_headings.py` rebuilds A–Z headings and already applies family spacing.
+If another edit collapses blank lines, run
+`scripts/normalize_family_spacing.py --write`.
+
+Spacing rules:
+
+- 3 blank lines before a family group
+- 3 blank lines after a family group
+- 1 blank line between family members
+- 1 blank line between ordinary entries
+- notes stay directly below their word
 
 Zero errors for:
 
@@ -115,3 +128,8 @@ Zero errors for:
 
 Missing IPA is tolerated. If the API is rate-limited, leave it blank rather than
 inserting a guessed pronunciation.
+
+## 6. Git
+
+Never run `git add`, `git commit`, or `git push`. Report the changed files and
+validation result; the user commits manually.

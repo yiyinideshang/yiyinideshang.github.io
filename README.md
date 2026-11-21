@@ -2,7 +2,7 @@
 
 一个按**词族**和**易混组**组织的四级单词复习网页。一个词只存一条，关系写在数据里，视图和测验自动生成。
 
-当前词库：**2142 词**，18 个易混组，188 个词族，23 个近义组。
+当前词库：**2220 词**，19 个易混组，449 个词族，23 个近义组。
 
 - 词库源文件：`words.md`（你只改这一个文件）
 - 应用：`index.html` + `app.js` + `style.css`
@@ -150,7 +150,7 @@ git push origin main
 - 或在 GitHub Desktop 里点一下 Push
 - 或者用 `git push` 手动推
 
-> 只改 `words.md` 不需要动版本号。改 `app.js` / `style.css` / `index.html` 时，把 `index.html` 里的 `?v=32` 和 `sw.js` 里的 `cet4-v32` 各加 1，否则手机可能继续用旧缓存。
+> 只改 `words.md` 不需要动版本号。改 `app.js` / `style.css` / `index.html` 时，把 `index.html` 里的 `?v=34` 和 `sw.js` 里的 `cet4-v34` 各加 1，否则手机可能继续用旧缓存。
 
 ---
 
@@ -234,20 +234,20 @@ ct4/
 ├── 上传.bat                一键 commit + push
 ├── README.md
 ├── sources/                原始笔记备份（不进仓库）
-├── 迁移报告.md              迁移时的检查报告（不进仓库）
 └── tools/
     ├── migrate.py          原始 md → 词库
     ├── postprocess.py      清洗、修错、合并
-    ├── letter_headings.py  给 words.md 加 A–Z 标题
+    ├── letter_headings.py  按 A–Z 重排，并整理同族空行
+    ├── family_spacing.py   同族组前后 3 空行、组内 1 空行
     ├── merge_families.py   合并被拆开的词族
-    ├── enrich.py           补音标/词性（词典 API）
+    ├── enrich.py           补音标/词性（旧词典 API）
     ├── fetch_ipa_uapi.py   用 Uapi 补缺失音标
     └── check.py            推送前格式检查
 ```
 
-> `migrate.py` / `postprocess.py` 只用于最初的迁移。以后加词直接改 `words.md`，不要重跑这两个，否则会覆盖你手工加的词。`letter_headings.py` 可以随时重跑，只整理标题。
+> `migrate.py` / `postprocess.py` 只用于最初的迁移。以后加词直接改 `words.md`，不要重跑这两个，否则会覆盖你手工加的词。`letter_headings.py` 现在可以随时重跑，它会保留同族组前后 3 空行、组内 1 空行。
 
-`sources/`、`迁移报告.md`、`build/` 在 `.gitignore` 里，不会公开。`words.md` 会公开（GitHub Pages 要读它），别往里写私人内容。
+`sources/` 在 `.gitignore` 里，不会公开。`words.md` 会公开（GitHub Pages 要读它），别往里写私人内容。
 
 ---
 
