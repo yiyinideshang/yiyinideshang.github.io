@@ -6,6 +6,8 @@
 
 # A
 
+
+
 abandon vt. 放弃；抛弃｜n. 放任,放纵 /əˈbændən/ [族:abandon]
 
 abandonment n. 抛弃,放弃 /əˈbændənmənt/ [族:abandon]
@@ -13,6 +15,10 @@ abandonment n. 抛弃,放弃 /əˈbændənmənt/ [族:abandon]
 
 
 ability n. 能力,才能,本领 /əˈbɪləti/ [近:capacity]
+
+aboard prep. adv. 在船(飞机，火车)上，上船等 /əˈbɔːrd/ [族:board]
+
+abroad adv. 在国外；广为流传地 /əˈbrɔːd/ [族:broad]
 
 
 
@@ -56,9 +62,9 @@ accord n. 协议，条约；一致，符合 vt. 给予，赠予 vi.(与...)一�
 
 accordance n. 一致,符合,按照,依据 /əˈkɔːrdns/ [族:accord]
 
-accordingly adv. 相应地，照着；因此，所以 /əˈkɔːrdɪŋli/ [族:accord]
-
 according to phr.据...所说，依照，按照，根据 [族:accord]
+
+accordingly adv. 相应地，照着；因此，所以 /əˈkɔːrdɪŋli/ [族:accord]
 
 
 
@@ -101,6 +107,10 @@ acquisition n. 习得,获得 /ˌækwɪˈzɪʃ(ə)n/ [族:acquire]
 acre n. 英亩 /ˈeɪkər/
 
 actor n. 演员 /ˈæktər/
+
+actual adj.真实的，实际的 /ˈæktʃuəl/
+
+actually adv.事实上；竟然 /ˈæktʃuəli/
 
 acute adj. 严重的,剧烈的,灵敏的 /əˈkjuːt/ [混:abuse,accuse] [近:keen,sharp]
 
@@ -198,6 +208,14 @@ agent n. 代理人,经纪人；代理人，代理商 /ˈeɪdʒənt/
 
 agreement n. 协议,协定,一致 /əˈɡriːmənt/
 
+
+
+agricultural adj. 农业的 /ˌæɡrɪˈkʌltʃərəl/ [族:agriculture]
+
+agriculture n. 农业，农学 /ˈæɡrɪkʌltʃər/ [族:agriculture]
+
+
+
 ahead adv. 向前面,在前面,提前,领先｜adj. 向前；在前的；领先｜adv. 向前地；领先地；在（某人或某事物的）前面；预先；在将来，为未来 /əˈhed/
 
 airplane n. 飞机 /ˈerpleɪn/
@@ -207,6 +225,12 @@ aisle n. 过道，走道 /aɪl/
 alert adj. 警觉的，警惕的｜vt. 使警觉，使意识到｜n. 警戒(状态)警报 /əˈlɜːrt/
 
 alliance n. 联合，联盟，结盟 /əˈlaɪəns/
+
+almost adv.几乎，差不多 /ˈɔːlmoʊst/
+
+along prep. 沿着，顺着；adv. 与...一起 /əˈlɔːŋ/
+
+along with idm. 与...一起，同事
 
 
 
@@ -224,9 +248,9 @@ amateur n. 业余爱好者｜adj. 业余的 /ˈæmətər/
 
 amaze vt. 使吃惊 /əˈmeɪz/ [混:amuse,assume,consume,resume] [族:amaze]
 
-amazing adj. 惊人的,了不起的 /əˈmeɪzɪŋ/ [族:amaze]
-
 amazement n. 惊奇，诧异 /əˈmeɪzmənt/ [族:amaze]
+
+amazing adj. 惊人的,了不起的 /əˈmeɪzɪŋ/ [族:amaze]
 
 
 
@@ -274,6 +298,8 @@ apart adv. 相距，分离，除外 /əˈpɑːrt/
 
 apartment n. 公寓；套房 /əˈpɑːrtmənt/
 
+apparatus n. 器械，仪器；机构；组织；器官 /ˌæpəˈrætəs/
+
 
 
 apparent adj. 显然的；表面上的，貌似的 /əˈpærənt/  [族:apparent]
@@ -281,8 +307,6 @@ apparent adj. 显然的；表面上的，貌似的 /əˈpærənt/  [族:apparent
 apparently adv. 据说；看来，显然 /əˈpærəntli/  [族:apparent]
 
 
-
-apparatus n. 器械，仪器；机构；组织；器官 /ˌæpəˈrætəs/
 
 appeal vi. 吸引，呼吁，恳求，上诉，打动｜n. 吸引力，魅力，呼吁 /əˈpiːl/
 
@@ -326,11 +350,19 @@ architecture n. 建筑学，建筑风格 /ˈɑːrkɪtektʃər/ [族:architect]
 
 
 
+arguable adj.无把握的，有异议的 /ˈɑːrɡjuəb(ə)l/
+
+arguably adv. 可以说，按理说 /ˈɑːrɡjuəbli/
+
+
+
 argue vi.争论，争吵 v. 论证，主张 vt.证明，表明 /ˈɑːrɡjuː/  [族:argue]
 
 argument n. 争论，论据，理由 /ˈɑːrɡjumənt/ [族:argue]
 
 
+
+arise vi.发生，出现，由...引起 /əˈraɪz/
 
 arm n. 手臂，袖子，扶手｜v. 武装，装备 /ɑːrm/
 
@@ -350,9 +382,11 @@ arrangement n. 安排，布置，约定，协议 /əˈreɪndʒmənt/ [族:arrang
 
 arrest n./vt. 逮捕 /əˈrest/
 
-
-
 art n. 艺术，文科，文艺，艺术品 /ɑːrt/ [族:art]
+
+artificial adj. 人造的，人为的，不真诚的 /ˌɑːrtɪˈfɪʃ(ə)l/
+
+
 
 artist n. 艺术家 /ˈɑːrtɪst/ [族:art]
 
@@ -362,7 +396,9 @@ artistically adv. 在艺术方面的 /ɑːrˈtɪstɪkli/ [族:art]
 
 
 
-artificial adj. 人造的，人为的，不真诚的 /ˌɑːrtɪˈfɪʃ(ə)l/
+as far as phr. 在...范围内，就...而言
+
+as much as phr. 和……一样多
 
 ashore adv. 在岸上，向岸上 /əˈʃɔːr/
 
@@ -432,6 +468,16 @@ attachment n. 依恋，爱慕，连接物 /əˈtætʃmənt/ [族:attach]
 
 attack n. 攻击，袭击，抨击｜v. 攻击，袭击｜vt. 破坏，侵蚀 /əˈtæk/
 
+
+
+attain vt.获得，赢得；达到 /əˈteɪn/ [族:attain]
+
+attainable adj.可达到的，可得到的 /əˈteɪnəb(ə)l/ [族:attain]
+
+attainment n.获得，达到；成就 /əˈteɪnmənt/ [族:attain]
+
+
+
 attempt n./vt. 试图，尝试 /əˈtempt/
 
 
@@ -464,13 +510,13 @@ audio adj. 录音的，音频的｜n. 声音，音频 /ˈɔːdioʊ/
 
 author n. 作者，作家 vt. 创作，写作，撰写 /ˈɔːθər/ [族:author]
 
-authority n. 权威；权力；当权者，官方；授权 /əˈθɔːrəti/ [族:author]
-
 authoritative adj. 有权威的，权威性的 /əˈθɔːrəteɪtɪv/ [族:author]
 
-authorize vt.批准，授权，许可 /ˈɔːθəraɪz/ [族:author]
+authority n. 权威；权力；当权者，官方；授权 /əˈθɔːrəti/ [族:author]
 
 authorization n.授权(书)，许可(证) /ˌɔːθərəˈzeɪʃ(ə)n/ [族:author]
+
+authorize vt.批准，授权，许可 /ˈɔːθəraɪz/ [族:author]
 
 
 
@@ -499,10 +545,9 @@ avoidance n. 避免,防止,回避 /əˈvɔɪdəns/
 awake adj. 醒着的,v(使)醒来 /əˈweɪk/ [族:awake]
 
 awaken v. (使)醒来,唤起,(使)意识到 /əˈweɪk/ [族:awake]
-
-
-
 - 变形: 过去式 awoke；过去分词 awoken
+
+
 
 award n. 奖品｜vt. 授予，奖励 /əˈwɔːrd/
 
@@ -595,6 +640,12 @@ blessing n. 幸好 /ˈblesɪŋ/ [族:bless]
 
 
 
+blood n.血，血液，血统 /blʌd/
+
+bloom vi.开花，绽放；繁荣n.花朵 /bluːm/
+
+board n.木板；董事会；膳食v.上船(或飞机等)vi.在校寄宿 /bɔːrd/ [族:board]
+
 boat n. 小船，渔船 /boʊt/
 
 
@@ -643,6 +694,16 @@ bride n. 新娘 /braɪd/
 
 bridge n. 桥梁，纽带，桥牌｜vt. 架桥，弥合（差距） /brɪdʒ/
 
+
+
+broad adj.宽阔的；概括的，广泛的 /brɔːd/ [族:broad]
+
+broadband n.带宽 /ˈbrɔːdbænd/ [族:broad]
+
+broaden v.扩大，拓展 /ˈbrɔːdn/ [族:broad]
+
+
+
 bubble n./vi. 起泡，气泡，经济泡沫，涌动 /ˈbʌb(ə)l/
 
 bud n. 苞，芽，花蕾｜vi. 发芽 /bʌd/
@@ -667,11 +728,11 @@ bulletin n. 简明新闻，简讯，公告 /ˈbʊlətɪn/
 
 
 
+bump down phr. 颠沛而行 [族:bump]
+
 bump v. 猛碰，撞｜n.碰撞(声)；隆起，凸块 /bʌmp/ [族:bump]
 
 bumper n.保险杠 adj. 丰收的，巨大的 /ˈbʌmpər/ [族:bump]
-
-bump down phr. 颠沛而行 [族:bump]
 
 
 
@@ -704,7 +765,6 @@ calm adj. 平静的，风平浪静的｜v. 使平静，使镇静｜n. 平静，�
 camp n. 营地，阵营｜vi. 扎营，露营 /kæmp/
 
 cancer n. 癌症；社会恶习 /ˈkænsər/ [混:career]
-
 - 记: cancer 里有 can（can + cer），可以想成“癌细胞会扩散”。
 - 记: can + cer，中间是 n。
 - 错: 与 career 混；重音在前，像“坎瑟”，开头是“坎”。职业 career 找 r，癌症 cancer 找 n。
@@ -720,7 +780,6 @@ capture vt. 抓起,俘虏,攻占,夺取｜vt. 引起,吸引,捕捉｜n. 捕获,�
 carbon n. 碳，复写纸 /ˈkɑːrbən/
 
 career n. 职业；事业；生涯｜adj. 就业的；职业的 /kəˈrɪr/ [混:cancer] [近:occupation]
-
 - 记: career 开头像 care（care + er），职业要用心经营。
 - 错: 与 cancer 混；重音在后，像“克瑞尔”，有卷舌 r 音。职业 career 找 r，癌症 cancer 找 n。
 
@@ -812,6 +871,8 @@ charter n. 章程；特许状｜adj. (飞机、船只等)包租的 /ˈtʃɑːrt�
 
 chase n. 追逐，追赶 /tʃeɪs/
 
+chemical adj. 化学的，与化学有关的｜n. 化学品 /ˈkemɪk(ə)l/
+
 
 
 chill n. 寒冷，寒意，着凉｜vt. 使寒冷，使冰冷｜v. 冷却，冷静，放松｜adj. 寒冷的 /tʃɪl/ [族:chill]
@@ -821,7 +882,6 @@ chilly adj. 寒冷的，冷淡的，不友好的 /ˈtʃɪli/ [族:chill]
 
 
 chip n. 薯条，薯片；芯片，缺口｜v. 打破｜vt. 削下，凿下 /tʃɪp/
-
 - 变形: 复数 chips
 
 choose v. 选择,挑选 /tʃuːz/ [近:opt]
@@ -838,8 +898,6 @@ church n. 教堂 /tʃɜːrtʃ/
 
 
 
-circus n. 马戏团，马戏表演；环形广场 /ˈsɜːrkəs/ [族:circ]
-
 circuit n. 环形(路线)；电路 /ˈsɜːrkɪt/ [族:circ]
 
 circular adj. 圆形的；循环的｜n. 广告印刷品 /ˈsɜːrkjələr/ [族:circ]
@@ -849,6 +907,8 @@ circulate v. 循环，流传，散播｜vt. 传递，传阅 /ˈsɜːrkjəleɪt/ 
 circulation n.血液循环；流通；发行量 /ˌsɜːrkjəˈleɪʃ(ə)n/ [族:circ]
 
 circumstance n. 情况，情形；生活状态，客观环境 /ˈsɜːrkəmstæns/ [族:circ]
+
+circus n. 马戏团，马戏表演；环形广场 /ˈsɜːrkəs/ [族:circ]
 
 
 
@@ -980,13 +1040,13 @@ commonplace adj. 平常普通的，不足为奇的｜n. 寻常事物 /ˈkɑːmə
 
 commune n.公社；群体 vi. 与...融为一体 /ˈkɑːmjuːn； kəˈmjuːn/ [族:commun]
 
-communism n. 共产主义 /ˈkɑːmjənɪzəm/ [族:commun]
-
-communist n. 共产主义者 adj. 共产主义的 /ˈkɑːmjənɪst/ [族:commun]
-
 communicate v. 通信,交流,交际,连接,相通,传达,传播 /kəˈmjuːnɪkeɪt/ [族:commun]
 
 communicative adj. 健谈的,善于言谈的,沟通的 /kəˈmjuːnɪkeɪtɪv/ [族:commun]
+
+communism n. 共产主义 /ˈkɑːmjənɪzəm/ [族:commun]
+
+communist n. 共产主义者 adj. 共产主义的 /ˈkɑːmjənɪst/ [族:commun]
 
 community n. 社区,群体 /kəˈmjuːnəti/ [族:commun]
 
@@ -1160,11 +1220,17 @@ consider v. 考虑，斟酌｜vt. 认为；体谅 /kənˈsɪdər/ [族:consider]
 
 considerable adj. 相当多的，相当大的 /kənˈsɪdərəb(ə)l/ [族:consider]
 
+
+
+considerably adv. 相当地，非常地；在很大程度上 /kənˈsɪdərəbli/
+
+
+
 considerate adj. 体贴的，考虑周到的 /kənˈsɪdərət/ [族:consider]
 
 consideration n. 考虑；体谅 /kənˌsɪdəˈreɪʃ(ə)n/ [族:consider]
 
-considering prep./conj. 考虑到，鉴于 [族:consider]
+considering prep./conj. 考虑到，鉴于 /kənˈsɪdərɪŋ/ [族:consider]
 
 
 
@@ -1208,7 +1274,13 @@ consumption n. 消耗,消费 /kənˈsʌmpʃ(ə)n/ [族:consume]
 
 contact n. 联系，接触 /ˈkɑːntækt/
 
+contain vt. 容纳，包含，控制，遏制 /kənˈteɪn/
+
 container n. 容器，集装箱，货柜 /kənˈteɪnər/
+
+contaminate vt. 污染，弄脏，玷污 /kənˈtæmɪneɪt/
+
+contamination n.污染，弄脏 /kənˌtæmɪˈneɪʃ(ə)n/
 
 contestant n. 参赛者 /kənˈtestənt/
 
@@ -1406,6 +1478,8 @@ crush vt. 压碎，压垮｜n. 迷恋 /krʌʃ/
 
 cube n. 立方体 /kjuːb/
 
+cultivate vt.开垦；种植；培养 /ˈkʌltɪveɪt/
+
 curious adj. 好奇的 /ˈkjʊriəs/
 
 curl v. 使卷曲｜n. 卷状物；卷装物 /kɜːrl/
@@ -1425,6 +1499,8 @@ customs n. 海关，(进口)关税 /ˈkʌstəmz/ [族:custom]
 
 
 cyberspace n. 网络空间 /ˈsaɪbərspeɪs/ [族:space]
+
+cyclist n. 骑行者，骑自行车的人 /ˈsaɪklɪst/
 
 # D
 
@@ -1502,6 +1578,12 @@ definition n. 定义，释义；清晰，分明 /ˌdefɪˈnɪʃn/ [族:define]
 
 
 
+definitive adj. 最终的，确定的，最佳的 /dɪˈfɪnətɪv/
+
+degree n.度，程度；学位 /dɪˈɡriː/
+
+
+
 deliberate adj. 故意的 /dɪˈlɪbərət/ [族:deliberat]
 
 deliberation n. 慎重的考虑 /dɪˌlɪbəˈreɪʃ(ə)n/ [族:deliberat]
@@ -1567,7 +1649,6 @@ descriptive adj. 描写的，叙述的，说明的 /dɪˈskrɪptɪv/ [族:descri
 
 
 desert n. 沙漠,荒漠｜vt. 抛弃 /ˈdezərt/ [混:deserve,desire,dessert,detect]
-
 - 记: desert 单 s，沙漠/抛弃；dessert 双 s，多一份甜。
 
 deserve vt. 值得,应得,应受 /dɪˈzɜːrv/ [混:desert,desire,dessert,detect,preserve]
@@ -1589,7 +1670,6 @@ desire n./vt. 渴望,欲望 /dɪˈzaɪər/ [族:desir] [混:desert,deserve,desse
 desktop n. 桌面，台面，台式计算机｜adj. (计算机)台式的 /ˈdesktɑːp/
 
 dessert n. (饭后)甜点 /dɪˈzɜːrt/ [混:desert,deserve,desire,detect]
-
 - 记: dessert 双 s，多一份甜。
 
 
@@ -1613,6 +1693,10 @@ destructive adj. 毁灭性的 /dɪˈstrʌktɪv/ [族:destroy]
 detect vt. 发现,察觉,测出 /dɪˈtekt/ [族:detect] [混:desert,deserve,desire,dessert]
 
 detective n. 侦探 /dɪˈtektɪv/ [族:detect]
+
+
+
+determinant n. 决定性因素 /dɪˈtɜːrmɪnənt/
 
 
 
@@ -1652,6 +1736,8 @@ diameter n. 直径；放大倍数 /daɪˈæmɪtər/
 
 diamond n. 钻石，金刚石 /ˈdaɪmənd/
 
+dilemma  n.(进退两难的)困境，窘境 /dɪˈlemə/
+
 diligent adj. 勤奋的,勤勉的 /ˈdɪlɪdʒənt/
 
 dip vt. 蘸，浸｜v. 下降，下沉｜n. 下降 /dɪp/
@@ -1686,6 +1772,12 @@ disappointment n. 失望，沮丧；令人失望的人或物 /ˌdɪsəˈpɔɪntm
 
 
 
+disaster n.灾难；不幸 /dɪˈzæstər/ [族:disaster]
+
+disastrous adj.灾难性的；极糟糕的 /dɪˈzæstrəs/ [族:disaster]
+
+
+
 discharge vt. 准许离开，解雇；履行｜v. 排出，放出｜n. 排出(物)；获准离开；履行 /dɪsˈtʃɑːrdʒ/
 
 disco n. 迪克斯舞厅，迪斯科舞曲 /ˈdɪskoʊ/
@@ -1693,6 +1785,8 @@ disco n. 迪克斯舞厅，迪斯科舞曲 /ˈdɪskoʊ/
 discount n. 减价，折扣｜vt. 打折出售 /ˈdɪskaʊnt/
 
 discourage vt. 打消…的念头，阻止；使灰心 /dɪsˈkɜːrɪdʒ/
+
+disease n.疾病；恶习 /dɪˈziːz/
 
 disguise vt. 装扮,打扮,掩盖,掩饰｜n. 伪装物 /dɪsˈɡaɪz/
 
@@ -1754,15 +1848,23 @@ ditch n. 沟,渠；构，渠｜vt. 丢弃,抛弃｜v. 丢弃，抛弃 /dɪtʃ/ [
 
 dive vi. //｜n. 跳水，潜水，俯冲 /daɪv/
 
-
+diver n.潜水员；跳水者 /ˈdaɪvər/
 
 diverse adj. 多样的，形形色色的 /daɪˈvɜːrs/ [族:diverse]
+
+diversification n. 多样化 /daɪˌvɜːrsɪfɪˈkeɪʃ(ə)n/ [族:divers]
+
+
 
 diversify v. (使)多样化；(使)扩大经营范围 /daɪˈvɜːrsɪfaɪ/ [族:diverse]
 
 diversity n. 多样性；各种各样的人或事 /daɪˈvɜːrsəti； dɪˈvɜːsɪti/ [族:diverse]
 
 
+
+divert vt.使转向；使分心 /daɪˈvɜːrt/
+
+divorce n.离婚，分离v.与(某人)离婚vt.使分离，使脱离 /dɪˈvɔːrs/
 
 doctor n. 医生，博士 /ˈdɑːktər/
 
@@ -1843,6 +1945,8 @@ drift v. 漂流，使漂浮｜n. 雪堆，水流，气流，主旨 /drɪft/
 drill n. 钻机，练习，演习｜v. 钻(孔)，培训 /drɪl/
 
 drip vi. (液体)滴下｜v. 滴下(液体)；充满｜n. 滴落，滴水声 /drɪp/
+
+drop v. (使)降低，(使)落下，减少；vt. 中途卸客，寄送，中止；n. 水珠，滴；下降 /drɑːp/
 
 drought n. 干旱，旱灾 /draʊt/
 
@@ -2111,6 +2215,16 @@ evident adj. 明显的，显然的 /ˈevɪdənt/ [族:evid]
 
 
 evil adj. 邪恶的｜n. 邪恶，弊端，坏处 /ˈiːv(ə)l/
+
+evoke vt.引起，唤起 /ɪˈvoʊk/
+
+
+
+evolution n.进化；演变，发展 /ˌevəˈluːʃ(ə)n/ [族:evolve]
+
+evolve v.进化；逐渐形成，逐步发展 /ɪˈvɑːlv/ [族:evolve]
+
+
 
 exact adj. 精确的，严谨的，精密的｜vt. 勒索，suo'qi /ɪɡˈzækt/
 
@@ -2511,9 +2625,39 @@ gasoline n. 汽油 /ˈɡæsəliːn； ˌɡæsəˈliːn/
 
 gear n. 挡位，齿轮，设备，装置｜v. 适合 /ɡɪr/
 
+
+
+gene n.基因 /dʒiːn/ [族:gener]
+
+general adj. 普遍的，总的；通常的；首席的 n. 将军 /ˈdʒen(ə)rəl/ [族:gener]
+
+
+
+generalise vi.概况，归纳 /ˈdʒen(ə)rəlaɪz/
+
+generally adv. 通常 /ˈdʒen(ə)rəli/
+
+
+
+generate vt.引起，产生；发电 /ˈdʒenəreɪt/ [族:gener]
+
+generation n.一代；产生 /ˌdʒenəˈreɪʃ(ə)n/ [族:gener]
+
+generator n.发电机；发生器 /ˈdʒenəreɪtər/ [族:gener]
+
+
+
+generous adj. 慷慨的，大方的，丰富的 /ˈdʒenərəs/
+
+genetic adj.遗传的，基因的 /dʒəˈnetɪk/ [族:gener]
+
 gentle adj. 温柔的，平缓的 /ˈdʒent(ə)l/
 
 get rid of idm. 摆脱,丢弃,赶走
+
+give way to idm. 让位于，被...代替；屈服
+
+glimpse n.一瞥；一看 /ɡlɪmps/
 
 
 
@@ -2580,15 +2724,19 @@ grave n. 坟墓，墓穴；去世 adj. 严重的，严峻的 /ɡreɪv/
 
 
 
-gravity n. 重力，地心引力 /ˈɡrævəti/ [族:grav]
-
 gravitation n. 重力，地心引力 /ˌɡrævɪˈteɪʃ(ə)n/ [族:grav]
+
+gravity n. 重力，地心引力 /ˈɡrævəti/ [族:grav]
 
 
 
 gray adj. 灰色的，昏暗的｜n. 灰色，灰白色｜vi. (头发)变花白 /ɡreɪ/
 
 grip n. 紧握，抓紧，掌控，控制｜v. 紧握｜vt. 使感兴趣 /ɡrɪp/
+
+guarantee vt.担保，确保，保障n.保证，保修金 /ˌɡærənˈtiː/
+
+guard n.卫兵，看守，警戒，保卫vt.守卫，保卫，提防 /ɡɑːrd/
 
 
 
@@ -2698,13 +2846,13 @@ honey n. 蜂蜜,亲爱的 /ˈhʌni/
 
 honor n. 荣誉(称号),荣幸｜vt. 尊敬,表彰,信守 /ˈɑːnər/ [近:privilege]
 
-horror n. 震惊,恐惧；惧怕，憎恶；恐怖性；极其不愉快的（或可怕的）经历；恐怖故事（或电影等） /ˈhɔːrər/ [族:horr]
-
-horsepower n. 马力 /ˈhɔːrspaʊər/
-
 horizon n.地平线；范围，眼界，见识 /həˈraɪz(ə)n/
 
 horizontal adj. 水平的，横的 n. 水平位置；水平线，水平面 /ˌhɔːrɪˈzɑːnt(ə)l/ [族:horizon]
+
+horror n. 震惊,恐惧；惧怕，憎恶；恐怖性；极其不愉快的（或可怕的）经历；恐怖故事（或电影等） /ˈhɔːrər/ [族:horr]
+
+horsepower n. 马力 /ˈhɔːrspaʊər/
 
 hug v./n. 拥抱 /hʌɡ/
 
@@ -2812,6 +2960,8 @@ improvement n. 改善，改进，提高 /ɪmˈpruːvmənt/ [族:improve]
 
 in a mess phr. 杂乱的，一团糟的
 
+in general phr. 通常，一般来说；总体上
+
 in part idm. 部分地，在某种程度上
 
 in place of idm. 代替,顶替
@@ -2850,19 +3000,29 @@ income n. 收入，收益，所得 /ˈɪnkʌm/
 
 incorporate vt. 把…并入，包含 /ɪnˈkɔːrpəreɪt/
 
+increasingly adv. 越来越多的 /ɪnˈkriːsɪŋli/
+
 incredible adj. 极好的，极大的；难以置信的 /ɪnˈkredəb(ə)l/
 
 incredibly adv. 极端地，极其；难以置信地 /ɪnˈkredəbli/ [族:incredible]
 
-increasingly adv. 越来越多的 /ɪnˈkriːsɪŋli/
+indefinite adj.无限期的；不明确的 /ɪnˈdefɪnət/
 
 indicate v. 表明，标示；象征，暗示 /ˈɪndɪkeɪt/
+
+individual adj. 单独的，个人的；独特的n.个人 /ˌɪndɪˈvɪdʒuəl/
 
 
 
 induce vt. 引诱，劝说，引起，导致 /ɪnˈduːs/ [族:induce]
 
 inducement n. 诱惑，引诱物 /ɪnˈduːsmənt/ [族:induce]
+
+
+
+industrial adj. 工业的，工业制造的，工业用的 /ɪnˈdʌstriəl/ [族:industry]
+
+industry n. 工业，行业，产业 /ˈɪndəstri/ [族:industry]
 
 
 
@@ -2976,7 +3136,11 @@ insistent adj. 坚决要求的；持续不断的 /ɪnˈsɪstənt/ [族:insist]
 
 
 
+install vt.安装 /ɪnˈstɔːl/
+
 installment n. 一期 /ɪnˈstɔːlmənt/
+
+instance n. 例子，事例vt.举...为例 /ˈɪnstəns/
 
 instant adj. 立即的，即食的，速溶的｜n. 刹那，顷刻 /ˈɪnstənt/
 
@@ -3097,6 +3261,8 @@ investor n. 投资者 /ɪnˈvestər/ [族:invest]
 
 
 inward adj. 内心的，内在的｜adv. 向内的 /ˈɪnwərd/
+
+ironically adv.讽刺地 /aɪˈrɑːnɪkli/
 
 
 
@@ -3253,6 +3419,8 @@ legislator n. 立法者，议会议员 /ˈledʒɪsleɪtər/ [族:legislat]
 leisure n. 闲暇,空闲；闲暇，业余时间，休闲活动｜adj. 空闲的，业余的 /ˈliːʒər/
 
 lend vt. 借给,借出 /lend/ [混:leak,lean,load,loan]
+
+letter n.信，信件；字母 /ˈletər/
 
 liability n. (法律上的)责任,累赘 /ˌlaɪəˈbɪləti/
 
@@ -3449,6 +3617,10 @@ mentality n. 心态，思维方式 /menˈtæləti/ [族:mental]
 
 
 
+merchant n.商人，批发商 /ˈmɜːrtʃənt/
+
+
+
 mere adj. 仅仅，只不过，极小的，单单｜n. 小湖，池塘 /mɪr/ [族:mere]
 
 merely adv. 只不过，仅仅 /ˈmɪrli/ [族:mere]
@@ -3458,6 +3630,8 @@ merely adv. 只不过，仅仅 /ˈmɪrli/ [族:mere]
 merriment n. 欢乐，欢笑 /ˈmerimənt/
 
 merry adj. 欢乐的，愉快的 /ˈmeri/
+
+mess n.杂乱，麻烦，困境，混乱vt.使不整洁，弄乱 /mes/
 
 messenger n. 送信者，通信员 /ˈmesɪndʒər/
 
@@ -3488,6 +3662,18 @@ millimeter n. 毫米 /ˈmɪlimiːtər/
 million num. 一百万；许多，无数 /ˈmɪljən/
 
 millionaire n. 百万富翁 /ˌmɪljəˈner/
+
+
+
+mind n.头脑，思维；心思v.介意vt.当心，注意 /maɪnd/ [族:mind]
+
+mindful adj.注意的，留心的 /ˈmaɪndfl/ [族:mind]
+
+mindless adj.没头脑的，愚昧的 /ˈmaɪndləs/ [族:mind]
+
+mindset n. 心态，思维模式 /ˈmaɪndset/ [族:mind]
+
+
 
 mineral adj. 矿物质，矿产 /ˈmɪnərəl/
 
@@ -3547,6 +3733,8 @@ motive n. 动机，缘由 /ˈmoʊtɪv/ [族:motiv]
 
 motor n. 发动机,马达,汽车｜adj. 机动的,汽车的,肌肉运动的 /ˈmoʊtər/ [混:mayor]
 
+mount vt. 安排,组织开展,登上,安置｜vi. 逐步增加｜v. 骑上,乘上；安置，逐步增加｜n. 山峰 /maʊnt/
+
 
 
 mouth n. 嘴，口腔 /maʊθ/ [族:mouth]
@@ -3554,8 +3742,6 @@ mouth n. 嘴，口腔 /maʊθ/ [族:mouth]
 mouthful n. 一口之量 /ˈmaʊθfʊl/ [族:mouth]
 
 
-
-mount vt. 安排,组织开展,登上,安置｜vi. 逐步增加｜v. 骑上,乘上；安置，逐步增加｜n. 山峰 /maʊnt/
 
 mud n. 泥，烂泥 /mʌd/
 
@@ -3647,6 +3833,8 @@ northwest n. 西北方，西北地区｜adj. 西北部的｜adv. 向西北地 /�
 
 northwestern adj. 西北部的 /ˌnɔːrθˈwestərn/
 
+not just but phr. 不仅…而且
+
 notice n. 注意｜v. 注意到 /ˈnoʊtɪs/ [族:notif]
 
 noticeable adj. 容易注意到的,明显的 /ˈnoʊtɪsəb(ə)l/
@@ -3659,9 +3847,19 @@ notify vt. 通知，告知 /ˈnoʊtɪfaɪ/ [族:notif]
 
 
 
-not just but phr. 不仅…而且
-
 nuisance n. 讨厌的人,麻烦的事 /ˈnuːs(ə)ns/
+
+
+
+nutrient n.营养物质，养分 /ˈnuːtriənt/ [族:nutrition]
+
+nutrition n.营养，滋养 /nuˈtrɪʃ(ə)n/ [族:nutrition]
+
+nutritional adj.营养的 /nuˈtrɪʃən(ə)l/ [族:nutrition]
+
+nutritious adj. 有营养的，营养丰富的 /nuˈtrɪʃəs/ [族:nutrition]
+
+
 
 # O
 
@@ -3895,6 +4093,8 @@ patent n. 专利权｜adj. 专利的，明显的｜vt. 得到…专利权 /ˈpæ
 
 path n. 小路，小径；路线；途径 /pæθ/
 
+pattern n. 模式，方式；图案 /ˈpætərn/
+
 pause vi./n. 暂停，停顿 /pɔːz/
 
 pearl n. 珍珠 /pɜːrl/
@@ -3906,6 +4106,10 @@ peculiar adj. 古怪的，特有的 /pɪˈkjuːliər/ [族:peculiar]
 peculiarity n. 古怪之处，特性 /pɪˌkjuːliˈærəti/ [族:peculiar]
 
 peculiarly adv. 奇怪地，特有地 /pɪˈkjuːliərli/ [族:peculiar]
+
+
+
+pedestrian n.行人，步行者adj.行人的，步行的 /pəˈdestriən/
 
 
 
@@ -3921,7 +4125,7 @@ pensioner n. 领取养老金的人 /ˈpenʃənər/ [族:pension]
 
 
 
-per prep. 每，每一
+per prep. 每，每一 /pər/
 
 perceive v. 认为，理解,察觉，注意到，意识到 /pərˈsiːv/
 
@@ -3955,6 +4159,12 @@ perilous adj. 危险的，艰险的 /ˈperələs/ [族:peril]
 
 
 
+permanence n.永久，持久 /ˈpɜːrmənəns/ [族:permanent]
+
+permanent adj.永久的；永恒的 /ˈpɜːrmənənt/ [族:permanent]
+
+
+
 permissible adj. 容许的，许可的 /pərˈmɪsəb(ə)l/
 
 permission n. 许可(证)，批准 /pərˈmɪʃ(ə)n/ [族:mission]
@@ -3984,6 +4194,8 @@ personally adv. 就个人而言；亲自；个别地；私人地 /ˈpɜːrsənə
 
 
 personnel n. 员工，人事部门 /ˌpɜːrsəˈnel/
+
+perspective n.视角，观点；判断力 /pərˈspektɪv/
 
 persuade vt. 劝说，说服，使相信，使信服 /pərˈsweɪd/
 
@@ -4037,6 +4249,8 @@ plane n. 平面，飞机，水平｜adj. 平坦的 /pleɪn/
 
 planetary adj. 行星的，与行星有关的 /ˈplænəteri/
 
+plant n.植物，发电厂，工厂vt.栽种，种植 /plænt/
+
 
 
 pleasant adj. 令人愉快的，礼貌而友善的 /ˈplez(ə)nt/ [族:please]
@@ -4048,6 +4262,8 @@ pleasure n. 愉快，满足，令人快乐的事 /ˈpleʒər/ [族:please]
 
 
 plentiful adj. 丰富的，充足的 /ˈplentɪf(ə)l/
+
+plenty pron. 大量，充足 n.富裕 /ˈplenti/
 
 pointless adj. 无意义的，无目的的，无益的 /ˈpɔɪntləs/
 
@@ -4158,6 +4374,12 @@ preliminary adj. 初步的，预备的｜n. 初步行动，准备工作 /prɪˈl
 preparation n. 准备工作 /ˌprepəˈreɪʃ(ə)n/ [族:preparat]
 
 preparatory adj. 预备的，准备的 /prɪˈpærətɔːri/ [族:preparat]
+
+
+
+preschool n.幼儿园 /ˈpriːskuːl/ [族:preschool]
+
+preschooler n. 学龄前儿童 /ˌpriˈskʊlər/ [族:preschool]
 
 
 
@@ -4288,6 +4510,8 @@ professor n. 教授 /prəˈfesər/ [族:profess]
 proficiency n. 熟练,精通 /prəˈfɪʃ(ə)nsi/
 
 profound adj. 深远的，知识渊博的 /prəˈfaʊnd/
+
+progress n.进步，进展vi.取得进步 /ˈprɑːɡres/
 
 prohibit vt. 禁止 /prəˈhɪbɪt/
 
@@ -4430,9 +4654,11 @@ racial adj. 种族间的,种族的,人种的 /ˈreɪʃ(ə)l/ [族:race]
 
 radar n. 雷达 /ˈreɪdɑːr/
 
-
-
 rag n. 抹布；破旧衣服｜vt. 嘲笑，捉弄 /ræɡ/ [族:rag]
+
+rage n. 暴怒，狂怒｜v. 发怒｜vi. 猛烈地进行 /reɪdʒ/ [族:rage]
+
+
 
 ragged adj. 破旧的；衣衫褴褛的；参差不齐的 /ˈræɡɪd/ [族:rag]
 
@@ -4440,11 +4666,11 @@ raggedly adv. 穿着破烂地，急促地，参差地 /ˈræɡɪdli/ [族:rag]
 
 
 
-rage n. 暴怒，狂怒｜v. 发怒｜vi. 猛烈地进行 /reɪdʒ/ [族:rage]
-
 raging adj. 强烈的，猛烈的，很严重的 /ˈreɪdʒɪŋ/ [族:rage]
 
+raise vt.举起；提高；vt.引起；饲养n.加薪 /reɪz/
 
+rally n.公众集会 /ˈræli/
 
 range n. 一系列，范围，射程｜vi. 变化，包括 /reɪndʒ/
 
@@ -4508,6 +4734,10 @@ refreshment n. 茶点，食品和饮料；恢复精力 /rɪˈfreʃmənt/ [族:re
 
 
 
+regain vt.重新获得，恢复；返回 /rɪˈɡeɪn/
+
+
+
 regard v. 认为，把……看作；<正式>（尤指以某种方式）注视，凝视；<古>注意，留心；<古>与……有关，涉及 /rɪˈɡɑːrd/ [族:regard]
 
 regarding prep. 关于 /rɪˈɡɑːrdɪŋ/ [族:regard]
@@ -4550,6 +4780,10 @@ rejection n. 拒绝；冷落 /rɪˈdʒekʃ(ə)n/ [族:reject]
 
 relate v. 联系,使有关联｜vt. 叙述,讲述｜vi. 涉及,关于,理解 /rɪˈleɪt/ [族:relat] [近:associate]
 
+relation n.关系，交往；联系；亲戚 /rɪˈleɪʃn/ [族:relat]
+
+relational adj.有关的，相关的 /rɪˈleɪʃənl/ [族:relat]
+
 relationship n. 关系，联系 /rɪˈleɪʃ(ə)nʃɪp/ [族:relat]
 
 
@@ -4584,7 +4818,19 @@ reluctant adj. 勉强的，不情愿的 /rɪˈlʌktənt/ [族:reluct]
 
 rely vi. 依靠，信任 /rɪˈlaɪ/ [族:rely]
 
+remain v. 保持，仍是｜vi. 余下；留下，逗留 /rɪˈmeɪn/
+
 remainder n. 剩余部分，剩余物 /rɪˈmeɪndər/
+
+
+
+remark n. 评论，意见 v.评论 /rɪˈmɑːrk/ [族:remark]
+
+remarkable adj. 非凡的，不同寻常的 /rɪˈmɑːrkəb(ə)l/ [族:remark]
+
+remarkably adv. 不寻常地，惊人地 /rɪˈmɑːrkəbli/ [族:remark]
+
+
 
 remedial adj. 补习的，辅导的；纠正的 /rɪˈmiːdiəl/
 
@@ -4628,6 +4874,8 @@ renovation n. 修复,改造,翻新 /ˌrenəˈveɪʃ(ə)n/ [族:renovat]
 
 rent v. 租用，租借｜vt. 出租｜n. 租金 /rent/
 
+repair vt. /n. 修理，修补 /rɪˈper/
+
 
 
 replace vt. 替换,更换 /rɪˈpleɪs/ [族:replace]
@@ -4649,6 +4897,8 @@ reproduction n. 繁殖，复制，再现 /ˌriːprəˈdʌkʃ(ə)n/ [族:reproduc
 reproductive adj. 生殖的，繁殖的 /ˌriːprəˈdʌktɪv/ [族:reproduce]
 
 
+
+reputation n.名誉，名声 /ˌrepjuˈteɪʃ(ə)n/
 
 require vt. 需要；要求；规定 /rɪˈkwaɪər/ [族:require] [混:acquire,inquire,inquiry]
 
@@ -4740,6 +4990,10 @@ resume v. 继续,重新开始｜n. 简历,履历,摘要 /rɪˈzuːm； ˈrezəme
 
 resumption n. 重新开始，恢复，继续 /rɪˈzʌmpʃ(ə)n/
 
+retail n.零售 /ˈriːteɪl/
+
+retain vt. 保持，保留；储存 /rɪˈteɪn/
+
 
 
 retire v. (使)退休｜vi. 退出，离开，退役 /rɪˈtaɪər/ [族:retire]
@@ -4798,6 +5052,8 @@ riotous adj. 狂欢的，暴乱的 /ˈraɪətəs/
 
 ripe adj. (时机)成熟的，(水果等)成熟的 /raɪp/
 
+road n.路，途径，方法 /roʊd/
+
 roar v./n. 咆哮，吼叫，发生大笑，呼啸声 /rɔːr/
 
 
@@ -4851,6 +5107,8 @@ sailor n. 水手，船员，海员 /ˈseɪlər/ [族:sail]
 
 saint n. 圣徒，圣人 /seɪnt/
 
+sale n.销售，销售量；大减价 /seɪl/
+
 sate n. 缘故，目的，利益 /seɪt/
 
 
@@ -4884,6 +5142,8 @@ scar n. 伤疤,(精神)创伤 /skɑːr/
 scare vt. 惊吓,使恐惧｜n. 恐惧｜vi. 害怕 /sker/
 
 scarf n. 围巾，头巾 /skɑːrf/
+
+scatter vt.撒播 /ˈskætər/
 
 
 
@@ -4925,6 +5185,8 @@ seat v.使坐下 n. 座位；所在地，场所；席位 /siːt/
 
 secondary adj. 中学的,次要的 /ˈsekənderi/
 
+section n.部分，区域；节段 /ˈsekʃ(ə)n/
+
 sector n. 部门，行业 /ˈsektər/
 
 secure adj. 安全的，可靠的｜v. 获得，保护，使安全 /sɪˈkjʊr/
@@ -4939,7 +5201,11 @@ segmental adj. 分段的，部分的 /seɡˈmentl/ [族:segment]
 
 
 
-selfish adj. 自私的 /ˈselfɪʃ/
+selfish adj. 自私的 /ˈselfɪʃ/ [族:self]
+
+selfishly adv.自私地 /ˈselfɪʃli/ [族:self]
+
+selfishness n. 自私 /ˈselfɪʃnəs/ [族:self]
 
 
 
@@ -5003,13 +5269,13 @@ sharpen v. 使变锋利,使敏锐 /ˈʃɑːrpən/
 
 shave v. 刮胡子，刮脸 /ʃeɪv/
 
-shift v. 转移,挪动,换挡｜v. 改变｜vt. 改变观点(态度)等｜n. 改变,转变,轮班 /ʃɪft/
-
 shelf n. 架子 /ʃelf/ [混:shell]
 
 shell n.壳；框架 v. 炮击 /ʃel/ [混:shelf]
 
 shelter n.住处；庇护；避难所，收容所 vt. 保护，掩蔽 vi. 躲避 /ˈʃeltər/
+
+shift v. 转移,挪动,换挡｜v. 改变｜vt. 改变观点(态度)等｜n. 改变,转变,轮班 /ʃɪft/
 
 
 
@@ -5025,7 +5291,11 @@ shoot v. 设计，发射，打猎，拍摄，射杀｜n. 新芽 /ʃuːt/
 
 shore n. 海岸，河岸 /ʃɔːr/
 
+shout v.大声说，大喊vi.大叫，喊叫n.喊叫声 /ʃaʊt/
+
 shove v. 猛推，乱挤，推撞｜vt. 乱放｜n. 猛推 /ʃʌv/
+
+sicken vt. 使厌恶,使作呕｜vi. 患病，生病  /ˈsɪkən/
 
 
 
@@ -5041,8 +5311,6 @@ significant adj. 重要的，显著的；数量可观的 /sɪɡˈnɪfɪkənt/ [�
 
 
 
-sicken vt. 使厌恶,使作呕｜vi. 患病，生病  /ˈsɪkən/
-
 silicon n. 硅 /ˈsɪlɪkən/
 
 
@@ -5056,7 +5324,6 @@ simply adv. 仅仅，简直，简单地，简朴地 /ˈsɪmpli/ [族:simple]
 
 
 sink vi. 下沉；降低 vt. 使下沉；挖，掘 n. 洗碗槽 /ˈsɪŋk/
-
 - 变形: 过去式 sank；过去分词 sunk
 
 sit vi. 坐,坐落在；被放在；担任 /sɪt/
@@ -5184,6 +5451,10 @@ speculation n. 推测,投机买卖 /ˌspekjuˈleɪʃ(ə)n/ [族:speculat]
 
 
 
+speed up phr. (使)加速
+
+
+
 spell v. 拼写｜vt. 招致｜n. 一段时间 /spel/ [族:spell]
 
 spelling n. 拼写，拼写能力 /ˈspelɪŋ/ [族:spell]
@@ -5199,8 +5470,11 @@ spending n. 开支，花销 /ˈspendɪŋ/ [族:spend]
 sphere n. 球体,球形,范围,领域；范围，领域，球体，社会阶层 /sfɪr/
 
 spill v. (使)溢出或洒出｜n. 洒出，泼出 /spɪl/
+- 变形: 过去式/过去分词 spilt
 
 spin v. (使)快速旋转 /spɪn/
+
+split v.(使)分裂；(使)分开vt.分担，分摊；划破，割破vi.(和某人)断绝关系n.分歧；划分 /splɪt/
 
 spoil v. 毁坏，破坏，宠坏，溺爱｜vi. (食物)变质 /spɔɪl/
 - 变形: 过去式/过去分词 spoiled, spoilt
@@ -5231,8 +5505,6 @@ spring n. 春天，泉，弹簧，发条｜vi. 跳，蹦 /sprɪŋ/
 
 spur n. 鞭策，激励｜vt. 鞭策，激励；促进，加速 /spɜːr/
 
-stay away phr. 远离，离开，避免
-
 stability n. 稳定,稳固 /stəˈbɪləti/
 
 
@@ -5258,6 +5530,8 @@ standpoint n. 立场，观点，角度，立足点 /ˈstændpɔɪnt/
 staple adj. 主要的，基本的，重要的｜n. 基本食物 /ˈsteɪp(ə)l/
 
 starry adj.满天繁星的；像星星的 /ˈstɑːri/
+
+stay away phr. 远离，离开，避免
 
 stay n./v. 停留，逗留，维持，坚持 /steɪ/
 
@@ -5320,11 +5594,13 @@ strategy n. 战略,策略；战术策略 复数 strategies /ˈstrætədʒi/ [族
 
 
 
+street n.街，街道 /striːt/
+
 strength n. 力量，优势，强度 /streŋθ/
 
 strengthen v. 加强，加固 /ˈstreŋ(k)θ(ə)n/
 
-stretch v. 伸展；拉长；延伸 vi. 绵延 vt. 拉紧 n. 一段时间；伸展；弹性 /stretʃ/
+stretch v. 伸展；拉长；延伸 vi. 绵延 vt. 拉紧 n. 一段时间；一片；一段；伸展；弹性 /stretʃ/
 
 
 
@@ -5420,6 +5696,8 @@ supposition n. 假定，设想 /ˌsʌpəˈzɪʃ(ə)n/ [族:suppose]
 
 
 
+surf v. 冲浪 vt.网上冲浪 /sɜːrf/
+
 surge vi. 涌动，激增｜n. 激增；奔涌向前 /sɜːrdʒ/
 
 
@@ -5432,8 +5710,6 @@ surgical adj. 外科手术的；精确的 /ˈsɜːrdʒɪkl/ [族:surgery]
 
 
 
-surf v. 冲浪 vt.网上冲浪 /sɜːrf/
-
 surplus n. 过剩，过剩量｜adj. 过剩的，剩余的 /ˈsɜːrplʌs/
 
 surprise n. 意想不到的事情,惊奇｜vt. 使惊奇,使感到意外 /sərˈpraɪz/
@@ -5443,6 +5719,8 @@ surrender v. 投降｜vt. (被迫)放弃，交出｜n. 投降；屈服；放弃�
 surround vt. 环绕；包围；与…密切相关 /səˈraʊnd/
 
 surroundings n. 环境，周围事物 /səˈraʊndɪŋz/
+
+survey n./vt.调查，勘测；概述 /ˈsɜːrveɪ/
 
 suspect v. 怀疑，猜想｜n. 嫌疑犯 /səˈspekt/
 
@@ -5655,6 +5933,20 @@ track n. 小径，踪迹，路线｜n. 站台｜vt. 跟踪，追踪 /træk/
 
 tragedy n. 不幸,惨剧,悲剧 /ˈtrædʒədi/
 
+trail n.痕迹，踪迹；(乡间)小路；路线v.拖，拉；落后，失利vt.跟踪，追踪 /treɪl/
+
+
+
+train n.火车，列车；队列v.(接受)训练，(被)培训vt.教育 /treɪn/ [族:train]
+
+trainee n.受培训者，实习生 /ˌtreɪˈniː/ [族:train]
+
+trainer n.教练，驯兽师 /ˈtreɪnər/ [族:train]
+
+
+
+trait n. 特征 /treɪt/
+
 transfer v. 转移,调动,移交｜vt. 转账,转让,传染｜n. 转移,调动｜n./v. 转移，调动，移交，转账，转让 /trænsˈfɜːr/
 
 
@@ -5709,6 +6001,8 @@ tune n. 曲子,曲调｜vt. 调音,调频道 /tuːn/
 
 turkey n. 火鸡，火鸡肉 /ˈtɜːrki/
 
+turn out phr. 最终结果是
+
 twin n. 双胞胎之一 adj. 双胞胎之一的；双重的 /twɪn/
 
 type n. 类型，种类｜v. 打(字) /taɪp/
@@ -5716,6 +6010,8 @@ type n. 类型，种类｜v. 打(字) /taɪp/
 # U
 
 unalterable adj. 无法改变的 /ʌnˈɔːltərəb(ə)l/
+
+unattainable adj.无法实现的，难以得到的 /ˌʌnəˈteɪnəbl/ [族:attain]
 
 unconquerable adj. 不可战胜的 /ʌnˈkɑːŋkərəb(ə)l/
 
@@ -5881,11 +6177,15 @@ weave v. 编，织，迂回进行，穿行｜vt. 编造 /wiːv/
 
 weird adj. 古怪的，奇怪的，偶尔发生的 /wɪrd/
 
+wellness n.健康 /ˈwelnəs/
+
 west n. 西方｜adj. 西方的｜adv. 向西方 /west/
 
 whale n.鲸鱼，vi.捕鲸 /weɪl/
 
 wheelchair n. 轮椅 /ˈwiːltʃer/ [族:chair]
+
+whereas conj. 然而，但是 /ˌwerˈæz/
 
 wherever adv. 无论哪里；在任何情况下 /werˈevər/
 
@@ -5904,6 +6204,8 @@ widespread adj. 普遍的，广泛的 /ˌwaɪdˈspred/
 wilderness n.荒野，沙漠 /ˈwɪldərnəs/
 
 wildlife n.野生动物，野生物种 /ˈwaɪldlaɪf/
+
+wildness n. 荒凉；放荡，无约束 /ˈwaɪldnəs/
 
 willing adj. 愿意的，乐意的，乐于相助的｜v. 希望，想要 /ˈwɪlɪŋ/
 
@@ -5925,6 +6227,8 @@ wireless adj. 无线的｜n. 无线收音机，无线电 /ˈwaɪərləs/ [族:wi
 
 withdraw v. 使撤回，撤离｜vt. 取(款)，停止供应 /wɪðˈdrɔː/
 
+witness n.目击者，(出庭的)证人vt.目击，目睹，见证 /ˈwɪtnəs/
+
 wonder v. 想知道 /ˈwʌndər/
 
 wooden adj. 木质的 /ˈwʊd(ə)n/
@@ -5937,6 +6241,8 @@ world n. 世界，界 /wɜːrld/
 
 worldwide adj. 遍及全世界的，世界各地的｜adv. 遍及全世界，在世界各地 /ˌwɜːrldˈwaɪd/
 
+worse adj. 更坏的，更糟的，更严重的adv.更坏地，更糟地，更严重地 /wɜːrs/
+
 worship n. 敬奉，崇拜｜vt. 崇拜，敬仰 /ˈwɜːrʃɪp/
 
 worthwhile adj. 有价值的，值得的 /ˌwɜːrθˈwaɪl/
@@ -5948,6 +6254,8 @@ worthy adj. 值得的，值得尊敬的 /ˈwɜːrði/
 wrap vt. 包，裹｜n. 包装材料 /ræp/ [族:wrap]
 
 wrapping n. 包装纸，包装材料 /ˈræpɪŋ/ [族:wrap]
+
+
 
 # X
 
